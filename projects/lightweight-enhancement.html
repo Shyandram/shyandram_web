@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lightweight Deep Learning | Shyang-En Weng</title>
+    <link rel="icon" href="../images/icons/icon.jpg" type="image/jpeg">
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+    <nav>
+        <div class="container">
+            <div class="logo">Shyandram</div>
+            <ul class="nav-links">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../index.html#education">Education</a></li>
+                <li><a href="../index.html#experience">Experience</a></li>
+                <li><a href="../research.html">Research</a></li>
+                <li><a href="../index.html#awards">Awards</a></li>
+                <li><a href="../index.html#skills">Skills</a></li>
+                <li><a href="../index.html#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="project-hero">
+        <div class="container">
+            <a href="../index.html#research" class="back-link" onclick="history.back(); return false;">← Back</a>
+            <h1>Lightweight Deep Learning for Image Enhancement</h1>
+            <h2 style="font-size: 1.2rem; color: var(--text-secondary); opacity: 0.8; font-weight: 500;">
+                基於深度學習的輕量級影像增強方法</h2>
+            <div class="project-meta">
+                <span class="metric-chip">Edge AI</span>
+                <span class="metric-chip">Knowledge Distillation</span>
+                <span class="metric-chip">Explainable AI</span>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="project-content">
+            <div class="project-main">
+                <img src="../images/Lightweight Image Enhancement/CPGAnet.png" alt="CPGA-Net Architecture"
+                    class="project-image-large">
+                <img src="../images/Lightweight Image Enhancement/CPGAnet+.png" alt="Attention-Based Dynamic Adjustment"
+                    class="project-image-large">
+                <img src="../images/Lightweight Image Enhancement/exposure.png" alt="Exposure Correction Results"
+                    class="project-image-large">
+
+                <h2>Project Overview (2023/3-2024/2)</h2>
+                <p>
+                    This research investigates **Lightweight Deep Learning** methods for image enhancement, specifically
+                    tailored for **Edge AI and Mobile Devices**. The primary goal is to maintain high-quality results
+                    while significantly reducing computational requirements and memory footprint.
+                </p>
+
+                <h2>Technical Approach</h2>
+                <p>
+                    The project utilizes **Knowledge Distillation** to transfer capabilities from large-scale teacher
+                    models to compact student networks. It also emphasizes **Explainable AI (XAI)**, providing insights
+                    into how the network makes adjustment decisions based on input image features.
+                </p>
+                <p>
+                    The proposed method achieves real-time performance on various mobile processors, making it highly
+                    practical for smartphone photography and real-time surveillance.
+                </p>
+                <div style="margin-top: 1.5rem; margin-bottom: 3rem;">
+                    <a href="https://github.com/Shyandram/CPGA-Net-Pytorch.git" class="btn btn-outline"
+                        target="_blank">GitHub Repository</a>
+                </div>
+
+                <h2>Side Project: Image Enhancement for EdgeAI</h2>
+                <p>Deployed the lightweight model on various edge devices:</p>
+                <ul>
+                    <li><a href="https://github.com/Shyandram/CPGA-Net-IOS" target="_blank"
+                            style="color: var(--accent-color);">iOS Implementation</a></li>
+                    <li><a href="https://github.com/Shyandram/EdgeAI_LLIE-Jetson-Nano.git" target="_blank"
+                            style="color: var(--accent-color);">Jetson Nano</a></li>
+                    <li><a href="https://github.com/Shyandram/EdgeAI_LLIE_NCS2.git" target="_blank"
+                            style="color: var(--accent-color);">Neural Compute Stick 2 (NCS2)</a></li>
+                </ul>
+
+                <h2>Related Publications</h2>
+                <ul>
+                    <li>
+                        <strong>Exposure Correction in Driving Scenes Using the Atmospheric Scattering
+                            Model</strong><br>
+                        <em>IEEE ICCE-TW 2024, Taichung (Best Paper)</em><br>
+                        <a href="https://ieeexplore.ieee.org/document/10674535/" target="_blank">DOI:
+                            10.1109/ICCE-TW55602.2024.10674535</a>
+                    </li>
+                    <li style="margin-top: 1rem;">
+                        <strong>A lightweight low-light image enhancement network via channel prior and gamma
+                            correction</strong><br>
+                        <em>International Journal of Pattern Recognition and Artificial Intelligence, 2025</em><br>
+                        <a href="https://www.worldscientific.com/doi/full/10.1142/S0218001425540138"
+                            target="_blank">DOI: 10.1142/S0218001425540138</a>
+                    </li>
+                </ul>
+            </div>
+
+            <aside class="project-sidebar">
+                <div class="sidebar-card">
+                    <h4>Target Devices</h4>
+                    <p>Smartphones, IoT Edge Devices, Embedded Vision Systems</p>
+                </div>
+                <div class="sidebar-card">
+                    <h4>Core Techniques</h4>
+                    <ul>
+                        <li>Model Compression</li>
+                        <li>Feature Distillation</li>
+                        <li>Parameter Efficiency</li>
+                    </ul>
+                </div>
+            </aside>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p class="footer-text">&copy; 2024 Shyang-En Weng. All rights reserved. Built with Gemini and Anitigravity.
+            </p>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+
+</html>

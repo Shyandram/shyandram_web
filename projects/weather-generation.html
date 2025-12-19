@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Image Generation | Shyang-En Weng</title>
+    <link rel="icon" href="../images/icons/icon.jpg" type="image/jpeg">
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+    <nav>
+        <div class="container">
+            <div class="logo">Shyandram</div>
+            <ul class="nav-links">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../index.html#education">Education</a></li>
+                <li><a href="../index.html#experience">Experience</a></li>
+                <li><a href="../research.html">Research</a></li>
+                <li><a href="../index.html#awards">Awards</a></li>
+                <li><a href="../index.html#skills">Skills</a></li>
+                <li><a href="../index.html#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="project-hero">
+        <div class="container">
+            <a href="../index.html#research" class="back-link" onclick="history.back(); return false;">← Back</a>
+            <h1>Weather Image Generation (Thesis)</h1>
+            <h2 style="font-size: 1.2rem; color: var(--text-secondary); opacity: 0.8; font-weight: 500;">
+                用於生成不同天氣影像的端到端深度學習生成網路</h2>
+            <div style="margin-top: 2rem;">
+                <a href="https://hdl.handle.net/11296/xjgq5j" class="btn btn-outline" target="_blank">Master's Thesis
+                    (Chinese)</a>
+                <a href="https://dx.doi.org/10.2139/ssrn.4591716" class="btn btn-outline" target="_blank"
+                    style="margin-left: 1rem;">English Version</a>
+            </div>
+            <div class="project-meta">
+                <span class="metric-chip">Master's Thesis</span>
+                <span class="metric-chip">Weakly Supervised Learning</span>
+                <span class="metric-chip">Triplet Content Loss</span>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="project-content">
+            <div class="project-main">
+                <img src="../images/Weather Image Generation/master_thiesis.png" alt="Weather Generation Visualization"
+                    class="project-image-large">
+                <img src="../images/Weather Image Generation/master_thiesis_illust.png" alt="Network Architecture"
+                    class="project-image-large">
+
+                <h2>Master's Thesis Project (2022/10-2023/7)</h2>
+                <p>
+                    My Master's thesis involved developing an **End-to-End Deep Learning Network** for generating
+                    synthetic weather images. This work is crucial for augmenting datasets used in training robust
+                    autonomous driving systems and outdoor computer vision models.
+                </p>
+
+                <h2>Scientific Methodology</h2>
+                <p>
+                    The network employs **Weakly Supervised Learning** to translate clear weather images into
+                    high-fidelity synthetic versions of fog, precipitation, and other adverse conditions. A key
+                    technical contribution is the use of **Triplet Content Loss** to ensure that the semantic content
+                    and structure of the original image are preserved while accurately applying weather effects.
+                </p>
+                <p>
+                    The generated images exhibit high visual realism and have been proven effective in improving the
+                    robustness of downstream object detection tasks in bad weather.
+                </p>
+
+                <h2>Keywords</h2>
+                <ul>
+                    <li>Weather Image Generation</li>
+                    <li>Weakly Supervised Learning</li>
+                    <li>Fog and Precipitation Simulation</li>
+                    <li>Triplet Content Loss</li>
+                </ul>
+            </div>
+
+            <aside class="project-sidebar">
+                <div class="sidebar-card">
+                    <h4>Academic Background</h4>
+                    <p>Master of Science in Electronic Engineering (CYCU) & ECE (UWM)</p>
+                </div>
+                <div class="sidebar-card">
+                    <h4>Applications</h4>
+                    <ul>
+                        <li>Data Augmentation</li>
+                        <li>ADAS Robustness Testing</li>
+                        <li>Gaming & VR/AR</li>
+                    </ul>
+                </div>
+            </aside>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p class="footer-text">&copy; 2024 Shyang-En Weng. All rights reserved. Built with Gemini and Anitigravity.
+            </p>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+
+</html>

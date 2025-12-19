@@ -1,10 +1,379 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-    <title>Redirecting to Google Site</title>
-    <meta http-equiv="refresh" content="0;url=https://sites.google.com/view/shyandram/home">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Personal website of Shyang-En Weng, Computer Vision and Deep Learning Researcher.">
+    <title>Shyang-En Weng | Computer Vision Researcher</title>
+    <link rel="icon" href="images/icons/icon.jpg" type="image/jpeg">
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <p>If you are not redirected, <a href="https://sites.google.com/view/shyandram/home">click here</a>.</p>
+
+    <nav>
+        <div class="container">
+            <div class="logo"><a href="index.html">Shyang-En Weng</a></div>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#research">Research</a></li>
+                <li><a href="#awards">Awards</a></li>
+                <!-- <li><a href="#skills">Skills</a></li> -->
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="container hero-content">
+            <div class="hero-text fade-in">
+                <h1>Shyang-En Weng</h1>
+                <p>翁祥恩 (Shyang), Computer Vision Engineer & Researcher specializing in Image Restoration, Object
+                    Detection, and Deep
+                    Learning.</p>
+                <div class="hero-btns fade-in">
+                    <a href="#contact" class="btn">Get in Touch</a>
+                </div>
+            </div>
+            <div class="hero-image fade-in">
+                <img src="images/selfie.jpg" alt="Shyang-En Weng" class="profile-pic">
+            </div>
+        </div>
+    </header>
+
+    <section id="about" class="container" style="margin-bottom: 40px;">
+        <h2 class="section-title fade-in">About Me</h2>
+        <p class="fade-in" style="max-width: 800px; font-size: 1.1rem; color: var(--text-secondary);">
+            Currently pursuing a PhD in Computer Science at NYCU,
+            I hold dual Master's degrees in ECE from UWM and EL from CYCU.
+            My research expertise lies in Image Processing, Pattern Recognition, and Deep Learning, with a focus on
+            Image Restoration and Object Detection.
+            I am committed to developing innovative, real-world solutions and possess strong leadership skills to drive
+            technical projects from conception to deployment.
+        </p>
+    </section>
+
+    <section id="education" class="container" style="margin-bottom: 6rem;">
+        <h2 class="section-title fade-in">Education</h2>
+        <div class="timeline">
+            <!-- New Ph.D. Entry -->
+            <div class="timeline-item fade-in">
+                <div class="timeline-date">Feb 2025 - Present</div>
+                <div class="timeline-content">
+                    <h3>Doctor of Philosophy in Computer Science</h3>
+                    <span>National Yang Ming Chiao Tung University (NYCU), Taiwan</span>
+                    <p style="color: var(--text-secondary);">
+                        ACM Lab (Advanced Computing and Multimedia Lab). Focus on Computer Vision and Deep Learning.
+                    </p>
+                </div>
+            </div>
+
+            <div class="timeline-item fade-in">
+                <div class="timeline-date">Sep 2023 - May 2024</div>
+                <div class="timeline-content">
+                    <h3>Master of Science</h3>
+                    <span>University of Wisconsin-Milwaukee (UWM), USA</span>
+                    <p style="color: var(--text-secondary);">
+                        Electrical and Computer Engineering Concentration. GPA 3.833. Dual Master's Program.
+                    </p>
+                </div>
+            </div>
+
+            <div class="timeline-item fade-in">
+                <div class="timeline-date">Sep 2022 - May 2024</div>
+                <div class="timeline-content">
+                    <h3>Master of Science</h3>
+                    <span>Chung Yuan Christian University (CYCU), Taiwan</span>
+                    <p style="color: var(--text-secondary);">
+                        Electronic Engineering. GPA 4.000. Focused on Pattern Recognition and Machine Learning.
+                    </p>
+                </div>
+            </div>
+
+            <div class="timeline-item fade-in">
+                <div class="timeline-date">Sep 2017 - Jun 2022</div>
+                <div class="timeline-content">
+                    <h3>Bachelor of Science</h3>
+                    <span>Chung Yuan Christian University (CYCU), Taiwan</span>
+                    <p style="color: var(--text-secondary);">
+                        Electronic Engineering. GPA 3.878. Certificate of Cross-Disciplinary Program in Intelligent
+                        Robotics.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="experience" class="container" style="margin-bottom: 6rem;">
+        <h2 class="section-title fade-in">Experience</h2>
+        <div class="timeline">
+            <div class="timeline-item fade-in">
+                <div class="timeline-date">Feb 2025 - Present</div>
+                <div class="timeline-content">
+                    <h3>Research Assistant (Part-time)</h3>
+                    <span>ACM Lab, National Yang Ming Chiao Tung University</span>
+                    <p style="color: var(--text-secondary);">
+                        Focusing on Super-Resolution, Diffusion Models, and Image Restoration.
+                    </p>
+                </div>
+            </div>
+            <div class="timeline-item fade-in">
+                <div class="timeline-date">Oct 2022 - Jul 2024</div>
+                <div class="timeline-content">
+                    <h3>Research Assistant (Part-time)</h3>
+                    <span>MuCAT Lab, Chung Yuan Christian University</span>
+                    <p style="color: var(--text-secondary);">
+                        Worked on National Science and Technology Council (NSTC) research grants focusing on roadside
+                        monitoring systems and deep learning-based super-resolution imaging techniques.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="research" class="container">
+        <div style="display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 3rem;">
+            <h2 class="section-title fade-in">Research Highlights</h2>
+            <a href="research.html" class="btn btn-outline fade-in">View Full Portfolio</a>
+            <a href="https://scholar.google.com/citations?user=DBBIjHsAAAAJ" class="btn btn-outline fade-in">Google
+                Scholar</a>
+        </div>
+
+        <div id="research-projects" class="pub-grid" style="margin-top: 2rem; scroll-margin-top: 100px;">
+            <!-- Project 1 -->
+            <div class="card fade-in">
+                <div class="card-header">
+                    <h3>Dynamic Illuminance Enhancement for Diverse Scenes</h3>
+                    <div class="metrics">
+                        <span class="metric-chip">Illumination_Spectrum</span>
+                        <span class="metric-chip">CPGADIA</span>
+                    </div>
+                </div>
+                <div class="research-grid">
+                    <img src="images/Dynamic Illuminance Enhancement/CPGADIA.png" alt="Dynamic Illuminance Results"
+                        class="research-img">
+                </div>
+                <p style="margin-top: 1rem; color: var(--text-secondary);">
+                    Developing smart systems to handle extreme lighting variability in real-world environments.
+                </p>
+                <a href="projects/dynamic-illuminance.html" class="btn btn-outline">Learn More</a>
+            </div>
+            <!-- Highlight 2 -->
+            <div class="card fade-in">
+                <div class="card-header">
+                    <h3>Lightweight Deep Learning for Image Enhancement</h3>
+                    <div class="metrics">
+                        <span class="metric-chip">CPGA-Net</span>
+                        <span class="metric-chip">CPGA-Net+</span>
+                    </div>
+                </div>
+                <div class="research-grid">
+                    <img src="images/Lightweight Image Enhancement/exposure.png" alt="Lightweight Network"
+                        class="research-img">
+                </div>
+                <p style="margin-top: 1rem; color: var(--text-secondary);">
+                    Highly efficient neural networks designed for mobile devices and edge computing.
+                </p>
+                <a href="projects/lightweight-enhancement.html" class="btn btn-outline">Learn More</a>
+            </div>
+        </div>
+
+        <div id="research-publications" style="margin-top: 4rem; scroll-margin-top: 100px;">
+            <h3 class="fade-in" style="font-size: 1.5rem; margin-bottom: 2rem;">Selected Publications</h3>
+            <div class="pub-grid">
+                <div class="pub-item fade-in">
+                    <span class="pub-title">ZHPHiR - Zero-shot Adaptation of Stable Diffusion via Plug-in Hierarchical
+                        Degradation Representation for Real-World Super-Resolution</span>
+                    <span class="pub-authors">Yi-Cheng Liao, <strong>Shyang-En Weng</strong>, Yu-Syuan Xu, Chi-Wei
+                        Hsiao, Wei-Chen Chiu,
+                        Ching-Chun Huang</span>
+                    <span class="pub-meta">arXiv preprint arXiv:2512.10340, Dec 2025</span>
+                    <a href="https://arxiv.org/abs/2512.10340" class="pub-doi" target="_blank">arXiv:2512.10340</a>
+                </div>
+                <div class="pub-item fade-in">
+                    <span class="pub-title">Rethinking Theoretical Illumination for Efficient Low-Light Image
+                        Enhancement</span>
+                    <span class="pub-authors"><strong>Shyang-En Weng</strong>, Cheng-Yen Hsiao, Li-Wei Lu, Yu-Shen
+                        Huang, Tzu-Han Chen,
+                        Shaou-Gang Miaou, Ricky Christanto</span>
+                    <span class="pub-meta">arXiv preprint arXiv:2409.05274, Sep 2024</span>
+                    <a href="https://arxiv.org/abs/2409.05274" class="pub-doi" target="_blank">arXiv:2409.05274</a>
+                    <a href="projects/lightweight-enhancement.html" class="project-tag">#Lightweight-Enhancement</a>
+                </div>
+                <div class="pub-item fade-in">
+                    <span class="pub-title">A lightweight low-light image enhancement network via channel prior and
+                        gamma correction</span>
+                    <span class="pub-authors"><strong>Shyang-En Weng</strong>, Shaou-Gang Miaou, Ricky Christanto</span>
+                    <span class="pub-meta">International Journal of Pattern Recognition and Artificial Intelligence,
+                        2025</span>
+                    <a href="https://www.worldscientific.com/doi/full/10.1142/S0218001425540138" class="pub-doi"
+                        target="_blank">DOI: 10.1142/S0218001425540138</a>
+                    <a href="projects/lightweight-enhancement.html" class="project-tag">#Lightweight-Enhancement</a>
+                </div>
+                <div class="pub-item fade-in">
+                    <span class="pub-title">Dynamic Illuminance Adjustment for Simultaneous Exposure Correction and
+                        Low-Light Image Enhancement</span>
+                    <span class="pub-authors"><strong>Shyang-En Weng</strong>, Chang-Pin Hsu, Cheng-Yen Hsiao, Ricky
+                        Christanto, Shaou-Gang Miaou</span>
+                    <span class="pub-meta">Signal, Image and Video Processing, Sep 2024</span>
+                    <a href="https://doi.org/10.1007/s11760-024-03519-0" class="pub-doi">DOI:
+                        10.1007/s11760-024-03519-0</a>
+                    <a href="projects/dynamic-illuminance.html" class="project-tag">#Dynamic-Illuminance</a>
+                </div>
+                <div class="pub-item fade-in">
+                    <span class="pub-title">An Integrated Approach to Mask Wearing Classification and Crowd Counting in
+                        Public Spaces Using YOLOv5s and Deep SORT</span>
+                    <span class="pub-authors"><strong>Shyang-En Weng</strong>, Ying-Cheng Lin, Ming-Yao Liang,
+                        Shaou-Gang Miaou</span>
+                    <span class="pub-meta">Journal of Internet Technology, Jul 2025</span>
+                    <a href="https://jit.ndhu.edu.tw/article/view/3181" class="pub-doi">JIT: vol.26, no.4, pp.
+                        423-434</a>
+                    <a href="projects/mask-detection.html" class="project-tag">#Mask-Detection</a>
+                </div>
+            </div>
+        </div>
+
+
+        <div style="text-align: center; margin-top: 3rem; margin-bottom: 6rem;">
+            <a href="research.html" class="btn fade-in">View Full Research Portfolio</a>
+        </div>
+    </section>
+
+    <section id="awards" class="container" style="margin-bottom: 6rem;">
+        <h2 class="section-title fade-in">Honors & Awards</h2>
+        <div class="pub-grid">
+            <div class="card fade-in">
+                <h3>Best Conference Paper</h3>
+                <span class="timeline-date">Jun 2023</span>
+                <p style="margin-top: 1rem; color: var(--text-secondary);">IEEE IS3C 2023: Reducing Computational
+                    Requirements of Image Dehazing Using Super-Resolution Networks.</p>
+            </div>
+            <div class="card fade-in">
+                <h3>Silver Medal</h3>
+                <span class="timeline-date">Dec 2021</span>
+                <p style="margin-top: 1rem; color: var(--text-secondary);">Third AI & Big Data Creative Competition
+                    (CYCU): Deep Learning-Based System for Assessing Learning Effectiveness.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- <section id="skills" class="container" style="margin-bottom: 6rem;"
+        style="background: var(--surface-color); padding: 80px 2rem; border-radius: 24px; margin-top: 4rem;">
+        <h2 class="section-title fade-in">Technical Skills</h2>
+        <div class="skills-grid">
+            <div class="skill-category fade-in">
+                <h4>Core Expertise</h4>
+                <div class="skill-tags">
+                    <span class="skill-tag">Computer Vision</span>
+                    <span class="skill-tag">Pattern Recognition</span>
+                    <span class="skill-tag">Image Enhancement</span>
+                    <span class="skill-tag">Object Detection</span>
+                </div>
+            </div>
+            <div class="skill-category fade-in">
+                <h4>Programming</h4>
+                <div class="skill-tags">
+                    <span class="skill-tag">Python (Advanced)</span>
+                    <span class="skill-tag">MATLAB (Advanced)</span>
+                    <span class="skill-tag">Swift</span>
+                    <span class="skill-tag">Java</span>
+                    <span class="skill-tag">C++</span>
+                </div>
+            </div>
+            <div class="skill-category fade-in">
+                <h4>Toolkits</h4>
+                <div class="skill-tags">
+                    <span class="skill-tag">PyTorch</span>
+                    <span class="skill-tag">TensorFlow</span>
+                    <span class="skill-tag">OpenCV</span>
+                    <span class="skill-tag">Scikit-Learn</span>
+                </div>
+            </div>
+            <div class="skill-category fade-in">
+                <h4>Languages</h4>
+                <div class="skill-tags">
+                    <span class="skill-tag">Mandarin (Fluent)</span>
+                    <span class="skill-tag">English (Advanced)</span>
+                </div>
+                    <span class="skill-tag">English (Advanced)</span>
+                </div>
+            </div>
+        </div>
+    </section> -->
+
+    <section id="contact" class="container" style="margin-bottom: 6rem;">
+        <h2 class="section-title fade-in"><strong>Get in Touch</strong></h2>
+        <div class="contact-grid">
+            <a href="mailto:shyangen104@gmail.com" class="contact-card fade-in">
+                <img src="images/icons/email_white_44dp.png" alt="Email" class="contact-icon">
+                <h4>Email</h4>
+                <p>shyangen104@gmail.com</p>
+            </a>
+            <a href="https://www.linkedin.com/in/Shyandram/" target="_blank" class="contact-card fade-in">
+                <img src="images/icons/linkedin_white_44dp.png" alt="LinkedIn" class="contact-icon">
+                <h4>LinkedIn</h4>
+                <p>Shyandram</p>
+            </a>
+            <a href="https://github.com/Shyandram" target="_blank" class="contact-card fade-in">
+                <img src="images/icons/github_white_44dp.png" alt="GitHub" class="contact-icon">
+                <h4>GitHub</h4>
+                <p>Shyandram</p>
+            </a>
+            <a href="https://medium.com/@shyangen104" target="_blank" class="contact-card fade-in">
+                <img src="images/icons/medium_white_44dp.png" alt="Medium" class="contact-icon">
+                <h4>Medium</h4>
+                <p>@shyangen104</p>
+            </a>
+            <a href="https://scholar.google.com/citations?user=DBBIjHsAAAAJ" target="_blank"
+                class="contact-card fade-in">
+                <img src="images/icons/google_scholar_icon.png" alt="Google Scholar" class="contact-icon">
+                <h4>Scholar</h4>
+                <p>Google Scholar Profile</p>
+            </a>
+        </div>
+
+        <div
+            style="text-align: center; margin-top: 3rem; display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+            <a href="https://drive.google.com/file/d/1rs0FKCtK_leqRvLHzdSkleJ6Lxe3RcTZ/view"
+                class="btn btn-outline fade-in" target="_blank"><strong>Download CV</strong></a>
+            <a href="https://drive.google.com/file/d/1j0LcNTCM60v78FmR7VG5Dv24tpJnl4ON/view"
+                class="btn btn-outline fade-in" target="_blank"><strong>Research Slides</strong></a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="social-links">
+                <a href="mailto:shyangen104@gmail.com" title="Email"><img src="images/icons/email_white_44dp.png"
+                        alt="Email" class="social-icon"></a>
+                <a href="https://github.com/Shyandram" target="_blank" title="GitHub"><img
+                        src="images/icons/github_white_44dp.png" alt="GitHub" class="social-icon"></a>
+                <a href="https://www.linkedin.com/in/Shyandram/" target="_blank" title="LinkedIn"><img
+                        src="images/icons/linkedin_white_44dp.png" alt="LinkedIn" class="social-icon"></a>
+                <a href="https://medium.com/@shyangen104" target="_blank" title="Medium"><img
+                        src="images/icons/medium_white_44dp.png" alt="Medium" class="social-icon"></a>
+                <a href="https://scholar.google.com/citations?user=DBBIjHsAAAAJ" target="_blank" title="Google Scholar">
+                    <img src="images/icons/google_scholar_icon.png" alt="Google Scholar" class="social-icon">
+                </a>
+            </div>
+            <p class="footer-text">&copy; 2024 Shyang-En Weng. All rights reserved. Built with Gemini and Anitigravity.
+            </p>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="back-to-top" aria-label="Back to Top">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M18 15l-6-6-6 6" />
+        </svg>
+    </button>
+
+    <script src="script.js"></script>
 </body>
+
 </html>
