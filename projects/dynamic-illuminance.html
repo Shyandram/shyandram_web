@@ -56,49 +56,99 @@
                 <img src="../images/Dynamic Illuminance Enhancement/Illumination_Spectrum.png"
                     alt="Illumination Spectrum analysis" class="project-image-large">
 
-                <h2>Project Overview (2023/10-2024/7)</h2>
+                <h2>Project Overview</h2>
                 <p>
-                    This project focuses on **Dynamic Illuminance Image Enhancement** for diverse lighting conditions,
-                    ranging from extreme low-light to over-exposed scenes. It was conducted as part of an NSTC-Research
-                    Project titled "Lightweight Multi-Task Learning for Dynamic Illuminance Enhancement in ADAS".
+                    This project addresses the challenge of <strong>Dynamic Illuminance Image Enhancement</strong> in
+                    diverse
+                    lighting environments. From under-exposed night scenes to over-exposed daytime scenarios, the goal
+                    is
+                    to achieve balanced visibility. This work is supported by the NSTC-Research Project
+                    "Lightweight Multi-Task Learning for Dynamic Illuminance Enhancement in ADAS".
                 </p>
 
-                <h2>Core Innovations</h2>
-                <img src="../images/Lightweight Image Enhancement/CPGAnet+.png" alt="CPGA-Net+ Architecture"
-                    class="project-image-large">
+                <h2>Core Techniques</h2>
+
+                <h3 style="color: var(--accent-color);">1. Dynamic Illuminance Adjustment (CPGA-DIA)</h3>
                 <p>
-                    The research introduced **CPGA-Net+**, a lightweight multi-task learning architecture that
-                    incorporates **Explainable Factor Control**. By utilizing channel priors and adaptive gamma
-                    correction, the system can precisely adjust local and global illuminance without introducing
-                    artificial noise or artifacts.
+                    Published in <em>Signal, Image and Video Processing</em>, this work proposes
+                    <strong>CPGA-DIA</strong> (Channel Prior Gamma Adjustment for Dynamic Illuminance Adjustment), a
+                    multi-task framework designed for <strong>Simultaneous Exposure Correction</strong>.
                 </p>
+                <ul>
+                    <li><strong>Unified Correction</strong>: A single framework capable of handling both low-light
+                        (under-exposed) and over-exposed scenes simultaneously.</li>
+                    <li><strong>Gamma Correction Prior</strong>: Introduces explicit gamma correction to effectively
+                        handle extreme lighting variations while avoiding color artifacts.</li>
+                </ul>
+
+                <h3 style="margin-top: 2.5rem; color: var(--accent-color);">2. Scene-Guided Image Enhancement (SGIE)
+                </h3>
+                <img src="../images/Dynamic Illuminance Enhancement/SGIE-CPGA.png"
+                    alt="Scene-Guided Image Enhancement Architecture" class="project-image-large">
                 <p>
-                    Key technical focus areas include **Multi-Task Learning** to handle different exposure levels
-                    simultaneously and **Scene Analysis** to ensure safety in time-varying lighting environments.
+                    Presented at <em>CVGIP 2024</em>, this research introduces a <strong>Scene-Guided</strong> strategy
+                    leveraging <strong>Transfer Learning</strong> to adapt enhancement models to complex, varied
+                    illumination environments.
                 </p>
+                <ul>
+                    <li><strong>Transfer Learning</strong>: Utilizes pre-trained knowledge to adapt to specific lighting
+                        domains, improving robustness.</li>
+                    <li><strong>Scene-Guided Strategy</strong>: Classifies scene characteristics to dynamically adjust
+                        enhancement parameters for optimal visibility.</li>
+                    <li><strong>Gamma Correction Prior</strong>: Retains the core benefit of gamma prior for consistent
+                        structural preservation.</li>
+                </ul>
+
                 <div style="margin-top: 2rem;">
                     <a href="https://github.com/Shyandram/CPGA-DIA.git" class="btn btn-outline" target="_blank">GitHub
                         Repository</a>
                 </div>
 
                 <h2>Related Publications</h2>
-                <ul>
-                    <li>
-                        <strong>Dynamic Illuminance Adjustment for Simultaneous Exposure Correction and Low-Light Image
-                            Enhancement</strong><br>
-                        <em>Signal, Image and Video Processing, Sep 2024</em><br>
-                        <a href="https://doi.org/10.1007/s11760-024-03519-0" target="_blank">DOI:
-                            10.1007/s11760-024-03519-0</a>
-                    </li>
-                    <li style="margin-top: 1rem;">
-                        <strong>Scene-Guided Image Enhancement through Gamma Correction Prior and Transfer
-                            Learning</strong><br>
-                        <em>CVGIP 2024, Taiwan</em>
-                    </li>
-                </ul>
+
+                <div class="publication-item" style="margin-bottom: 1.5rem;">
+                    <strong>[1] Dynamic Illuminance Adjustment for Simultaneous Exposure Correction and Low-Light Image
+                        Enhancement</strong><br>
+                    <em>Signal, Image and Video Processing, Sep 2024</em><br>
+                    <span class="project-authors" style="font-size: 0.9em; color: var(--text-secondary);">
+                        Authors: <strong>Shyang-En Weng</strong>, Chang-Pin Hsu, Cheng-Yen Hsiao, Ricky Christanto,
+                        Shaou-Gang Miaou
+                    </span><br>
+                    <a href="https://doi.org/10.1007/s11760-024-03519-0" target="_blank">DOI:
+                        10.1007/s11760-024-03519-0</a>
+                </div>
+
+                <div class="publication-item">
+                    <strong>[2] Scene-Guided Image Enhancement through Gamma Correction Prior and Transfer Learning for
+                        Varied Illumination Environments</strong><br>
+                    <em>CVGIP 2024, Taiwan</em><br>
+                    <span class="project-authors" style="font-size: 0.9em; color: var(--text-secondary);">
+                        Authors: <strong>Shyang-En Weng</strong>, Cheng-Yen Hsiao, Chang-Pin Hsu, Shaou-Gang Miaou
+                    </span><br>
+                    <a href="https://drive.google.com/file/d/12UQGOyMK4EBdCErrsk_W5JYVBN7L8OD8/view?usp=sharing"
+                        target="_blank">Conference Article (PDF)</a>
+                </div>
             </div>
 
             <aside class="project-sidebar">
+                <div class="sidebar-card">
+                    <h4>Authors</h4>
+                    <p style="font-size: 0.9em; margin-bottom: 0.8rem;">
+                        <strong>[1]</strong><br>
+                        <strong>Shyang-En Weng</strong><br>
+                        Chang-Pin Hsu<br>
+                        Cheng-Yen Hsiao<br>
+                        Ricky Christanto<br>
+                        Shaou-Gang Miaou
+                    </p>
+                    <p style="font-size: 0.9em;">
+                        <strong>[2]</strong><br>
+                        <strong>Shyang-En Weng</strong><br>
+                        Cheng-Yen Hsiao<br>
+                        Chang-Pin Hsu<br>
+                        Shaou-Gang Miaou
+                    </p>
+                </div>
                 <div class="sidebar-card">
                     <h4>Keywords</h4>
                     <p>Dynamic Illuminance Adjustment, Low-Light Image Enhancement, Exposure Correction, Multi-Task

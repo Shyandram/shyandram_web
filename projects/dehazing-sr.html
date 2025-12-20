@@ -57,39 +57,85 @@
             <div class="project-main">
                 <img src="../images/DHSR/DHSR.png" alt="Dehazing SR Results" class="project-image-large">
 
-                <h2>Project Overview (2022/12-2023/8)</h2>
+                <h2>Project Overview</h2>
                 <p>
-                    This project, which received the **Best Paper Award at IEEE IS3C 2023**, investigates the synergy
-                    between **Image Dehazing** and **Super-Resolution (SR)** networks. The primary focus is on reducing
-                    the computational overhead of high-quality restoration.
+                    This project explores advanced techniques for <strong>Image Dehazing</strong>, focusing on two key
+                    directions:
+                    reducing computational costs through joint super-resolution training and enhancing accuracy using
+                    depth information
+                    from stereo and LiDAR systems.
                 </p>
 
-                <h2>Research & Innovation</h2>
+                <h2>Core Techniques</h2>
+
+                <h3>1. Efficient Dehazing via Super-Resolution</h3>
                 <p>
-                    Supported by the NSTC Research Grant (Grant NSTC 112-2813-C-033-009-E), this work explores **Joint
-                    Training** strategies where dehazing and SR tasks are optimized simultaneously. This approach allows
-                    the network to restore clarity and resolution more efficiently than two-stage pipelines.
-                </p>
-                <p>
-                    Applications include Advanced Driver Assistance Systems (ADAS), where maintaining visibility in
-                    foggy weather is critical for safety and object recognition.
+                    Awarded the <strong>Best Paper at IEEE IS3C 2023</strong>, this work investigates the synergy
+                    between dehazing
+                    and Super-Resolution (SR). By employing a <strong>Joint Training strategy</strong>, we reduce the
+                    computational
+                    overhead typically required for high-quality restoration, making it suitable for real-time ADAS
+                    applications.
                 </p>
 
-                <h2>Key Achievements</h2>
-                <ul>
-                    <li>**Award**: Best Conference Paper (IEEE IS3C 2023).</li>
-                    <li>**Grant**: NSTC 112-2813-C-033-009-E.</li>
-                    <li>**Keywords**: Image Dehazing, Super-Resolution, ADAS, Computational Requirement.</li>
-                </ul>
+                <h3>2. Depth-Aware Dehazing with LiDAR</h3>
+                <p>
+                    Presented at <strong>IEEE ICASI 2023</strong>, this research leverages <strong>Stereo Depth
+                        Estimation Networks</strong>
+                    and <strong>LiDAR-Assisted Cameras</strong>. The fusion of precise depth data helps the model better
+                    estimate
+                    haze density (transmission map), leading to cleaner more physically accurate dehazing results.
+                </p>
+
+                <h2>Related Publications</h2>
+
+                <div class="publication-item" style="margin-bottom: 1.5rem;">
+                    <strong>[1] Reducing Computational Requirements of Image Dehazing Using Super-Resolution
+                        Networks</strong><br>
+                    <em>IEEE IS3C 2023, Taichung (Best Paper)</em><br>
+                    <span class="project-authors" style="font-size: 0.9em; color: var(--text-secondary);">
+                        Authors: <strong>Shyang-En Weng</strong>, Yan-Gu Ye, Ying-Cheng Lin, Shaou-Gang Miaou
+                    </span><br>
+                    <a href="https://ieeexplore.ieee.org/document/10219494" target="_blank">DOI:
+                        10.1109/IS3C55602.2023.10219494</a>
+                </div>
+
+                <div class="publication-item">
+                    <strong>[2] Using Stereo Depth Estimation Network and LiDAR-Assisted Camera for
+                        Dehazing</strong><br>
+                    <em>ICASI 2023, Chiba, Japan</em><br>
+                    <span class="project-authors" style="font-size: 0.9em; color: var(--text-secondary);">
+                        Authors: Shih-Li Lu, Shaou-Gang Miaou, <strong>Shyang-En Weng</strong>, Ying-Cheng Lin
+                    </span><br>
+                    <a href="https://ieeexplore.ieee.org/document/10179550" target="_blank">DOI:
+                        10.1109/ICASI57738.2023.10179550</a>
+                </div>
             </div>
 
             <aside class="project-sidebar">
+                <div class="sidebar-card">
+                    <h4>Authors</h4>
+                    <p style="font-size: 0.9em; margin-bottom: 0.8rem;">
+                        <strong>[1]</strong><br>
+                        <strong>Shyang-En Weng</strong><br>
+                        Yan-Gu Ye<br>
+                        Ying-Cheng Lin<br>
+                        Shaou-Gang Miaou
+                    </p>
+                    <p style="font-size: 0.9em;">
+                        <strong>[2]</strong><br>
+                        Shih-Li Lu<br>
+                        Shaou-Gang Miaou<br>
+                        <strong>Shyang-En Weng</strong><br>
+                        Ying-Cheng Lin
+                    </p>
+                </div>
                 <div class="sidebar-card">
                     <h4>Project Type</h4>
                     <p>Undergraduate Research Excellence</p>
                 </div>
                 <div class="sidebar-card">
-                    <h4>Core Concepts</h4>
+                    <h4>Keywords</h4>
                     <ul>
                         <li>Joint Model Training</li>
                         <li>Feature Preservation</li>

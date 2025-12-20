@@ -58,69 +58,143 @@
                 <img src="../images/Lightweight Image Enhancement/exposure.png" alt="Exposure Correction Results"
                     class="project-image-large">
 
-                <h2>Project Overview (2023/3-2024/2)</h2>
+                <h2>Project Overview</h2>
                 <p>
-                    This research investigates **Lightweight Deep Learning** methods for image enhancement, specifically
-                    tailored for **Edge AI and Mobile Devices**. The primary goal is to maintain high-quality results
-                    while significantly reducing computational requirements and memory footprint.
+                    This research project focuses on developing <strong>Lightweight Low-Light Image Enhancement
+                        (LLIE)</strong>
+                    algorithms capable of real-time processing on edge devices. The core innovation lies in the
+                    <strong>CPGA-Net</strong> (Channel Prior and Gamma Estimation Network) and its advanced variant
+                    <strong>CPGA-Net+</strong>, which utilize channel priors and adaptive gamma correction to robustly
+                    enhance visibility in varying illumination conditions.
                 </p>
 
-                <h2>Technical Approach</h2>
+                <h2>Core Techniques</h2>
+                <h3>CPGA-Net: Channel Prior & Gamma Correction</h3>
+                <img src="../images/Lightweight Image Enhancement/CPGAnet.png" alt="CPGA-Net Architecture"
+                    class="project-image-large">
                 <p>
-                    The project utilizes **Knowledge Distillation** to transfer capabilities from large-scale teacher
-                    models to compact student networks. It also emphasizes **Explainable AI (XAI)**, providing insights
-                    into how the network makes adjustment decisions based on input image features.
+                    Introduced in our <em>IJPRAI</em> publication, <strong>CPGA-Net</strong> combines dark/bright
+                    channel priors
+                    with deep learning-based gamma correction. Inspired by the Retinex theory and Atmospheric Scattering
+                    Model,
+                    this architecture features:
                 </p>
+                <ul>
+                    <li><strong>Ultra-Lightweight Design</strong>: 0.025 million parameters with an inference time of
+                        0.030s.</li>
+                    <li><strong>Feature Distillation</strong>: Exploring knowledge transfer from complex teachers to
+                        compact student models.</li>
+                    <li><strong>Explainable Factors</strong>: Utilizing explicit gamma parameters for interpretable
+                        enhancement.</li>
+                </ul>
+                <div style="height: 2rem;"></div>
+
+                <h3>CPGA-Net+: Reshaping Theoretical Illumination</h3>
+                <img src="../images/Lightweight Image Enhancement/CPGAnet+.png" alt="CPGA-Net Architecture"
+                    class="project-image-large">
                 <p>
-                    The proposed method achieves real-time performance on various mobile processors, making it highly
-                    practical for smartphone photography and real-time surveillance.
+                    Detailed in our <em>ArXiv</em> preprint, <strong>CPGA-Net+</strong> extends the framework with
+                    <strong>theoretically-based attentions</strong> for local and global illumination processing.
+                    This version achieves a significant balance between performance and computational cost, effectively
+                    addressing the "theoretical illumination" constraints of previous models.
                 </p>
+
+                <h3>Atmospheric Scattering for Driving Scenes</h3>
+                <p>
+                    Our work presented at <em>IEEE ICCE-TW 2024</em> specifically targets <strong>Exposure
+                        Correction</strong>
+                    in dynamic driving scenes. By grounding the enhancement in the atmospheric scattering model, the
+                    method
+                    improves object detection accuracy in challenging lighting, from tunnel exits to night driving.
+                </p>
+
                 <div style="margin-top: 1.5rem; margin-bottom: 3rem;">
                     <a href="https://github.com/Shyandram/CPGA-Net-Pytorch.git" class="btn btn-outline"
                         target="_blank">GitHub Repository</a>
                 </div>
 
-                <h2>Side Project: Image Enhancement for EdgeAI</h2>
-                <p>Deployed the lightweight model on various edge devices:</p>
+                <h2>Side Project: Edge AI Deployment</h2>
+                <p>The lightweight nature of these models allows for deployment on resource-constrained hardware:</p>
                 <ul>
                     <li><a href="https://github.com/Shyandram/CPGA-Net-IOS" target="_blank"
-                            style="color: var(--accent-color);">iOS Implementation</a></li>
+                            style="color: var(--accent-color);">iOS Implementation</a> (CoreML)</li>
                     <li><a href="https://github.com/Shyandram/EdgeAI_LLIE-Jetson-Nano.git" target="_blank"
-                            style="color: var(--accent-color);">Jetson Nano</a></li>
+                            style="color: var(--accent-color);">Jetson Nano</a> (TensorRT)</li>
                     <li><a href="https://github.com/Shyandram/EdgeAI_LLIE_NCS2.git" target="_blank"
-                            style="color: var(--accent-color);">Neural Compute Stick 2 (NCS2)</a></li>
+                            style="color: var(--accent-color);">Neural Compute Stick 2</a> (OpenVINO)</li>
                 </ul>
 
                 <h2>Related Publications</h2>
-                <ul>
-                    <li>
-                        <strong>Exposure Correction in Driving Scenes Using the Atmospheric Scattering
-                            Model</strong><br>
-                        <em>IEEE ICCE-TW 2024, Taichung (Best Paper)</em><br>
-                        <a href="https://ieeexplore.ieee.org/document/10674535/" target="_blank">DOI:
-                            10.1109/ICCE-TW55602.2024.10674535</a>
-                    </li>
-                    <li style="margin-top: 1rem;">
-                        <strong>A lightweight low-light image enhancement network via channel prior and gamma
-                            correction</strong><br>
-                        <em>International Journal of Pattern Recognition and Artificial Intelligence, 2025</em><br>
-                        <a href="https://www.worldscientific.com/doi/full/10.1142/S0218001425540138"
-                            target="_blank">DOI: 10.1142/S0218001425540138</a>
-                    </li>
-                </ul>
+                <div class="publication-item" style="margin-bottom: 1.5rem;">
+                    <strong>[1] Rethinking Theoretical Illumination for Efficient Low-Light Image
+                        Enhancement</strong><br>
+                    <em>arXiv preprint arXiv:2409.05274, 2024</em><br>
+                    <span class="project-authors" style="font-size: 0.9em; color: var(--text-secondary);">
+                        Authors: <strong>Shyang-En Weng</strong>, Cheng-Yen Hsiao, Li-Wei Lu, Yu-Shen Huang, Tzu-Han
+                        Chen, Shaou-Gang Miaou, Ricky Christanto
+                    </span><br>
+                    <a href="https://arxiv.org/abs/2409.05274" target="_blank">arXiv Link</a>
+                </div>
+
+                <div class="publication-item" style="margin-bottom: 1.5rem;">
+                    <strong>[2] A Lightweight Low-Light Image Enhancement Network via Channel Prior and Gamma
+                        Correction</strong><br>
+                    <em>International Journal of Pattern Recognition and Artificial Intelligence (IJPRAI), 2025</em><br>
+                    <span class="project-authors" style="font-size: 0.9em; color: var(--text-secondary);">
+                        Authors: <strong>Shyang-En Weng</strong>, Shaou-Gang Miaou, Ricky Christanto
+                    </span><br>
+                    <a href="https://www.worldscientific.com/doi/full/10.1142/S0218001425540138" target="_blank">DOI:
+                        10.1142/S0218001425540138</a>
+                </div>
+
+                <div class="publication-item">
+                    <strong>[3] Exposure Correction in Driving Scenes Using the Atmospheric Scattering
+                        Model</strong><br>
+                    <em>IEEE ICCE-TW 2024</em><br>
+                    <span class="project-authors" style="font-size: 0.9em; color: var(--text-secondary);">
+                        Authors: <strong>Shyang-En Weng</strong>, Shaou-Gang Miaou, Ricky Christanto, Chang-Pin Hsu
+                    </span><br>
+                    <a href="https://ieeexplore.ieee.org/document/10674535/" target="_blank">DOI:
+                        10.1109/ICCE-TW55602.2024.10674535</a>
+                </div>
             </div>
 
             <aside class="project-sidebar">
                 <div class="sidebar-card">
-                    <h4>Target Devices</h4>
-                    <p>Smartphones, IoT Edge Devices, Embedded Vision Systems</p>
+                    <h4>Authors</h4>
+                    <p style="font-size: 0.9em; margin-bottom: 0.8rem;">
+                        <strong>[1]</strong><br>
+                        <strong>Shyang-En Weng</strong><br>
+                        Cheng-Yen Hsiao<br>
+                        Li-Wei Lu<br>
+                        Yu-Shen Huang<br>
+                        Tzu-Han Chen<br>
+                        Shaou-Gang Miaou<br>
+                        Ricky Christanto
+                    </p>
+                    <p style="font-size: 0.9em; margin-bottom: 0.8rem;">
+                        <strong>[2]</strong><br>
+                        <strong>Shyang-En Weng</strong><br>
+                        Shaou-Gang Miaou<br>
+                        Ricky Christanto
+                    </p>
+                    <p style="font-size: 0.9em;">
+                        <strong>[3]</strong><br>
+                        <strong>Shyang-En Weng</strong><br>
+                        Shaou-Gang Miaou<br>
+                        Ricky Christanto<br>
+                        Chang-Pin Hsu
+                    </p>
                 </div>
                 <div class="sidebar-card">
-                    <h4>Core Techniques</h4>
+                    <h4>Keywords</h4>
                     <ul>
+                        <li>Low-Light Enhancement</li>
+                        <li>Edge AI</li>
+                        <li>Knowledge Distillation</li>
+                        <li>Explainable AI</li>
                         <li>Model Compression</li>
-                        <li>Feature Distillation</li>
-                        <li>Parameter Efficiency</li>
+                        <li>Embedded Vision Systems</li>
                     </ul>
                 </div>
             </aside>
