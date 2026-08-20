@@ -150,9 +150,6 @@ nav .container { align-items: center; display: flex; justify-content: space-betw
 .pub-meta { color: var(--faint); display: block; font-size: .78rem; }
 .pub-doi { color: var(--accent); display: inline-block; font-size: .75rem; margin-top: .55rem; }
 .pub-doi:hover { color: #e0ad7d; }
-.citation-count { color: var(--faint); display: block; font-size: .7rem; letter-spacing: .03em; margin-top: .65rem; }
-.citation-count.is-ready { color: var(--accent); }
-.citation-source-note { color: var(--faint); display: block; font-size: .68rem; letter-spacing: .04em; margin-top: .45rem; }
 .project-tag { display: inline-block; margin-left: .5rem; }
 
 .contact-grid { border-top: 1px solid var(--line); display: grid; grid-template-columns: repeat(5, 1fr); }

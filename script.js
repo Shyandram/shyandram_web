@@ -20,58 +20,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const fadeElements = document.querySelectorAll('.fade-in');
     fadeElements.forEach(el => observer.observe(el));
 
-    // OpenAlex provides a public, CORS-friendly citation index for static sites.
-    // Google Scholar itself does not expose a stable public API for browser sync.
-    const citationItems = [...document.querySelectorAll('.pub-item')];
-    const citationCache = new Map();
-    const citationEndpoint = (item) => {
-        const title = item.querySelector('.pub-title')?.textContent.trim();
-        const link = item.querySelector('.pub-doi[href]');
-        if (!title) return null;
-        if (link) {
-            try {
-                const url = new URL(link.href);
-                if (url.hostname.includes('doi.org')) {
-                    return `https://api.openalex.org/works/https://doi.org/${encodeURIComponent(url.pathname.slice(1))}`;
-                }
-                if (url.hostname.includes('arxiv.org')) {
-                    return `https://api.openalex.org/works/https://arxiv.org/abs/${url.pathname.split('/').pop()}`;
-                }
-            } catch (error) {
-                return null;
-            }
-        }
-        return `https://api.openalex.org/works?search=${encodeURIComponent(title)}&per-page=1`;
-    };
-
-    const syncCitationCount = async (item) => {
-        const endpoint = citationEndpoint(item);
-        if (!endpoint) return;
-        const citation = document.createElement('span');
-        citation.className = 'citation-count';
-        citation.textContent = 'Citations syncing…';
-        citation.setAttribute('aria-live', 'polite');
-        item.append(citation);
-
-        try {
-            let work = citationCache.get(endpoint);
-            if (!work) {
-                const response = await fetch(endpoint, { headers: { Accept: 'application/json' } });
-                if (!response.ok) throw new Error('Citation request failed');
-                const payload = await response.json();
-                work = payload.results?.[0] || payload;
-                citationCache.set(endpoint, work);
-            }
-            const count = Number(work.cited_by_count);
-            citation.textContent = Number.isFinite(count) ? `Cited by ${count}` : 'Citation data unavailable';
-            citation.classList.add('is-ready');
-        } catch (error) {
-            citation.textContent = 'Citation data unavailable';
-        }
-    };
-
-    citationItems.forEach(syncCitationCount);
-
     // Keep the section navigation honest as the reader moves through the page.
     const pageSections = [...document.querySelectorAll('main section, body > section[id]')];
     const sectionLinks = [...document.querySelectorAll('.nav-links a[href^="#"]')];
