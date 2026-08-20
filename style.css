@@ -350,28 +350,28 @@ footer { background: var(--surface); border-top-color: var(--line); margin-top: 
 
 /* Hero reset: return to the original image-led introduction while giving the content below a new base. */
 :root {
-    --bg: #101918;
-    --surface: #182321;
-    --surface-raised: #20302d;
-    --line: rgba(225, 237, 229, .13);
-    --line-strong: rgba(225, 237, 229, .25);
-    --text: #f5f1e9;
-    --muted: #a6b1aa;
-    --faint: #75817b;
-    --text-secondary: #a6b1aa;
-    --surface-color: #182321;
-    --glass-border: rgba(225, 237, 229, .13);
+    --bg: #1c1917;
+    --surface: #292524;
+    --surface-raised: #332e2b;
+    --line: rgba(255, 255, 255, .1);
+    --line-strong: rgba(255, 255, 255, .2);
+    --text: #fafaf9;
+    --muted: #a8a29e;
+    --faint: #78716c;
+    --text-secondary: #a8a29e;
+    --surface-color: #292524;
+    --glass-border: rgba(255, 255, 255, .1);
     --accent: #fb923c;
     --accent-secondary: #f97316;
     --accent-soft: rgba(251, 146, 60, .11);
-    --shadow: rgba(3, 10, 9, .42);
+    --shadow: rgba(0, 0, 0, .42);
 }
 
 body { background: var(--bg); }
-nav { background: rgba(16, 25, 24, .9); }
+nav { background: rgba(28, 25, 23, .9); }
 .hero {
     align-items: center;
-    background-image: linear-gradient(to bottom, transparent, rgba(16, 25, 24, .94)), url('images/IMG_4067.JPEG');
+    background-image: linear-gradient(to bottom, transparent, rgba(28, 25, 23, .94)), url('images/IMG_4067.JPEG');
     background-position: center;
     background-size: cover;
     min-height: 100vh;
