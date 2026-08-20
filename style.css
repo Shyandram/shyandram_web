@@ -9,6 +9,9 @@
     --text: #f0eadf;
     --muted: #aaa396;
     --faint: #716d64;
+    --text-secondary: #aaa396;
+    --surface-color: #211f1a;
+    --glass-border: rgba(234, 226, 208, 0.14);
     --accent: #d49a63;
     --accent-soft: rgba(212, 154, 99, 0.13);
     --shadow: rgba(9, 9, 7, 0.38);
@@ -78,9 +81,13 @@ nav .container { align-items: center; display: flex; justify-content: space-betw
 .hero::after { background: linear-gradient(90deg, var(--accent), transparent); bottom: 0; content: ''; height: 1px; left: calc((100% - 1180px) / 2 + 2.25rem); opacity: .7; position: absolute; width: 180px; }
 .hero-content { align-items: center; display: grid; gap: 5rem; grid-template-columns: minmax(0, 1fr) 320px; }
 .hero-text { max-width: 710px; }
+.eyebrow { color: var(--accent); font-size: .68rem; font-weight: 700; letter-spacing: .14em; line-height: 1.4; text-transform: uppercase; }
+.hero .eyebrow { margin-bottom: 1.25rem; }
 .hero h1 { font-size: clamp(4.2rem, 9vw, 8.2rem); letter-spacing: -.065em; margin-left: -.06em; text-wrap: balance; }
 .hero p { color: var(--muted); font-size: 1.12rem; line-height: 1.8; margin: 1.8rem 0 0; max-width: 600px; }
 .hero-btns { margin-top: 2.5rem; }
+.hero-btns { display: flex; flex-wrap: wrap; gap: .7rem; }
+.hero-note { color: var(--faint); font-size: .68rem; letter-spacing: .08em; margin-top: 2.2rem; text-transform: uppercase; }
 .hero-image { justify-self: end; }
 .profile-pic { border: 1px solid var(--line-strong); border-radius: 2px; display: block; filter: saturate(.72) sepia(.12); height: 320px; object-fit: cover; width: 260px; }
 .profile-pic:hover { filter: saturate(1) sepia(0); transform: translate(-5px, -5px); }
@@ -94,6 +101,24 @@ nav .container { align-items: center; display: flex; justify-content: space-betw
 
 .section-title { align-items: baseline; display: flex; font-size: clamp(2.2rem, 4vw, 3.4rem); gap: 1.25rem; margin-bottom: 3rem; }
 .section-title::before { color: var(--accent); content: '—'; font-family: 'Manrope', sans-serif; font-size: 1rem; letter-spacing: 0; }
+.section-intro .section-title { margin-bottom: 2rem; }
+.about-section { padding-bottom: 2rem; }
+.about-grid { align-items: start; display: grid; gap: 5rem; grid-template-columns: minmax(0, 1fr) minmax(280px, .8fr); }
+.about-copy { color: var(--muted); font-size: 1.06rem; line-height: 1.85; max-width: 55ch; }
+.focus-list { border-top: 1px solid var(--line); }
+.focus-list > div { border-bottom: 1px solid var(--line); display: grid; gap: .8rem; grid-template-columns: 2rem 1fr; padding: .9rem 0; }
+.focus-list span { color: var(--accent); font-size: .68rem; font-weight: 700; padding-top: .2rem; }
+.focus-list strong { font-size: .9rem; }
+.focus-list p { color: var(--muted); font-size: .8rem; grid-column: 2; margin-top: -.55rem; }
+
+.section-heading { align-items: end; display: flex; justify-content: space-between; margin-bottom: 3rem; }
+.section-heading .section-title { margin-bottom: 0; }
+.section-actions { align-items: center; display: flex; gap: 1.3rem; }
+.text-link { color: var(--muted); font-size: .72rem; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; }
+.text-link span { color: var(--accent); font-size: 1rem; margin-left: .25rem; }
+.text-link:hover { color: var(--text); }
+.subsection-heading { margin: 5rem 0 1rem; }
+.subsection-heading h3 { font-size: 1.45rem; margin-top: .4rem; }
 
 .timeline { border-top: 1px solid var(--line); }
 .timeline-item { border-bottom: 1px solid var(--line); display: grid; gap: 2rem; grid-template-columns: 170px minmax(0, 1fr); padding: 2rem 0 2.2rem; }
@@ -203,7 +228,11 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outlin
     .nav-links { flex-wrap: wrap; row-gap: .3rem; }
     .hero { padding-top: 11rem; }
     .hero p { font-size: .98rem; }
+    .hero-note { line-height: 1.8; max-width: 28ch; }
     .section-title { margin-bottom: 2rem; }
+    .about-grid { gap: 2.5rem; grid-template-columns: 1fr; }
+    .section-heading { align-items: flex-start; flex-direction: column; gap: 1.5rem; }
+    .section-actions { flex-wrap: wrap; }
     .project-hero { min-height: 390px; padding-top: 11rem !important; }
     .project-hero h1 { font-size: 3.5rem; }
     .sub-nav { align-items: flex-start; flex-direction: column; gap: .6rem; }

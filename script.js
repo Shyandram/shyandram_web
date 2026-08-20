@@ -20,6 +20,22 @@ document.addEventListener('DOMContentLoaded', () => {
     const fadeElements = document.querySelectorAll('.fade-in');
     fadeElements.forEach(el => observer.observe(el));
 
+    // Keep the section navigation honest as the reader moves through the page.
+    const pageSections = [...document.querySelectorAll('main section, body > section[id]')];
+    const sectionLinks = [...document.querySelectorAll('.nav-links a[href^="#"]')];
+    if (pageSections.length && sectionLinks.length) {
+        const sectionObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (!entry.isIntersecting) return;
+                sectionLinks.forEach(link => {
+                    link.classList.toggle('active', link.getAttribute('href') === `#${entry.target.id}`);
+                });
+            });
+        }, { rootMargin: '-30% 0px -55% 0px', threshold: 0 });
+
+        pageSections.forEach(section => sectionObserver.observe(section));
+    }
+
     // Smooth scroll for nav links (handled by CSS, but good to have)
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {

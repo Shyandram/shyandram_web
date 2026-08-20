@@ -40,12 +40,15 @@
     <header class="hero">
         <div class="container hero-content">
             <div class="hero-text fade-in">
+                <p class="eyebrow">PhD candidate · Computer vision · Taiwan</p>
                 <h1>Shyang-En Weng</h1>
-                <p>翁祥恩 (Shyang), Computer Vision Engineer & Researcher specializing in Image Restoration, Object
-                    Detection, and Deep Learning.</p>
+                <p>翁祥恩 (Shyang) — I build practical vision systems for images that are difficult to see, understand,
+                    or use.</p>
                 <div class="hero-btns fade-in">
-                    <a href="#contact" class="btn">Get in Touch</a>
+                    <a href="#research" class="btn">Explore the work</a>
+                    <a href="#contact" class="btn btn-outline">Get in touch</a>
                 </div>
+                <div class="hero-note">Image restoration · Low-light enhancement · Object detection</div>
             </div>
             <div class="hero-image fade-in">
                 <img src="images/selfie.jpg" alt="Shyang-En Weng" class="profile-pic">
@@ -53,16 +56,25 @@
         </div>
     </header>
 
-    <section id="about" class="container" style="margin-bottom: 40px;">
-        <h2 class="section-title fade-in">About Me</h2>
-        <p class="fade-in" style="max-width: 800px; font-size: 1.1rem; color: var(--text-secondary);">
+    <section id="about" class="container about-section">
+        <div class="section-intro fade-in">
+            <p class="eyebrow">A short introduction</p>
+            <h2 class="section-title">About</h2>
+        </div>
+        <div class="about-grid">
+        <p class="about-copy fade-in">
             Currently a PhD candidate in Computer Science at NYCU,
             I hold dual Master's degrees in ECE from UWM and EL from CYCU.
             My research expertise lies in Image Processing, Pattern Recognition, and Deep Learning, with a focus on
             Image Restoration and Object Detection.
-            I am committed to developing innovative, real-world solutions and possess strong leadership skills to drive
-            technical projects from conception to deployment.
+            I care about the gap between a promising model and a system that holds up in the real world.
         </p>
+        <div class="focus-list fade-in">
+            <div><span>01</span><strong>Restore</strong><p>Recover detail, color, and visibility from degraded imagery.</p></div>
+            <div><span>02</span><strong>Recognize</strong><p>Turn visual signals into reliable, useful information.</p></div>
+            <div><span>03</span><strong>Deploy</strong><p>Keep models efficient enough for practical environments.</p></div>
+        </div>
+        </div>
     </section>
 
     <section id="education" class="container" style="margin-bottom: 6rem;">
@@ -281,11 +293,12 @@
     </section>
 
     <section id="research" class="container">
-        <div style="display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 3rem;">
-            <h2 class="section-title fade-in">Research Highlights</h2>
-            <a href="research.html" class="btn btn-outline fade-in">View Full Portfolio</a>
-            <a href="https://scholar.google.com/citations?user=DBBIjHsAAAAJ" class="btn btn-outline fade-in">Google
-                Scholar</a>
+        <div class="section-heading">
+            <h2 class="section-title fade-in">Research highlights</h2>
+            <div class="section-actions fade-in">
+                <a href="research.html" class="btn btn-outline">Full portfolio</a>
+                <a href="https://scholar.google.com/citations?user=DBBIjHsAAAAJ" class="text-link" target="_blank" rel="noopener">Google Scholar <span>↗</span></a>
+            </div>
         </div>
 
         <div id="research-projects" class="pub-grid" style="margin-top: 2rem; scroll-margin-top: 100px;">
@@ -328,7 +341,7 @@
         </div>
 
         <div id="research-publications" style="margin-top: 4rem; scroll-margin-top: 100px;">
-            <h3 class="fade-in" style="font-size: 1.5rem; margin-bottom: 2rem;">Selected Publications</h3>
+            <div class="subsection-heading fade-in"><p class="eyebrow">Selected writing</p><h3>Publications</h3></div>
             <div class="pub-grid">
                 <div class="pub-item fade-in">
                     <span class="pub-title">ZePHiR - Zero-shot Adaptation of Stable Diffusion via Plug-in Hierarchical
