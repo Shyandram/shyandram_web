@@ -189,9 +189,9 @@ PUBLICATIONS = [
     },
     {
         "id": "zephir-2025", "year": 2025, "type": "preprint", "selected": True,
-        "title": "ZePHiR - Zero-shot Adaptation of Stable Diffusion via Plug-in Hierarchical Degradation "
-                 "Representation for Real-World Super-Resolution",
-        "authors": "Yi-Cheng Liao, Shyang-En Weng, Yu-Syuan Xu, Chi-Wei Hsiao, Wei-Chen Chiu, Ching-Chun Huang",
+        "title": "Learning Ordinal Degradation Representations with Textual Priors for Diffusion-Based "
+                 "Blind Image Super-Resolution",
+        "authors": "Yi-Cheng Liao, Shyang-En Weng, Yu-Syuan Xu, Chia-Hung Yuan, Wei-Chen Chiu, Ching-Chun Huang",
         "venue": "arXiv preprint", "date": "Dec 2025",
         "links": [("arXiv:2512.10340", "https://arxiv.org/abs/2512.10340")],
     },
