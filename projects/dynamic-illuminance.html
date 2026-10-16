@@ -8,168 +8,176 @@
         window.dataLayer = window.dataLayer || [];
         function gtag() { dataLayer.push(arguments); }
         gtag('js', new Date());
-
         gtag('config', 'G-4WB2LLQP50');
     </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dynamic Illuminance Adjustment | Shyang-En Weng</title>
+    <title>Dynamic Illuminance Enhancement for Diverse Scenes | Shyang-En Weng</title>
+    <meta name="description" content="Dynamic Illuminance Enhancement for Diverse Scenes — Developing smart systems to handle extreme lighting variability in real-world environments.">
+    <link rel="canonical" href="https://shyandram.dev/projects/dynamic-illuminance.html">
+    <meta name="theme-color" content="#1c1917">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Dynamic Illuminance Enhancement for Diverse Scenes | Shyang-En Weng">
+    <meta property="og:description" content="Dynamic Illuminance Enhancement for Diverse Scenes — Developing smart systems to handle extreme lighting variability in real-world environments.">
+    <meta property="og:url" content="https://shyandram.dev/projects/dynamic-illuminance.html">
+    <meta property="og:image" content="https://shyandram.dev/images/selfie.jpg">
+    <meta name="twitter:card" content="summary">
     <link rel="icon" href="../images/icons/icon.jpg" type="image/jpeg">
-    <link rel="stylesheet" href="../style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap">
+    <script>document.documentElement.classList.add('js')</script>
+    <link rel="stylesheet" href="../style.css?v=e761200b">
 </head>
 
-<body>
-    <nav>
+<body class="">
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-nav">
         <div class="container">
-            <div class="logo">Shyandram</div>
-            <ul class="nav-links">
-                <li><a href="../index.html">Home</a></li>
+            <div class="logo"><a href="../index.html">Shyang-En Weng</a></div>
+            <button class="nav-toggle" aria-expanded="false" aria-controls="site-menu" aria-label="Menu"><span></span></button>
+            <nav aria-label="Primary">
+                <ul class="nav-links" id="site-menu">
+                <li><a href="../index.html#about">About</a></li>
                 <li><a href="../index.html#education">Education</a></li>
                 <li><a href="../index.html#experience">Experience</a></li>
-                <li><a href="../research.html?v=20260820">Research</a></li>
+                <li><a href="../research.html" aria-current="page">Research</a></li>
+                <li><a href="../research.html#publications">Publications</a></li>
                 <li><a href="../index.html#awards">Awards</a></li>
-                <li><a href="../index.html#skills">Skills</a></li>
                 <li><a href="../index.html#contact">Contact</a></li>
-            </ul>
-        </div>
-    </nav>
-
-    <header class="project-hero">
-        <div class="container">
-            <a href="../index.html#research" class="back-link" onclick="history.back(); return false;">← Back</a>
-            <h1>Dynamic Illuminance Enhancement for Diverse Scenes</h1>
-            <h2 style="font-size: 1.2rem; color: var(--text-secondary); opacity: 0.8; font-weight: 500;">
-                面對不同亮度場景的動態照明影像增強</h2>
-            <div class="project-meta">
-                <span class="metric-chip">Dynamic Illuminance Adjustment</span>
-                <span class="metric-chip">Exposure Correction</span>
-                <span class="metric-chip">NSTC-Research Project</span>
-            </div>
+                <li><a class="btn btn-outline" href="https://drive.google.com/file/d/1rs0FKCtK_leqRvLHzdSkleJ6Lxe3RcTZ/view" target="_blank" rel="noopener">CV</a></li>
+                </ul>
+            </nav>
         </div>
     </header>
-
-    <main class="container">
-        <div class="project-content">
-            <div class="project-main">
-                <img src="../images/Dynamic Illuminance Enhancement/CPGADIA.png" alt="Dynamic Illuminance Results"
-                    class="project-image-large">
-                <img src="../images/Dynamic Illuminance Enhancement/Illumination_Spectrum.png"
-                    alt="Illumination Spectrum analysis" class="project-image-large">
-
-                <h2>Project Overview</h2>
-                <p>
-                    This project addresses the challenge of <strong>Dynamic Illuminance Image Enhancement</strong> in
-                    diverse
-                    lighting environments. From under-exposed night scenes to over-exposed daytime scenarios, the goal
-                    is
-                    to achieve balanced visibility. This work is supported by the NSTC-Research Project
-                    "Lightweight Multi-Task Learning for Dynamic Illuminance Enhancement in ADAS".
-                </p>
-
-                <h2>Core Techniques</h2>
-
-                <h3 style="color: var(--accent-color);">1. Dynamic Illuminance Adjustment (CPGA-DIA)</h3>
-                <p>
-                    Published in <em>Signal, Image and Video Processing</em>, this work proposes
-                    <strong>CPGA-DIA</strong> (Channel Prior Gamma Adjustment for Dynamic Illuminance Adjustment), a
-                    multi-task framework designed for <strong>Simultaneous Exposure Correction</strong>.
-                </p>
-                <ul>
-                    <li><strong>Unified Correction</strong>: A single framework capable of handling both low-light
-                        (under-exposed) and over-exposed scenes simultaneously.</li>
-                    <li><strong>Gamma Correction Prior</strong>: Introduces explicit gamma correction to effectively
-                        handle extreme lighting variations while avoiding color artifacts.</li>
-                </ul>
-
-                <h3 style="margin-top: 2.5rem; color: var(--accent-color);">2. Scene-Guided Image Enhancement (SGIE)
-                </h3>
-                <img src="../images/Dynamic Illuminance Enhancement/SGIE-CPGA.png"
-                    alt="Scene-Guided Image Enhancement Architecture" class="project-image-large">
-                <p>
-                    Presented at <em>CVGIP 2024</em>, this research introduces a <strong>Scene-Guided</strong> strategy
-                    leveraging <strong>Transfer Learning</strong> to adapt enhancement models to complex, varied
-                    illumination environments.
-                </p>
-                <ul>
-                    <li><strong>Transfer Learning</strong>: Utilizes pre-trained knowledge to adapt to specific lighting
-                        domains, improving robustness.</li>
-                    <li><strong>Scene-Guided Strategy</strong>: Classifies scene characteristics to dynamically adjust
-                        enhancement parameters for optimal visibility.</li>
-                    <li><strong>Gamma Correction Prior</strong>: Retains the core benefit of gamma prior for consistent
-                        structural preservation.</li>
-                </ul>
-
-                <div style="margin-top: 2rem;">
-                    <a href="https://github.com/Shyandram/CPGA-DIA.git" class="btn btn-outline" target="_blank">GitHub
-                        Repository</a>
-                </div>
-
-                <h2>Related Publications</h2>
-
-                <div class="publication-item" style="margin-bottom: 1.5rem;">
-                    <strong>[1] Dynamic Illuminance Adjustment for Simultaneous Exposure Correction and Low-Light Image
-                        Enhancement</strong><br>
-                    <em>Signal, Image and Video Processing, Sep 2024</em><br>
-                    <span class="project-authors" style="font-size: 0.9em; color: var(--text-secondary);">
-                        Authors: <strong>Shyang-En Weng</strong>, Chang-Pin Hsu, Cheng-Yen Hsiao, Ricky Christanto,
-                        Shaou-Gang Miaou
-                    </span><br>
-                    <a href="https://doi.org/10.1007/s11760-024-03519-0" target="_blank">DOI:
-                        10.1007/s11760-024-03519-0</a>
-                </div>
-
-                <div class="publication-item">
-                    <strong>[2] Scene-Guided Image Enhancement through Gamma Correction Prior and Transfer Learning for
-                        Varied Illumination Environments</strong><br>
-                    <em>CVGIP 2024, Taiwan</em><br>
-                    <span class="project-authors" style="font-size: 0.9em; color: var(--text-secondary);">
-                        Authors: <strong>Shyang-En Weng</strong>, Cheng-Yen Hsiao, Chang-Pin Hsu, Shaou-Gang Miaou
-                    </span><br>
-                    <a href="https://drive.google.com/file/d/12UQGOyMK4EBdCErrsk_W5JYVBN7L8OD8/view?usp=sharing"
-                        target="_blank">Conference Article (PDF)</a>
-                </div>
+    <main id="main">
+        <header class="page-head">
+            <div class="container">
+                <nav class="breadcrumb" aria-label="Breadcrumb"><a href="../research.html">Research</a><span aria-hidden="true">/</span><span aria-current="page">Dynamic Illuminance Adjustment</span></nav>
+                <p class="eyebrow">2024 · Enhancement</p>
+                <h1>Dynamic Illuminance Enhancement for Diverse Scenes</h1>
+                <p class="subtitle" lang="zh-TW">面對不同亮度場景的動態照明影像增強</p>
+                <div class="chips"><span class="chip">Dynamic Illuminance Adjustment</span><span class="chip">Exposure Correction</span><span class="chip">NSTC-Research Project</span></div>
+                <div class="btn-row"><a href="https://github.com/Shyandram/CPGA-DIA.git" class="btn" target="_blank" rel="noopener">GitHub Repository</a></div>
             </div>
+        </header>
 
-            <aside class="project-sidebar">
-                <div class="sidebar-card">
-                    <h4>Authors</h4>
-                    <p style="font-size: 0.9em; margin-bottom: 0.8rem;">
-                        <strong>[1]</strong><br>
-                        <strong>Shyang-En Weng</strong><br>
-                        Chang-Pin Hsu<br>
-                        Cheng-Yen Hsiao<br>
-                        Ricky Christanto<br>
-                        Shaou-Gang Miaou
-                    </p>
-                    <p style="font-size: 0.9em;">
-                        <strong>[2]</strong><br>
-                        <strong>Shyang-En Weng</strong><br>
-                        Cheng-Yen Hsiao<br>
-                        Chang-Pin Hsu<br>
-                        Shaou-Gang Miaou
-                    </p>
+        <div class="container project-layout">
+            <article class="prose">
+                <section id="overview">
+                    <h2>Project overview</h2>
+                <figure class="figure">
+                    <button type="button" class="figure-frame" data-zoom aria-label="Enlarge figure: Illumination Spectrum analysis">
+                        <img src="../images/Dynamic%20Illuminance%20Enhancement/Illumination_Spectrum.webp" alt="Illumination Spectrum analysis" width="731" height="512" loading="lazy" decoding="async">
+                    </button>
+                    <figcaption>Illumination Spectrum analysis</figcaption>
+                </figure>
+<p>This project addresses the challenge of <strong>Dynamic Illuminance Image Enhancement</strong> in diverse
+lighting environments. From under-exposed night scenes to over-exposed daytime scenarios, the goal is to achieve
+balanced visibility. This work is supported by the NSTC-Research Project "Lightweight Multi-Task Learning for
+Dynamic Illuminance Enhancement in ADAS".</p>
+                </section>
+                <section id="cpga-dia">
+                    <h2>Dynamic Illuminance Adjustment (CPGA-DIA)</h2>
+                <figure class="figure">
+                    <button type="button" class="figure-frame" data-zoom aria-label="Enlarge figure: Dynamic Illuminance Results">
+                        <img src="../images/Dynamic%20Illuminance%20Enhancement/CPGADIA.webp" alt="Dynamic Illuminance Results" width="1400" height="1060" loading="lazy" decoding="async">
+                    </button>
+                    <figcaption>Dynamic Illuminance Results</figcaption>
+                </figure>
+<p>Published in <em>Signal, Image and Video Processing</em>, this work proposes <strong>CPGA-DIA</strong>
+(Channel Prior Gamma Adjustment for Dynamic Illuminance Adjustment), a multi-task framework designed for
+<strong>Simultaneous Exposure Correction</strong>.</p>
+<ul>
+<li><strong>Unified Correction</strong>: A single framework capable of handling both low-light (under-exposed)
+and over-exposed scenes simultaneously.</li>
+<li><strong>Gamma Correction Prior</strong>: Introduces explicit gamma correction to effectively handle extreme
+lighting variations while avoiding color artifacts.</li>
+</ul>
+                </section>
+                <section id="sgie">
+                    <h2>Scene-Guided Image Enhancement (SGIE)</h2>
+                <figure class="figure">
+                    <button type="button" class="figure-frame" data-zoom aria-label="Enlarge figure: Scene-Guided Image Enhancement Architecture">
+                        <img src="../images/Dynamic%20Illuminance%20Enhancement/SGIE-CPGA.webp" alt="Scene-Guided Image Enhancement Architecture" width="1155" height="538" loading="lazy" decoding="async">
+                    </button>
+                    <figcaption>Scene-Guided Image Enhancement Architecture</figcaption>
+                </figure>
+<p>Presented at <em>CVGIP 2024</em>, this research introduces a <strong>Scene-Guided</strong> strategy leveraging
+<strong>Transfer Learning</strong> to adapt enhancement models to complex, varied illumination environments.</p>
+<ul>
+<li><strong>Transfer Learning</strong>: Utilizes pre-trained knowledge to adapt to specific lighting domains,
+improving robustness.</li>
+<li><strong>Scene-Guided Strategy</strong>: Classifies scene characteristics to dynamically adjust enhancement
+parameters for optimal visibility.</li>
+<li><strong>Gamma Correction Prior</strong>: Retains the core benefit of gamma prior for consistent structural
+preservation.</li>
+</ul>
+                </section>
+                <section id="publications">
+                    <h2>Related publications</h2>
+            <article class="pub">
+                <div class="pub-tags"><span class="chip is-neutral">Journal</span></div>
+                <h3 class="pub-title">Dynamic Illuminance Adjustment for Simultaneous Exposure Correction and Low-Light Image Enhancement</h3>
+                <p class="pub-authors"><strong>Shyang-En Weng</strong>, Chang-Pin Hsu, Cheng-Yen Hsiao, Ricky Christanto, Shaou-Gang Miaou</p>
+                <p class="pub-venue">Signal, Image and Video Processing · Sep 2024</p>
+                <div class="pub-foot"><a class="pub-link" href="https://doi.org/10.1007/s11760-024-03519-0" target="_blank" rel="noopener">DOI: 10.1007/s11760-024-03519-0</a></div>
+            </article>
+            <article class="pub">
+                <div class="pub-tags"><span class="chip is-neutral">Conference</span></div>
+                <h3 class="pub-title">Scene-Guided Image Enhancement through Gamma Correction Prior and Transfer Learning for Varied Illumination Environments</h3>
+                <p class="pub-authors"><strong>Shyang-En Weng</strong>, Cheng-Yen Hsiao, Chang-Pin Hsu, Shaou-Gang Miaou</p>
+                <p class="pub-venue">CVGIP 2024, Hualien, Taiwan · 2024</p>
+                <div class="pub-foot"><a class="pub-link" href="https://drive.google.com/file/d/12UQGOyMK4EBdCErrsk_W5JYVBN7L8OD8/view?usp=sharing" target="_blank" rel="noopener">PDF</a></div>
+            </article>
+                </section>
+                <nav class="pager" aria-label="More projects"><a class="next" href="lightweight-enhancement.html"><small>Next →</small><span>Lightweight Deep Learning for Image Enhancement</span></a></nav>
+            </article>
+
+            <aside class="project-aside">
+                <div class="aside-block">
+                    <h2>At a glance</h2>
+                    <dl class="facts"><dt>Context</dt><dd>NSTC Research Project & University Student Grant</dd><dt>Period</dt><dd>2024</dd></dl>
                 </div>
-                <div class="sidebar-card">
-                    <h4>Keywords</h4>
-                    <p>Dynamic Illuminance Adjustment, Low-Light Image Enhancement, Exposure Correction, Multi-Task
-                        Learning, Gamma Correction.</p>
+                <div class="aside-block toc-block">
+                    <h2>On this page</h2>
+                    <nav class="toc" aria-label="On this page" data-spy>
+                        <a href="#overview">Project overview</a>
+                        <a href="#cpga-dia">Dynamic Illuminance Adjustment (CPGA-DIA)</a>
+                        <a href="#sgie">Scene-Guided Image Enhancement (SGIE)</a>
+                        <a href="#publications">Related publications</a>
+                    </nav>
                 </div>
-                <div class="sidebar-card">
-                    <h4>Grant</h4>
-                    <p>NSTC Research Project & University Student Grant</p>
+                <div class="aside-block">
+                    <h2>Keywords</h2>
+                    <div class="chips"><span class="chip is-neutral">Dynamic Illuminance Adjustment</span><span class="chip is-neutral">Low-Light Image Enhancement</span><span class="chip is-neutral">Exposure Correction</span><span class="chip is-neutral">Multi-Task Learning</span><span class="chip is-neutral">Gamma Correction</span></div>
                 </div>
             </aside>
         </div>
     </main>
 
-    <footer>
+    <dialog id="lightbox" class="lightbox" aria-label="Enlarged figure">
+        <div class="lightbox-inner"><img src="" alt=""></div>
+    </dialog>
+    <footer class="site-footer">
         <div class="container">
-            <p class="footer-text">&copy; 2024 Shyang-En Weng. All rights reserved. Built with Codex.
-            </p>
+            <div class="social-links">
+                <a href="mailto:shyangen104@gmail.com" title="Email"><img src="../images/icons/email_white_44dp.png" alt="Email" class="social-icon" width="18" height="18" loading="lazy"></a>
+                <a href="https://github.com/Shyandram" target="_blank" rel="noopener" title="GitHub"><img src="../images/icons/github_white_44dp.png" alt="GitHub" class="social-icon" width="18" height="18" loading="lazy"></a>
+                <a href="https://www.linkedin.com/in/Shyandram/" target="_blank" rel="noopener" title="LinkedIn"><img src="../images/icons/linkedin_white_44dp.png" alt="LinkedIn" class="social-icon" width="18" height="18" loading="lazy"></a>
+                <a href="https://medium.com/@shyangen104" target="_blank" rel="noopener" title="Medium"><img src="../images/icons/medium_white_44dp.png" alt="Medium" class="social-icon" width="18" height="18" loading="lazy"></a>
+                <a href="https://scholar.google.com/citations?user=DBBIjHsAAAAJ" target="_blank" rel="noopener" title="Google Scholar"><img src="../images/icons/google_scholar_icon.png" alt="Google Scholar" class="social-icon" width="18" height="18" loading="lazy"></a>
+            </div>
+            <p class="footer-text">&copy; 2026 Shyang-En Weng. All rights reserved. Built with Codex.</p>
         </div>
     </footer>
-
-    <script src="../script.js?v=20260820"></script>
+    <button id="backToTop" class="back-to-top" aria-label="Back to top">
+        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M18 15l-6-6-6 6" />
+        </svg>
+    </button>
+    <script src="../script.js?v=4bbb0646"></script>
 </body>
 
 </html>

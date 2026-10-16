@@ -8,122 +8,137 @@
         window.dataLayer = window.dataLayer || [];
         function gtag() { dataLayer.push(arguments); }
         gtag('js', new Date());
-
         gtag('config', 'G-4WB2LLQP50');
     </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mask Detection & People Flow | Shyang-En Weng</title>
+    <title>Mask Detection &amp; People Flow Systems | Shyang-En Weng</title>
+    <meta name="description" content="Mask Detection &amp; People Flow Systems — Real-time public safety monitoring with YOLO-based detection and tracking.">
+    <link rel="canonical" href="https://shyandram.dev/projects/mask-detection.html">
+    <meta name="theme-color" content="#1c1917">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Mask Detection &amp; People Flow Systems | Shyang-En Weng">
+    <meta property="og:description" content="Mask Detection &amp; People Flow Systems — Real-time public safety monitoring with YOLO-based detection and tracking.">
+    <meta property="og:url" content="https://shyandram.dev/projects/mask-detection.html">
+    <meta property="og:image" content="https://shyandram.dev/images/selfie.jpg">
+    <meta name="twitter:card" content="summary">
     <link rel="icon" href="../images/icons/icon.jpg" type="image/jpeg">
-    <link rel="stylesheet" href="../style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap">
+    <script>document.documentElement.classList.add('js')</script>
+    <link rel="stylesheet" href="../style.css?v=e761200b">
 </head>
 
-<body>
-    <nav>
+<body class="">
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-nav">
         <div class="container">
-            <div class="logo">Shyandram</div>
-            <ul class="nav-links">
-                <li><a href="../index.html">Home</a></li>
+            <div class="logo"><a href="../index.html">Shyang-En Weng</a></div>
+            <button class="nav-toggle" aria-expanded="false" aria-controls="site-menu" aria-label="Menu"><span></span></button>
+            <nav aria-label="Primary">
+                <ul class="nav-links" id="site-menu">
+                <li><a href="../index.html#about">About</a></li>
                 <li><a href="../index.html#education">Education</a></li>
                 <li><a href="../index.html#experience">Experience</a></li>
-                <li><a href="../research.html?v=20260820">Research</a></li>
+                <li><a href="../research.html" aria-current="page">Research</a></li>
+                <li><a href="../research.html#publications">Publications</a></li>
                 <li><a href="../index.html#awards">Awards</a></li>
-                <li><a href="../index.html#skills">Skills</a></li>
                 <li><a href="../index.html#contact">Contact</a></li>
-            </ul>
-        </div>
-    </nav>
-
-    <header class="project-hero">
-        <div class="container">
-            <a href="../index.html#research" class="back-link" onclick="history.back(); return false;">← Back</a>
-            <h1>Mask Detection & People Flow Systems</h1>
-            <h2 style="font-size: 1.2rem; color: var(--text-secondary); opacity: 0.8; font-weight: 500;">
-                基於深度學習網路之口罩配戴辨識</h2>
-            <div class="project-meta">
-                <span class="metric-chip">Object Detection</span>
-                <span class="metric-chip">Tracking</span>
-                <span class="metric-chip">Creativity Award</span>
-            </div>
+                <li><a class="btn btn-outline" href="https://drive.google.com/file/d/1rs0FKCtK_leqRvLHzdSkleJ6Lxe3RcTZ/view" target="_blank" rel="noopener">CV</a></li>
+                </ul>
+            </nav>
         </div>
     </header>
-
-    <main class="container">
-        <div class="project-content">
-            <div class="project-main">
-                <img src="../images/Mask Detection & People Flow Systems/mask_wearing_cls.png" alt="Detection Results"
-                    class="project-image-large">
-
-                <h2>Project Overview</h2>
-                <p>
-                    This project focused on the development of an <strong>Integrated Mask Wearing Classification and
-                        People
-                        Counting System</strong> for public health monitoring. Recognized with the
-                    <em>CYCU College Student Research Creativity Award</em>, the system addresses the need for automated
-                    compliance checks in public spaces.
-                </p>
-
-                <h2>Core Techniques</h2>
-                <p>
-                    The proposed solution utilizes <strong>YOLOv5s</strong> for high-speed object detection and mask
-                    classification
-                    (Correct, Incorrect, None), integrated with <strong>Deep SORT</strong> for robust multi-object
-                    tracking.
-                    This combination allows for accurate <strong>Crowd Counting</strong> and individual tracking even in
-                    dense environments.
-                </p>
-
-                <h2>Related Publications</h2>
-
-                <div class="publication-item">
-                    <strong>[1] An Integrated Approach to Mask Wearing Classification and Crowd Counting in Public
-                        Spaces Using YOLOv5s and Deep SORT</strong><br>
-                    <em>Journal of Internet Technology, Vol.26, No.4, pp. 423-434, Jul 2025</em><br>
-                    <span class="project-authors" style="font-size: 0.9em; color: var(--text-secondary);">
-                        Authors: <strong>Shyang-En Weng</strong>, Ying-Cheng Lin, Ming-Yao Liang, Shaou-Gang Miaou
-                    </span><br>
-                    <a href="https://jit.ndhu.edu.tw/article/view/3181" target="_blank">JIT Article Link</a>
-                </div>
+    <main id="main">
+        <header class="page-head">
+            <div class="container">
+                <nav class="breadcrumb" aria-label="Breadcrumb"><a href="../research.html">Research</a><span aria-hidden="true">/</span><span aria-current="page">Mask detection</span></nav>
+                <p class="eyebrow">2022-2025 · Detection <span class="badge" style="margin-left:.6rem">Creativity Award</span></p>
+                <h1>Mask Detection &amp; People Flow Systems</h1>
+                <p class="subtitle" lang="zh-TW">基於深度學習網路之口罩配戴辨識</p>
+                <div class="chips"><span class="chip">Object Detection</span><span class="chip">Tracking</span><span class="chip">Creativity Award</span></div>
+                <div class="btn-row"><a href="https://drive.google.com/file/d/1aH6K4oJzWHm3O7tRLdsa136o_wgOWKWs/view?usp=sharing" class="btn" target="_blank" rel="noopener">Journal Article (PDF)</a></div>
             </div>
+        </header>
 
-            <aside class="project-sidebar">
-                <div class="sidebar-card">
-                    <h4>Authors</h4>
-                    <p style="font-size: 0.9em;">
-                        <strong>[1]</strong><br>
-                        <strong>Shyang-En Weng</strong><br>
-                        Ying-Cheng Lin<br>
-                        Ming-Yao Liang<br>
-                        Shaou-Gang Miaou
-                    </p>
+        <div class="container project-layout">
+            <article class="prose">
+                <section id="overview">
+                    <h2>Project overview</h2>
+                <figure class="figure">
+                    <button type="button" class="figure-frame" data-zoom aria-label="Enlarge figure: Detection Results">
+                        <img src="../images/Mask%20Detection%20%26%20People%20Flow%20Systems/mask_wearing_cls.webp" alt="Detection Results" width="1400" height="419" loading="lazy" decoding="async">
+                    </button>
+                    <figcaption>Detection Results</figcaption>
+                </figure>
+<p>This project focused on the development of an <strong>Integrated Mask Wearing Classification and People
+Counting System</strong> for public health monitoring. Recognized with the <em>CYCU College Student Research
+Creativity Award</em>, the system addresses the need for automated compliance checks in public spaces.</p>
+                </section>
+                <section id="techniques">
+                    <h2>Core techniques</h2>
+<p>The proposed solution utilizes <strong>YOLOv5s</strong> for high-speed object detection and mask
+classification (Correct, Incorrect, None), integrated with <strong>Deep SORT</strong> for robust multi-object
+tracking. This combination allows for accurate <strong>Crowd Counting</strong> and individual tracking even in
+dense environments.</p>
+                </section>
+                <section id="publications">
+                    <h2>Related publications</h2>
+            <article class="pub">
+                <div class="pub-tags"><span class="chip is-neutral">Journal</span></div>
+                <h3 class="pub-title">An Integrated Approach to Mask Wearing Classification and Crowd Counting in Public Spaces Using YOLOv5s and Deep SORT</h3>
+                <p class="pub-authors"><strong>Shyang-En Weng</strong>, Ying-Cheng Lin, Ming-Yao Liang, Shaou-Gang Miaou</p>
+                <p class="pub-venue">Journal of Internet Technology, vol. 26, no. 4, pp. 423-434 · Jul 2025</p>
+                <div class="pub-foot"><a class="pub-link" href="https://jit.ndhu.edu.tw/article/view/3181" target="_blank" rel="noopener">JIT article</a><a class="pub-link" href="https://drive.google.com/file/d/1aH6K4oJzWHm3O7tRLdsa136o_wgOWKWs/view?usp=sharing" target="_blank" rel="noopener">PDF</a></div>
+            </article>
+                </section>
+                <nav class="pager" aria-label="More projects"><a class="prev" href="drone-survey.html"><small>← Previous</small><span>Drone-based Aerial Image Super-Resolution</span></a></nav>
+            </article>
+
+            <aside class="project-aside">
+                <div class="aside-block">
+                    <h2>At a glance</h2>
+                    <dl class="facts"><dt>Period</dt><dd>2022-2025</dd><dt>Recognition</dt><dd>CYCU College Student Research Creativity Award</dd></dl>
                 </div>
-                <div style="margin-top: 2rem;">
-                    <a href="https://drive.google.com/file/d/1aH6K4oJzWHm3O7tRLdsa136o_wgOWKWs/view?usp=sharing"
-                        class="btn btn-outline" target="_blank">Journal Article (PDF)</a>
+                <div class="aside-block toc-block">
+                    <h2>On this page</h2>
+                    <nav class="toc" aria-label="On this page" data-spy>
+                        <a href="#overview">Project overview</a>
+                        <a href="#techniques">Core techniques</a>
+                        <a href="#publications">Related publications</a>
+                    </nav>
                 </div>
-                <div class="sidebar-card">
-                    <h4>Keywords</h4>
-                    <ul>
-                        <li>YOLO</li>
-                        <li>DeepSORT</li>
-                        <li>Deep Learning</li>
-                        <li>Public Safety Monitoring</li>
-                        <li>AI for Social Good</li>
-                        <li>Real-time Surveillance</li>
-                    </ul>
+                <div class="aside-block">
+                    <h2>Keywords</h2>
+                    <div class="chips"><span class="chip is-neutral">YOLO</span><span class="chip is-neutral">DeepSORT</span><span class="chip is-neutral">Deep Learning</span><span class="chip is-neutral">Public Safety Monitoring</span><span class="chip is-neutral">AI for Social Good</span><span class="chip is-neutral">Real-time Surveillance</span></div>
                 </div>
             </aside>
         </div>
     </main>
 
-    <footer>
+    <dialog id="lightbox" class="lightbox" aria-label="Enlarged figure">
+        <div class="lightbox-inner"><img src="" alt=""></div>
+    </dialog>
+    <footer class="site-footer">
         <div class="container">
-            <p class="footer-text">&copy; 2024 Shyang-En Weng. All rights reserved. Built with Codex.
-            </p>
+            <div class="social-links">
+                <a href="mailto:shyangen104@gmail.com" title="Email"><img src="../images/icons/email_white_44dp.png" alt="Email" class="social-icon" width="18" height="18" loading="lazy"></a>
+                <a href="https://github.com/Shyandram" target="_blank" rel="noopener" title="GitHub"><img src="../images/icons/github_white_44dp.png" alt="GitHub" class="social-icon" width="18" height="18" loading="lazy"></a>
+                <a href="https://www.linkedin.com/in/Shyandram/" target="_blank" rel="noopener" title="LinkedIn"><img src="../images/icons/linkedin_white_44dp.png" alt="LinkedIn" class="social-icon" width="18" height="18" loading="lazy"></a>
+                <a href="https://medium.com/@shyangen104" target="_blank" rel="noopener" title="Medium"><img src="../images/icons/medium_white_44dp.png" alt="Medium" class="social-icon" width="18" height="18" loading="lazy"></a>
+                <a href="https://scholar.google.com/citations?user=DBBIjHsAAAAJ" target="_blank" rel="noopener" title="Google Scholar"><img src="../images/icons/google_scholar_icon.png" alt="Google Scholar" class="social-icon" width="18" height="18" loading="lazy"></a>
+            </div>
+            <p class="footer-text">&copy; 2026 Shyang-En Weng. All rights reserved. Built with Codex.</p>
         </div>
     </footer>
-
-    <script src="../script.js?v=20260820"></script>
+    <button id="backToTop" class="back-to-top" aria-label="Back to top">
+        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M18 15l-6-6-6 6" />
+        </svg>
+    </button>
+    <script src="../script.js?v=4bbb0646"></script>
 </body>
 
 </html>

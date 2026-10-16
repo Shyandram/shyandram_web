@@ -8,100 +8,133 @@
         window.dataLayer = window.dataLayer || [];
         function gtag() { dataLayer.push(arguments); }
         gtag('js', new Date());
-
         gtag('config', 'G-4WB2LLQP50');
     </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Drone Image Super-Resolution | Shyang-En Weng</title>
+    <title>Drone-based Aerial Image Super-Resolution | Shyang-En Weng</title>
+    <meta name="description" content="Drone-based Aerial Image Super-Resolution — Improving the resolution of drone-based aerial images for better object detection.">
+    <link rel="canonical" href="https://shyandram.dev/projects/drone-survey.html">
+    <meta name="theme-color" content="#1c1917">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Drone-based Aerial Image Super-Resolution | Shyang-En Weng">
+    <meta property="og:description" content="Drone-based Aerial Image Super-Resolution — Improving the resolution of drone-based aerial images for better object detection.">
+    <meta property="og:url" content="https://shyandram.dev/projects/drone-survey.html">
+    <meta property="og:image" content="https://shyandram.dev/images/selfie.jpg">
+    <meta name="twitter:card" content="summary">
     <link rel="icon" href="../images/icons/icon.jpg" type="image/jpeg">
-    <link rel="stylesheet" href="../style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap">
+    <script>document.documentElement.classList.add('js')</script>
+    <link rel="stylesheet" href="../style.css?v=e761200b">
 </head>
 
-<body>
-    <nav>
+<body class="">
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-nav">
         <div class="container">
-            <div class="logo">Shyandram</div>
-            <ul class="nav-links">
-                <li><a href="../index.html">Home</a></li>
+            <div class="logo"><a href="../index.html">Shyang-En Weng</a></div>
+            <button class="nav-toggle" aria-expanded="false" aria-controls="site-menu" aria-label="Menu"><span></span></button>
+            <nav aria-label="Primary">
+                <ul class="nav-links" id="site-menu">
+                <li><a href="../index.html#about">About</a></li>
                 <li><a href="../index.html#education">Education</a></li>
                 <li><a href="../index.html#experience">Experience</a></li>
-                <li><a href="../research.html?v=20260820">Research</a></li>
+                <li><a href="../research.html" aria-current="page">Research</a></li>
+                <li><a href="../research.html#publications">Publications</a></li>
                 <li><a href="../index.html#awards">Awards</a></li>
-                <li><a href="../index.html#skills">Skills</a></li>
                 <li><a href="../index.html#contact">Contact</a></li>
-            </ul>
-        </div>
-    </nav>
-
-    <header class="project-hero">
-        <div class="container">
-            <a href="../index.html#research" class="back-link" onclick="history.back(); return false;">← Back</a>
-            <h1>Drone-based Aerial Image Super-Resolution</h1>
-            <h2 style="font-size: 1.2rem; color: var(--text-secondary); opacity: 0.8; font-weight: 500;">
-                以超解析度技術提升無人機載具空拍影像解析度</h2>
-            <div class="project-meta">
-                <span class="metric-chip">Super-Resolution</span>
-                <span class="metric-chip">Drone Imaging</span>
-                <span class="metric-chip">Survey</span>
-            </div>
+                <li><a class="btn btn-outline" href="https://drive.google.com/file/d/1rs0FKCtK_leqRvLHzdSkleJ6Lxe3RcTZ/view" target="_blank" rel="noopener">CV</a></li>
+                </ul>
+            </nav>
         </div>
     </header>
-
-    <main class="container">
-        <div class="project-content">
-            <div class="project-main">
-                <img src="../images/SR for Drone-based Aerial Images.png" alt="Drone SR Survey"
-                    class="project-image-large">
-
-                <h2>Project Overview (2022-2023)</h2>
-                <p>
-                    This project was a comprehensive survey and investigation into improving the resolution of
-                    drone-based aerial images using super-resolution techniques. It served as a subproject of the
-                    NSTC-Research Project titled "Deep Learning-based Multi-Task Super-Resolution Imaging Technology."
-                </p>
-
-                <h2>Key Focus Areas</h2>
-                <ul>
-                    <li><strong>UAV Constraints:</strong> Analyzing the limitations of drone hardware and transmission
-                        bandwidth.</li>
-                    <li><strong>Small Object Detection:</strong> Improving the detection accuracy of small objects in
-                        aerial views through resolution enhancement.</li>
-                    <li><strong>Real-world Application:</strong> Evaluating the feasibility of deployment on edge
-                        devices for real-time processing.</li>
-                </ul>
-
-                <h2>Research Context</h2>
-                <p>
-                    Subproject of NSTC-Research Project: 基於深度學習的多任務超解析成像技術 - 以衛星、空拍及路側影像應用為例
-                </p>
-
-                <div style="margin-top: 2rem;">
-                    <!-- No direct link provided in source, keeping placeholder or removing -->
-                </div>
+    <main id="main">
+        <header class="page-head">
+            <div class="container">
+                <nav class="breadcrumb" aria-label="Breadcrumb"><a href="../research.html">Research</a><span aria-hidden="true">/</span><span aria-current="page">Aerial image SR</span></nav>
+                <p class="eyebrow">2022-2023 · Restoration & SR</p>
+                <h1>Drone-based Aerial Image Super-Resolution</h1>
+                <p class="subtitle" lang="zh-TW">以超解析度技術提升無人機載具空拍影像解析度</p>
+                <div class="chips"><span class="chip">Super-Resolution</span><span class="chip">Drone Imaging</span><span class="chip">Survey</span></div>
             </div>
+        </header>
 
-            <aside class="project-sidebar">
-                <div class="sidebar-card">
-                    <h4>Keywords</h4>
-                    <p>Drone-based Aerial Images, Super-Resolution, Object Detection, UAV</p>
+        <div class="container project-layout">
+            <article class="prose">
+                <section id="overview">
+                    <h2>Project overview</h2>
+                <figure class="figure">
+                    <button type="button" class="figure-frame" data-zoom aria-label="Enlarge figure: Drone SR Survey">
+                        <img src="../images/SR%20for%20Drone-based%20Aerial%20Images.webp" alt="Drone SR Survey" width="984" height="553" loading="lazy" decoding="async">
+                    </button>
+                    <figcaption>Drone SR Survey</figcaption>
+                </figure>
+<p>This project was a comprehensive survey and investigation into improving the resolution of drone-based aerial
+images using super-resolution techniques. It served as a subproject of the NSTC-Research Project titled
+"Deep Learning-based Multi-Task Super-Resolution Imaging Technology."</p>
+                </section>
+                <section id="focus">
+                    <h2>Key focus areas</h2>
+<ul>
+<li><strong>UAV Constraints:</strong> Analyzing the limitations of drone hardware and transmission bandwidth.</li>
+<li><strong>Small Object Detection:</strong> Improving the detection accuracy of small objects in aerial views
+through resolution enhancement.</li>
+<li><strong>Real-world Application:</strong> Evaluating the feasibility of deployment on edge devices for
+real-time processing.</li>
+</ul>
+                </section>
+                <section id="context">
+                    <h2>Research context</h2>
+<p>Subproject of NSTC-Research Project: <span lang="zh-TW">基於深度學習的多任務超解析成像技術 - 以衛星、空拍及路側影像應用為例</span></p>
+                </section>
+                <nav class="pager" aria-label="More projects"><a class="prev" href="hairstyle-recommendation.html"><small>← Previous</small><span>Hairstyle Recommendation System</span></a><a class="next" href="mask-detection.html"><small>Next →</small><span>Mask Detection &amp; People Flow Systems</span></a></nav>
+            </article>
+
+            <aside class="project-aside">
+                <div class="aside-block">
+                    <h2>At a glance</h2>
+                    <dl class="facts"><dt>Role</dt><dd>Undergraduate Project Leader</dd><dt>Period</dt><dd>2022-2023</dd></dl>
                 </div>
-                <div class="sidebar-card">
-                    <h4>Role</h4>
-                    <p>Undergraduate Project Leader</p>
+                <div class="aside-block toc-block">
+                    <h2>On this page</h2>
+                    <nav class="toc" aria-label="On this page" data-spy>
+                        <a href="#overview">Project overview</a>
+                        <a href="#focus">Key focus areas</a>
+                        <a href="#context">Research context</a>
+                    </nav>
+                </div>
+                <div class="aside-block">
+                    <h2>Keywords</h2>
+                    <div class="chips"><span class="chip is-neutral">Drone-based Aerial Images</span><span class="chip is-neutral">Super-Resolution</span><span class="chip is-neutral">Object Detection</span><span class="chip is-neutral">UAV</span></div>
                 </div>
             </aside>
         </div>
     </main>
 
-    <footer>
+    <dialog id="lightbox" class="lightbox" aria-label="Enlarged figure">
+        <div class="lightbox-inner"><img src="" alt=""></div>
+    </dialog>
+    <footer class="site-footer">
         <div class="container">
-            <p class="footer-text">&copy; 2024 Shyang-En Weng. All rights reserved. Built with Codex.
-            </p>
+            <div class="social-links">
+                <a href="mailto:shyangen104@gmail.com" title="Email"><img src="../images/icons/email_white_44dp.png" alt="Email" class="social-icon" width="18" height="18" loading="lazy"></a>
+                <a href="https://github.com/Shyandram" target="_blank" rel="noopener" title="GitHub"><img src="../images/icons/github_white_44dp.png" alt="GitHub" class="social-icon" width="18" height="18" loading="lazy"></a>
+                <a href="https://www.linkedin.com/in/Shyandram/" target="_blank" rel="noopener" title="LinkedIn"><img src="../images/icons/linkedin_white_44dp.png" alt="LinkedIn" class="social-icon" width="18" height="18" loading="lazy"></a>
+                <a href="https://medium.com/@shyangen104" target="_blank" rel="noopener" title="Medium"><img src="../images/icons/medium_white_44dp.png" alt="Medium" class="social-icon" width="18" height="18" loading="lazy"></a>
+                <a href="https://scholar.google.com/citations?user=DBBIjHsAAAAJ" target="_blank" rel="noopener" title="Google Scholar"><img src="../images/icons/google_scholar_icon.png" alt="Google Scholar" class="social-icon" width="18" height="18" loading="lazy"></a>
+            </div>
+            <p class="footer-text">&copy; 2026 Shyang-En Weng. All rights reserved. Built with Codex.</p>
         </div>
     </footer>
-
-    <script src="../script.js?v=20260820"></script>
+    <button id="backToTop" class="back-to-top" aria-label="Back to top">
+        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M18 15l-6-6-6 6" />
+        </svg>
+    </button>
+    <script src="../script.js?v=4bbb0646"></script>
 </body>
 
 </html>

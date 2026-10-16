@@ -8,152 +8,152 @@
         window.dataLayer = window.dataLayer || [];
         function gtag() { dataLayer.push(arguments); }
         gtag('js', new Date());
-
         gtag('config', 'G-4WB2LLQP50');
     </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Image Dehazing & SR | Shyang-En Weng</title>
+    <title>Image Dehazing using SR Networks | Shyang-En Weng</title>
+    <meta name="description" content="Image Dehazing using SR Networks — Joint training of dehazing and super-resolution models to reduce computation.">
+    <link rel="canonical" href="https://shyandram.dev/projects/dehazing-sr.html">
+    <meta name="theme-color" content="#1c1917">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Image Dehazing using SR Networks | Shyang-En Weng">
+    <meta property="og:description" content="Image Dehazing using SR Networks — Joint training of dehazing and super-resolution models to reduce computation.">
+    <meta property="og:url" content="https://shyandram.dev/projects/dehazing-sr.html">
+    <meta property="og:image" content="https://shyandram.dev/images/selfie.jpg">
+    <meta name="twitter:card" content="summary">
     <link rel="icon" href="../images/icons/icon.jpg" type="image/jpeg">
-    <link rel="stylesheet" href="../style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap">
+    <script>document.documentElement.classList.add('js')</script>
+    <link rel="stylesheet" href="../style.css?v=e761200b">
 </head>
 
-<body>
-    <nav>
+<body class="">
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-nav">
         <div class="container">
-            <div class="logo">Shyandram</div>
-            <ul class="nav-links">
-                <li><a href="../index.html">Home</a></li>
+            <div class="logo"><a href="../index.html">Shyang-En Weng</a></div>
+            <button class="nav-toggle" aria-expanded="false" aria-controls="site-menu" aria-label="Menu"><span></span></button>
+            <nav aria-label="Primary">
+                <ul class="nav-links" id="site-menu">
+                <li><a href="../index.html#about">About</a></li>
                 <li><a href="../index.html#education">Education</a></li>
                 <li><a href="../index.html#experience">Experience</a></li>
-                <li><a href="../research.html?v=20260820">Research</a></li>
+                <li><a href="../research.html" aria-current="page">Research</a></li>
+                <li><a href="../research.html#publications">Publications</a></li>
                 <li><a href="../index.html#awards">Awards</a></li>
-                <li><a href="../index.html#skills">Skills</a></li>
                 <li><a href="../index.html#contact">Contact</a></li>
-            </ul>
-        </div>
-    </nav>
-
-    <header class="project-hero">
-        <div class="container">
-            <a href="../index.html#research" class="back-link" onclick="history.back(); return false;">← Back</a>
-            <div style="margin-top: 2rem;">
-                <a href="https://ieeexplore.ieee.org/document/10219494" class="btn btn-outline" target="_blank">IEEE
-                    IS3C Paper</a>
-            </div>
-            <h1>Image Dehazing using SR Networks</h1>
-            <h2 style="font-size: 1.2rem; color: var(--text-secondary); opacity: 0.8; font-weight: 500;">
-                除霧與超解析度的串接模型與共同訓練的效益探討以及在物件辨識上之應用</h2>
-            <div class="project-meta">
-                <span class="metric-chip">Best Paper Award</span>
-                <span class="metric-chip">Image Dehazing</span>
-                <span class="metric-chip">Super-Resolution</span>
-            </div>
+                <li><a class="btn btn-outline" href="https://drive.google.com/file/d/1rs0FKCtK_leqRvLHzdSkleJ6Lxe3RcTZ/view" target="_blank" rel="noopener">CV</a></li>
+                </ul>
+            </nav>
         </div>
     </header>
-
-    <main class="container">
-        <div class="project-content">
-            <div class="project-main">
-                <img src="../images/DHSR/DHSR.png" alt="Dehazing SR Results" class="project-image-large">
-
-                <h2>Project Overview</h2>
-                <p>
-                    This project explores advanced techniques for <strong>Image Dehazing</strong>, focusing on two key
-                    directions:
-                    reducing computational costs through joint super-resolution training and enhancing accuracy using
-                    depth information
-                    from stereo and LiDAR systems.
-                </p>
-
-                <h2>Core Techniques</h2>
-
-                <h3>1. Efficient Dehazing via Super-Resolution</h3>
-                <p>
-                    Awarded the <strong>Best Paper at IEEE IS3C 2023</strong>, this work investigates the synergy
-                    between dehazing
-                    and Super-Resolution (SR). By employing a <strong>Joint Training strategy</strong>, we reduce the
-                    computational
-                    overhead typically required for high-quality restoration, making it suitable for real-time ADAS
-                    applications.
-                </p>
-
-                <h3>2. Depth-Aware Dehazing with LiDAR</h3>
-                <p>
-                    Presented at <strong>IEEE ICASI 2023</strong>, this research leverages <strong>Stereo Depth
-                        Estimation Networks</strong>
-                    and <strong>LiDAR-Assisted Cameras</strong>. The fusion of precise depth data helps the model better
-                    estimate
-                    haze density (transmission map), leading to cleaner more physically accurate dehazing results.
-                </p>
-
-                <h2>Related Publications</h2>
-
-                <div class="publication-item" style="margin-bottom: 1.5rem;">
-                    <strong>[1] Reducing Computational Requirements of Image Dehazing Using Super-Resolution
-                        Networks</strong><br>
-                    <em>IEEE IS3C 2023, Taichung (Best Paper)</em><br>
-                    <span class="project-authors" style="font-size: 0.9em; color: var(--text-secondary);">
-                        Authors: <strong>Shyang-En Weng</strong>, Yan-Gu Ye, Ying-Cheng Lin, Shaou-Gang Miaou
-                    </span><br>
-                    <a href="https://ieeexplore.ieee.org/document/10219494" target="_blank">DOI:
-                        10.1109/IS3C55602.2023.10219494</a>
-                </div>
-
-                <div class="publication-item">
-                    <strong>[2] Using Stereo Depth Estimation Network and LiDAR-Assisted Camera for
-                        Dehazing</strong><br>
-                    <em>ICASI 2023, Chiba, Japan</em><br>
-                    <span class="project-authors" style="font-size: 0.9em; color: var(--text-secondary);">
-                        Authors: Shih-Li Lu, Shaou-Gang Miaou, <strong>Shyang-En Weng</strong>, Ying-Cheng Lin
-                    </span><br>
-                    <a href="https://ieeexplore.ieee.org/document/10179550" target="_blank">DOI:
-                        10.1109/ICASI57738.2023.10179550</a>
-                </div>
+    <main id="main">
+        <header class="page-head">
+            <div class="container">
+                <nav class="breadcrumb" aria-label="Breadcrumb"><a href="../research.html">Research</a><span aria-hidden="true">/</span><span aria-current="page">Dehazing + SR</span></nav>
+                <p class="eyebrow">2023 · Restoration & SR <span class="badge" style="margin-left:.6rem">Best Paper Award</span></p>
+                <h1>Image Dehazing using SR Networks</h1>
+                <p class="subtitle" lang="zh-TW">除霧與超解析度的串接模型與共同訓練的效益探討以及在物件辨識上之應用</p>
+                <div class="chips"><span class="chip">Best Paper Award</span><span class="chip">Image Dehazing</span><span class="chip">Super-Resolution</span></div>
+                <div class="btn-row"><a href="https://ieeexplore.ieee.org/document/10219494" class="btn" target="_blank" rel="noopener">IEEE IS3C Paper</a></div>
             </div>
+        </header>
 
-            <aside class="project-sidebar">
-                <div class="sidebar-card">
-                    <h4>Authors</h4>
-                    <p style="font-size: 0.9em; margin-bottom: 0.8rem;">
-                        <strong>[1]</strong><br>
-                        <strong>Shyang-En Weng</strong><br>
-                        Yan-Gu Ye<br>
-                        Ying-Cheng Lin<br>
-                        Shaou-Gang Miaou
-                    </p>
-                    <p style="font-size: 0.9em;">
-                        <strong>[2]</strong><br>
-                        Shih-Li Lu<br>
-                        Shaou-Gang Miaou<br>
-                        <strong>Shyang-En Weng</strong><br>
-                        Ying-Cheng Lin
-                    </p>
+        <div class="container project-layout">
+            <article class="prose">
+                <section id="overview">
+                    <h2>Project overview</h2>
+                <figure class="figure">
+                    <button type="button" class="figure-frame" data-zoom aria-label="Enlarge figure: Dehazing SR Results">
+                        <img src="../images/DHSR/DHSR.webp" alt="Dehazing SR Results" width="438" height="202" loading="lazy" decoding="async">
+                    </button>
+                    <figcaption>Dehazing SR Results</figcaption>
+                </figure>
+<p>This project explores advanced techniques for <strong>Image Dehazing</strong>, focusing on two key
+directions: reducing computational costs through joint super-resolution training and enhancing accuracy using
+depth information from stereo and LiDAR systems.</p>
+                </section>
+                <section id="efficient">
+                    <h2>Efficient dehazing via super-resolution</h2>
+<p>Awarded the <strong>Best Paper at IEEE IS3C 2023</strong>, this work investigates the synergy between dehazing
+and Super-Resolution (SR). By employing a <strong>Joint Training strategy</strong>, we reduce the computational
+overhead typically required for high-quality restoration, making it suitable for real-time ADAS
+applications.</p>
+                </section>
+                <section id="depth">
+                    <h2>Depth-aware dehazing with LiDAR</h2>
+<p>Presented at <strong>IEEE ICASI 2023</strong>, this research leverages <strong>Stereo Depth Estimation
+Networks</strong> and <strong>LiDAR-Assisted Cameras</strong>. The fusion of precise depth data helps the model
+better estimate haze density (transmission map), leading to cleaner more physically accurate dehazing
+results.</p>
+                </section>
+                <section id="publications">
+                    <h2>Related publications</h2>
+            <article class="pub">
+                <div class="pub-tags"><span class="chip is-neutral">Conference</span><span class="badge">Best Paper Award</span></div>
+                <h3 class="pub-title">Reducing Computational Requirements of Image Dehazing Using Super-Resolution Networks</h3>
+                <p class="pub-authors"><strong>Shyang-En Weng</strong>, Yan-Gu Ye, Ying-Cheng Lin, Shaou-Gang Miaou</p>
+                <p class="pub-venue">IEEE IS3C 2023, Taichung, Taiwan · 2023</p>
+                <div class="pub-foot"><a class="pub-link" href="https://ieeexplore.ieee.org/document/10219494" target="_blank" rel="noopener">DOI: 10.1109/IS3C55602.2023.10219494</a></div>
+            </article>
+            <article class="pub">
+                <div class="pub-tags"><span class="chip is-neutral">Conference</span></div>
+                <h3 class="pub-title">Using Stereo Depth Estimation Network and LiDAR-Assisted Camera for Dehazing</h3>
+                <p class="pub-authors">Shih-Li Lu, Shaou-Gang Miaou, <strong>Shyang-En Weng</strong>, Ying-Cheng Lin</p>
+                <p class="pub-venue">2023 9th IEEE International Conference on Applied System Innovation (ICASI2023), Chiba, Japan · 2023</p>
+                <div class="pub-foot"><a class="pub-link" href="https://ieeexplore.ieee.org/document/10179550" target="_blank" rel="noopener">DOI: 10.1109/ICASI57738.2023.10179550</a></div>
+            </article>
+                </section>
+                <nav class="pager" aria-label="More projects"><a class="prev" href="weather-generation.html"><small>← Previous</small><span>Weather Image Generation (Thesis)</span></a><a class="next" href="hairstyle-recommendation.html"><small>Next →</small><span>Hairstyle Recommendation System</span></a></nav>
+            </article>
+
+            <aside class="project-aside">
+                <div class="aside-block">
+                    <h2>At a glance</h2>
+                    <dl class="facts"><dt>Project type</dt><dd>Undergraduate Research Excellence</dd><dt>Period</dt><dd>2023</dd></dl>
                 </div>
-                <div class="sidebar-card">
-                    <h4>Project Type</h4>
-                    <p>Undergraduate Research Excellence</p>
+                <div class="aside-block toc-block">
+                    <h2>On this page</h2>
+                    <nav class="toc" aria-label="On this page" data-spy>
+                        <a href="#overview">Project overview</a>
+                        <a href="#efficient">Efficient dehazing via super-resolution</a>
+                        <a href="#depth">Depth-aware dehazing with LiDAR</a>
+                        <a href="#publications">Related publications</a>
+                    </nav>
                 </div>
-                <div class="sidebar-card">
-                    <h4>Keywords</h4>
-                    <ul>
-                        <li>Joint Model Training</li>
-                        <li>Feature Preservation</li>
-                        <li>Optimized Computation</li>
-                    </ul>
+                <div class="aside-block">
+                    <h2>Keywords</h2>
+                    <div class="chips"><span class="chip is-neutral">Joint Model Training</span><span class="chip is-neutral">Feature Preservation</span><span class="chip is-neutral">Optimized Computation</span></div>
                 </div>
             </aside>
         </div>
     </main>
 
-    <footer>
+    <dialog id="lightbox" class="lightbox" aria-label="Enlarged figure">
+        <div class="lightbox-inner"><img src="" alt=""></div>
+    </dialog>
+    <footer class="site-footer">
         <div class="container">
-            <p class="footer-text">&copy; 2024 Shyang-En Weng. All rights reserved. Built with Codex.
-            </p>
+            <div class="social-links">
+                <a href="mailto:shyangen104@gmail.com" title="Email"><img src="../images/icons/email_white_44dp.png" alt="Email" class="social-icon" width="18" height="18" loading="lazy"></a>
+                <a href="https://github.com/Shyandram" target="_blank" rel="noopener" title="GitHub"><img src="../images/icons/github_white_44dp.png" alt="GitHub" class="social-icon" width="18" height="18" loading="lazy"></a>
+                <a href="https://www.linkedin.com/in/Shyandram/" target="_blank" rel="noopener" title="LinkedIn"><img src="../images/icons/linkedin_white_44dp.png" alt="LinkedIn" class="social-icon" width="18" height="18" loading="lazy"></a>
+                <a href="https://medium.com/@shyangen104" target="_blank" rel="noopener" title="Medium"><img src="../images/icons/medium_white_44dp.png" alt="Medium" class="social-icon" width="18" height="18" loading="lazy"></a>
+                <a href="https://scholar.google.com/citations?user=DBBIjHsAAAAJ" target="_blank" rel="noopener" title="Google Scholar"><img src="../images/icons/google_scholar_icon.png" alt="Google Scholar" class="social-icon" width="18" height="18" loading="lazy"></a>
+            </div>
+            <p class="footer-text">&copy; 2026 Shyang-En Weng. All rights reserved. Built with Codex.</p>
         </div>
     </footer>
-
-    <script src="../script.js?v=20260820"></script>
+    <button id="backToTop" class="back-to-top" aria-label="Back to top">
+        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M18 15l-6-6-6 6" />
+        </svg>
+    </button>
+    <script src="../script.js?v=4bbb0646"></script>
 </body>
 
 </html>

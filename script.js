@@ -1,136 +1,107 @@
+/* Progressive enhancement only: every page is fully readable and navigable without this file. */
 document.addEventListener('DOMContentLoaded', () => {
+    const $ = (sel, root = document) => root.querySelector(sel);
+    const $$ = (sel, root = document) => [...root.querySelectorAll(sel)];
 
-    // Intersection Observer for scroll animations
-    const observerOptions = {
-        threshold: 0.1,
-        rootMargin: '0px 0px -50px 0px'
-    };
-
-    const observer = new IntersectionObserver((entries) => {
+    // ---- Scroll reveal ----
+    const reveal = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('visible');
-                // Once it's visible, we don't need to observe it anymore
-                observer.unobserve(entry.target);
-            }
+            if (!entry.isIntersecting) return;
+            entry.target.classList.add('visible');
+            reveal.unobserve(entry.target);
         });
-    }, observerOptions);
+    }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+    $$('.fade-in').forEach(el => reveal.observe(el));
 
-    // Track all elements with .fade-in class
-    const fadeElements = document.querySelectorAll('.fade-in');
-    fadeElements.forEach(el => observer.observe(el));
-
-    // Keep the section navigation honest as the reader moves through the page.
-    const pageSections = [...document.querySelectorAll('main section, body > section[id]')];
-    const sectionLinks = [...document.querySelectorAll('.nav-links a[href^="#"]')];
-    if (pageSections.length && sectionLinks.length) {
-        const sectionObserver = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (!entry.isIntersecting) return;
-                sectionLinks.forEach(link => {
-                    link.classList.toggle('active', link.getAttribute('href') === `#${entry.target.id}`);
-                });
+    // ---- Scroll spy: marks the link whose in-page target is currently in view ----
+    // Used by the main nav (home), the research tabs and the project table of contents.
+    const spy = (links) => {
+        const pairs = links
+            .map(link => [link, document.getElementById((link.getAttribute('href').split('#')[1] || ''))])
+            .filter(([, target]) => target);
+        if (!pairs.length) return;
+        const visible = new Set();
+        const io = new IntersectionObserver((entries) => {
+            entries.forEach(e => (e.isIntersecting ? visible.add(e.target) : visible.delete(e.target)));
+            // the first target (document order) that is in the reading band wins
+            const current = pairs.find(([, target]) => visible.has(target));
+            pairs.forEach(([link, target]) => {
+                if (current && current[1] === target) link.setAttribute('aria-current', 'true');
+                else link.removeAttribute('aria-current');
             });
-        }, { rootMargin: '-30% 0px -55% 0px', threshold: 0 });
+        }, { rootMargin: '-25% 0px -60% 0px', threshold: 0 });
+        pairs.forEach(([, target]) => io.observe(target));
+    };
+    spy($$('.nav-links a[href^="#"]'));
+    spy($$('[data-spy] a[href^="#"]'));
 
-        pageSections.forEach(section => sectionObserver.observe(section));
+    // ---- Header: scrolled state, mobile menu, back-to-top (single passive, rAF-throttled handler) ----
+    const nav = $('.site-nav');
+    const toggle = $('.nav-toggle');
+    const menu = $('.nav-links');
+    const topBtn = $('#backToTop');
+
+    let ticking = false;
+    const onScroll = () => {
+        const y = window.scrollY;
+        if (nav) nav.classList.toggle('scrolled', y > 24);
+        if (topBtn) topBtn.classList.toggle('visible', y > 400);
+        ticking = false;
+    };
+    window.addEventListener('scroll', () => {
+        if (!ticking) { ticking = true; requestAnimationFrame(onScroll); }
+    }, { passive: true });
+    onScroll();
+
+    if (topBtn) topBtn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+
+    if (toggle && menu) {
+        const setOpen = (open) => {
+            menu.classList.toggle('is-open', open);
+            toggle.setAttribute('aria-expanded', String(open));
+        };
+        toggle.addEventListener('click', () => setOpen(toggle.getAttribute('aria-expanded') !== 'true'));
+        menu.addEventListener('click', (e) => { if (e.target.closest('a')) setOpen(false); });
+        document.addEventListener('keydown', (e) => { if (e.key === 'Escape') setOpen(false); });
     }
 
-    // Smooth scroll for nav links (handled by CSS, but good to have)
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            e.preventDefault();
-            const target = document.querySelector(this.getAttribute('href'));
-            if (target) {
-                target.scrollIntoView({
-                    behavior: 'smooth'
-                });
-            }
-        });
+    // ---- Filters (research page): buttons with data-filter control items with data-<attr> ----
+    $$('[data-filter-group]').forEach(group => {
+        const attr = group.dataset.filterGroup;               // e.g. "category" or "type"
+        const scope = document.getElementById(group.dataset.target);
+        if (!scope) return;
+        const items = $$(`[data-${attr}]`, scope);
+        const buttons = $$('.filter', group);
+        const counter = $('[data-count]', scope.parentElement || document);
+
+        const apply = (value) => {
+            buttons.forEach(b => b.setAttribute('aria-pressed', String(b.dataset.filter === value)));
+            let shown = 0;
+            items.forEach(item => {
+                const match = value === 'all' || item.dataset[attr] === value;
+                item.hidden = !match;
+                if (match) shown++;
+            });
+            // hide year groups / sections that have nothing left to show
+            $$('[data-group]', scope).forEach(g => { g.hidden = !$$(`[data-${attr}]`, g).some(i => !i.hidden); });
+            if (counter) counter.textContent = `${shown} shown`;
+        };
+        buttons.forEach(b => b.addEventListener('click', () => apply(b.dataset.filter)));
+        apply('all');
     });
 
-    // Header scroll effect
-    const nav = document.querySelector('nav');
-    window.addEventListener('scroll', () => {
-        if (window.scrollY > 50) {
-            nav.style.padding = '1rem 0';
-        } else {
-            nav.style.padding = '1.5rem 0';
-        }
-    });
-
-    // Set current year in footer (if element exists)
-    const footerText = document.querySelector('.footer-text');
-    if (footerText) {
-        const year = new Date().getFullYear();
-        footerText.innerHTML = footerText.innerHTML.replace('2024', year);
-    }
-
-    // Back to Top Button Logic
-    const backToTopBtn = document.getElementById('backToTop');
-
-    // Floating Switcher Logic
-    const floatingSwitcher = document.querySelector('.floating-switcher');
-    const fabProjects = document.getElementById('fab-projects');
-    const fabPubs = document.getElementById('fab-publications');
-    const publicationsSection = document.getElementById('publications');
-
-    window.addEventListener('scroll', () => {
-        if (backToTopBtn) {
-            if (window.scrollY > 300) {
-                backToTopBtn.classList.add('visible');
-            } else {
-                backToTopBtn.classList.remove('visible');
-            }
-        }
-
-        if (floatingSwitcher && publicationsSection) {
-            // Show switcher after scrolling past header
-            if (window.scrollY > 300) {
-                floatingSwitcher.classList.add('visible');
-            } else {
-                floatingSwitcher.classList.remove('visible');
-            }
-
-            // Scroll Spy for Active State
-            const pubOffset = publicationsSection.offsetTop - 100; // Offset for better triggering
-
-            if (window.scrollY >= pubOffset) {
-                fabPubs.classList.add('active');
-                fabProjects.classList.remove('active');
-            } else {
-                fabProjects.classList.add('active');
-                fabPubs.classList.remove('active');
-            }
-        }
-    });
-
-    if (backToTopBtn) {
-        backToTopBtn.addEventListener('click', () => {
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
+    // ---- Figure lightbox ----
+    const dialog = $('#lightbox');
+    if (dialog && typeof dialog.showModal === 'function') {
+        const big = $('img', dialog);
+        $$('[data-zoom]').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const img = $('img', btn);
+                big.src = img.currentSrc || img.src;
+                big.alt = img.alt;
+                dialog.showModal();
             });
         });
+        dialog.addEventListener('click', () => dialog.close());
     }
-
-    // Smooth scroll for switcher links
-    document.querySelectorAll('.switcher-btn').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            e.preventDefault();
-            const targetId = this.getAttribute('href');
-            const targetSection = document.querySelector(targetId);
-
-            if (targetSection) {
-                window.scrollTo({
-                    top: targetSection.offsetTop - 100, // Offset for fixed header/nav
-                    behavior: 'smooth'
-                });
-
-                // Manual active state update update
-                document.querySelectorAll('.switcher-btn').forEach(btn => btn.classList.remove('active'));
-                this.classList.add('active');
-            }
-        });
-    });
 });

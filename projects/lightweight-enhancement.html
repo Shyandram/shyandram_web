@@ -8,207 +8,195 @@
         window.dataLayer = window.dataLayer || [];
         function gtag() { dataLayer.push(arguments); }
         gtag('js', new Date());
-
         gtag('config', 'G-4WB2LLQP50');
     </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lightweight Deep Learning | Shyang-En Weng</title>
+    <title>Lightweight Deep Learning for Image Enhancement | Shyang-En Weng</title>
+    <meta name="description" content="Lightweight Deep Learning for Image Enhancement — Highly efficient neural networks designed for mobile devices and edge computing.">
+    <link rel="canonical" href="https://shyandram.dev/projects/lightweight-enhancement.html">
+    <meta name="theme-color" content="#1c1917">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Lightweight Deep Learning for Image Enhancement | Shyang-En Weng">
+    <meta property="og:description" content="Lightweight Deep Learning for Image Enhancement — Highly efficient neural networks designed for mobile devices and edge computing.">
+    <meta property="og:url" content="https://shyandram.dev/projects/lightweight-enhancement.html">
+    <meta property="og:image" content="https://shyandram.dev/images/selfie.jpg">
+    <meta name="twitter:card" content="summary">
     <link rel="icon" href="../images/icons/icon.jpg" type="image/jpeg">
-    <link rel="stylesheet" href="../style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap">
+    <script>document.documentElement.classList.add('js')</script>
+    <link rel="stylesheet" href="../style.css?v=e761200b">
 </head>
 
-<body>
-    <nav>
+<body class="">
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-nav">
         <div class="container">
-            <div class="logo">Shyandram</div>
-            <ul class="nav-links">
-                <li><a href="../index.html">Home</a></li>
+            <div class="logo"><a href="../index.html">Shyang-En Weng</a></div>
+            <button class="nav-toggle" aria-expanded="false" aria-controls="site-menu" aria-label="Menu"><span></span></button>
+            <nav aria-label="Primary">
+                <ul class="nav-links" id="site-menu">
+                <li><a href="../index.html#about">About</a></li>
                 <li><a href="../index.html#education">Education</a></li>
                 <li><a href="../index.html#experience">Experience</a></li>
-                <li><a href="../research.html?v=20260820">Research</a></li>
+                <li><a href="../research.html" aria-current="page">Research</a></li>
+                <li><a href="../research.html#publications">Publications</a></li>
                 <li><a href="../index.html#awards">Awards</a></li>
-                <li><a href="../index.html#skills">Skills</a></li>
                 <li><a href="../index.html#contact">Contact</a></li>
-            </ul>
-        </div>
-    </nav>
-
-    <header class="project-hero">
-        <div class="container">
-            <a href="../index.html#research" class="back-link" onclick="history.back(); return false;">← Back</a>
-            <h1>Lightweight Deep Learning for Image Enhancement</h1>
-            <h2 style="font-size: 1.2rem; color: var(--text-secondary); opacity: 0.8; font-weight: 500;">
-                基於深度學習的輕量級影像增強方法</h2>
-            <div class="project-meta">
-                <span class="metric-chip">Edge AI</span>
-                <span class="metric-chip">Knowledge Distillation</span>
-                <span class="metric-chip">Explainable AI</span>
-            </div>
+                <li><a class="btn btn-outline" href="https://drive.google.com/file/d/1rs0FKCtK_leqRvLHzdSkleJ6Lxe3RcTZ/view" target="_blank" rel="noopener">CV</a></li>
+                </ul>
+            </nav>
         </div>
     </header>
-
-    <main class="container">
-        <div class="project-content">
-            <div class="project-main">
-                <img src="../images/Lightweight Image Enhancement/CPGAnet.png" alt="CPGA-Net Architecture"
-                    class="project-image-large">
-                <img src="../images/Lightweight Image Enhancement/CPGAnet+.png" alt="Attention-Based Dynamic Adjustment"
-                    class="project-image-large">
-                <img src="../images/Lightweight Image Enhancement/exposure.png" alt="Exposure Correction Results"
-                    class="project-image-large">
-
-                <h2>Project Overview</h2>
-                <p>
-                    This research project focuses on developing <strong>Lightweight Low-Light Image Enhancement
-                        (LLIE)</strong>
-                    algorithms capable of real-time processing on edge devices. The core innovation lies in the
-                    <strong>CPGA-Net</strong> (Channel Prior and Gamma Estimation Network) and its advanced variant
-                    <strong>CPGA-Net+</strong>, which utilize channel priors and adaptive gamma correction to robustly
-                    enhance visibility in varying illumination conditions.
-                </p>
-
-                <h2>Core Techniques</h2>
-                <h3>CPGA-Net: Channel Prior & Gamma Correction</h3>
-                <img src="../images/Lightweight Image Enhancement/CPGAnet.png" alt="CPGA-Net Architecture"
-                    class="project-image-large">
-                <p>
-                    Introduced in our <em>IJPRAI</em> publication, <strong>CPGA-Net</strong> combines dark/bright
-                    channel priors
-                    with deep learning-based gamma correction. Inspired by the Retinex theory and Atmospheric Scattering
-                    Model,
-                    this architecture features:
-                </p>
-                <ul>
-                    <li><strong>Ultra-Lightweight Design</strong>: 0.025 million parameters with an inference time of
-                        0.030s.</li>
-                    <li><strong>Feature Distillation</strong>: Exploring knowledge transfer from complex teachers to
-                        compact student models.</li>
-                    <li><strong>Explainable Factors</strong>: Utilizing explicit gamma parameters for interpretable
-                        enhancement.</li>
-                </ul>
-                <div style="height: 2rem;"></div>
-
-                <h3>CPGA-Net+: Reshaping Theoretical Illumination</h3>
-                <img src="../images/Lightweight Image Enhancement/CPGAnet+.png" alt="CPGA-Net Architecture"
-                    class="project-image-large">
-                <p>
-                    Detailed in our <em>ArXiv</em> preprint, <strong>CPGA-Net+</strong> extends the framework with
-                    <strong>theoretically-based attentions</strong> for local and global illumination processing.
-                    This version achieves a significant balance between performance and computational cost, effectively
-                    addressing the "theoretical illumination" constraints of previous models.
-                </p>
-
-                <h3>Atmospheric Scattering for Driving Scenes</h3>
-                <p>
-                    Our work presented at <em>IEEE ICCE-TW 2024</em> specifically targets <strong>Exposure
-                        Correction</strong>
-                    in dynamic driving scenes. By grounding the enhancement in the atmospheric scattering model, the
-                    method
-                    improves object detection accuracy in challenging lighting, from tunnel exits to night driving.
-                </p>
-
-                <div style="margin-top: 1.5rem; margin-bottom: 3rem;">
-                    <a href="https://github.com/Shyandram/CPGA-Net-Pytorch.git" class="btn btn-outline"
-                        target="_blank">GitHub Repository</a>
-                </div>
-
-                <h2>Side Project: Edge AI Deployment</h2>
-                <p>The lightweight nature of these models allows for deployment on resource-constrained hardware:</p>
-                <ul>
-                    <li><a href="https://github.com/Shyandram/CPGA-Net-IOS" target="_blank"
-                            style="color: var(--accent-color);">iOS Implementation</a> (CoreML)</li>
-                    <li><a href="https://github.com/Shyandram/EdgeAI_LLIE-Jetson-Nano.git" target="_blank"
-                            style="color: var(--accent-color);">Jetson Nano</a> (TensorRT)</li>
-                    <li><a href="https://github.com/Shyandram/EdgeAI_LLIE_NCS2.git" target="_blank"
-                            style="color: var(--accent-color);">Neural Compute Stick 2</a> (OpenVINO)</li>
-                </ul>
-
-                <h2>Related Publications</h2>
-                <div class="publication-item" style="margin-bottom: 1.5rem;">
-                    <strong>[1] Rethinking Theoretical Illumination for Efficient Low-Light Image
-                        Enhancement</strong><br>
-                    <em>arXiv preprint arXiv:2409.05274, 2024</em><br>
-                    <span class="project-authors" style="font-size: 0.9em; color: var(--text-secondary);">
-                        Authors: <strong>Shyang-En Weng</strong>, Cheng-Yen Hsiao, Li-Wei Lu, Yu-Shen Huang, Tzu-Han
-                        Chen, Shaou-Gang Miaou, Ricky Christanto
-                    </span><br>
-                    <a href="https://arxiv.org/abs/2409.05274" target="_blank">arXiv Link</a>
-                </div>
-
-                <div class="publication-item" style="margin-bottom: 1.5rem;">
-                    <strong>[2] A Lightweight Low-Light Image Enhancement Network via Channel Prior and Gamma
-                        Correction</strong><br>
-                    <em>International Journal of Pattern Recognition and Artificial Intelligence (IJPRAI), 2025</em><br>
-                    <span class="project-authors" style="font-size: 0.9em; color: var(--text-secondary);">
-                        Authors: <strong>Shyang-En Weng</strong>, Shaou-Gang Miaou, Ricky Christanto
-                    </span><br>
-                    <a href="https://www.worldscientific.com/doi/full/10.1142/S0218001425540138" target="_blank">DOI:
-                        10.1142/S0218001425540138</a>
-                </div>
-
-                <div class="publication-item">
-                    <strong>[3] Exposure Correction in Driving Scenes Using the Atmospheric Scattering
-                        Model</strong><br>
-                    <em>IEEE ICCE-TW 2024</em><br>
-                    <span class="project-authors" style="font-size: 0.9em; color: var(--text-secondary);">
-                        Authors: <strong>Shyang-En Weng</strong>, Shaou-Gang Miaou, Ricky Christanto, Chang-Pin Hsu
-                    </span><br>
-                    <a href="https://ieeexplore.ieee.org/document/10674535/" target="_blank">DOI:
-                        10.1109/ICCE-TW55602.2024.10674535</a>
-                </div>
+    <main id="main">
+        <header class="page-head">
+            <div class="container">
+                <nav class="breadcrumb" aria-label="Breadcrumb"><a href="../research.html">Research</a><span aria-hidden="true">/</span><span aria-current="page">Lightweight enhancement</span></nav>
+                <p class="eyebrow">2024-2025 · Enhancement</p>
+                <h1>Lightweight Deep Learning for Image Enhancement</h1>
+                <p class="subtitle" lang="zh-TW">基於深度學習的輕量級影像增強方法</p>
+                <div class="chips"><span class="chip">Edge AI</span><span class="chip">Knowledge Distillation</span><span class="chip">Explainable AI</span></div>
+                <div class="btn-row"><a href="https://github.com/Shyandram/CPGA-Net-Pytorch.git" class="btn" target="_blank" rel="noopener">GitHub Repository</a></div>
             </div>
+        </header>
 
-            <aside class="project-sidebar">
-                <div class="sidebar-card">
-                    <h4>Authors</h4>
-                    <p style="font-size: 0.9em; margin-bottom: 0.8rem;">
-                        <strong>[1]</strong><br>
-                        <strong>Shyang-En Weng</strong><br>
-                        Cheng-Yen Hsiao<br>
-                        Li-Wei Lu<br>
-                        Yu-Shen Huang<br>
-                        Tzu-Han Chen<br>
-                        Shaou-Gang Miaou<br>
-                        Ricky Christanto
-                    </p>
-                    <p style="font-size: 0.9em; margin-bottom: 0.8rem;">
-                        <strong>[2]</strong><br>
-                        <strong>Shyang-En Weng</strong><br>
-                        Shaou-Gang Miaou<br>
-                        Ricky Christanto
-                    </p>
-                    <p style="font-size: 0.9em;">
-                        <strong>[3]</strong><br>
-                        <strong>Shyang-En Weng</strong><br>
-                        Shaou-Gang Miaou<br>
-                        Ricky Christanto<br>
-                        Chang-Pin Hsu
-                    </p>
+        <div class="container project-layout">
+            <article class="prose">
+                <section id="overview">
+                    <h2>Project overview</h2>
+                <figure class="figure">
+                    <button type="button" class="figure-frame" data-zoom aria-label="Enlarge figure: Exposure Correction Results">
+                        <img src="../images/Lightweight%20Image%20Enhancement/exposure.webp" alt="Exposure Correction Results" width="1400" height="768" loading="lazy" decoding="async">
+                    </button>
+                    <figcaption>Exposure Correction Results</figcaption>
+                </figure>
+<p>This research project focuses on developing <strong>Lightweight Low-Light Image Enhancement (LLIE)</strong>
+algorithms capable of real-time processing on edge devices. The core innovation lies in the
+<strong>CPGA-Net</strong> (Channel Prior and Gamma Estimation Network) and its advanced variant
+<strong>CPGA-Net+</strong>, which utilize channel priors and adaptive gamma correction to robustly enhance
+visibility in varying illumination conditions.</p>
+                </section>
+                <section id="cpga-net">
+                    <h2>CPGA-Net: channel prior &amp; gamma correction</h2>
+                <figure class="figure">
+                    <button type="button" class="figure-frame" data-zoom aria-label="Enlarge figure: CPGA-Net Architecture">
+                        <img src="../images/Lightweight%20Image%20Enhancement/CPGAnet.webp" alt="CPGA-Net Architecture" width="544" height="278" loading="lazy" decoding="async">
+                    </button>
+                    <figcaption>CPGA-Net Architecture</figcaption>
+                </figure>
+<p>Introduced in our <em>IJPRAI</em> publication, <strong>CPGA-Net</strong> combines dark/bright channel priors
+with deep learning-based gamma correction. Inspired by the Retinex theory and Atmospheric Scattering Model, this
+architecture features:</p>
+<ul>
+<li><strong>Ultra-Lightweight Design</strong>: 0.025 million parameters with an inference time of 0.030s.</li>
+<li><strong>Feature Distillation</strong>: Exploring knowledge transfer from complex teachers to compact student
+models.</li>
+<li><strong>Explainable Factors</strong>: Utilizing explicit gamma parameters for interpretable enhancement.</li>
+</ul>
+                </section>
+                <section id="cpga-net-plus">
+                    <h2>CPGA-Net+: reshaping theoretical illumination</h2>
+                <figure class="figure">
+                    <button type="button" class="figure-frame" data-zoom aria-label="Enlarge figure: Attention-Based Dynamic Adjustment">
+                        <img src="../images/Lightweight%20Image%20Enhancement/CPGAnet%2B.webp" alt="Attention-Based Dynamic Adjustment" width="1400" height="421" loading="lazy" decoding="async">
+                    </button>
+                    <figcaption>Attention-Based Dynamic Adjustment</figcaption>
+                </figure>
+<p>Detailed in our <em>ArXiv</em> preprint, <strong>CPGA-Net+</strong> extends the framework with
+<strong>theoretically-based attentions</strong> for local and global illumination processing. This version
+achieves a significant balance between performance and computational cost, effectively addressing the
+"theoretical illumination" constraints of previous models.</p>
+                </section>
+                <section id="driving">
+                    <h2>Atmospheric scattering for driving scenes</h2>
+<p>Our work presented at <em>IEEE ICCE-TW 2024</em> specifically targets <strong>Exposure Correction</strong> in
+dynamic driving scenes. By grounding the enhancement in the atmospheric scattering model, the method improves
+object detection accuracy in challenging lighting, from tunnel exits to night driving.</p>
+                </section>
+                <section id="edge-ai">
+                    <h2>Side project: edge AI deployment</h2>
+<p>The lightweight nature of these models allows for deployment on resource-constrained hardware:</p>
+<ul>
+<li><a href="https://github.com/Shyandram/CPGA-Net-IOS" target="_blank" rel="noopener">iOS Implementation</a> (CoreML)</li>
+<li><a href="https://github.com/Shyandram/EdgeAI_LLIE-Jetson-Nano.git" target="_blank" rel="noopener">Jetson Nano</a> (TensorRT)</li>
+<li><a href="https://github.com/Shyandram/EdgeAI_LLIE_NCS2.git" target="_blank" rel="noopener">Neural Compute Stick 2</a> (OpenVINO)</li>
+</ul>
+                </section>
+                <section id="publications">
+                    <h2>Related publications</h2>
+            <article class="pub">
+                <div class="pub-tags"><span class="chip is-neutral">Journal</span></div>
+                <h3 class="pub-title">A lightweight low-light image enhancement network via channel prior and gamma correction</h3>
+                <p class="pub-authors"><strong>Shyang-En Weng</strong>, Shaou-Gang Miaou, Ricky Christanto</p>
+                <p class="pub-venue">International Journal of Pattern Recognition and Artificial Intelligence (IJPRAI) · 2025</p>
+                <div class="pub-foot"><a class="pub-link" href="https://www.worldscientific.com/doi/full/10.1142/S0218001425540138" target="_blank" rel="noopener">DOI: 10.1142/S0218001425540138</a></div>
+            </article>
+            <article class="pub">
+                <div class="pub-tags"><span class="chip is-neutral">Preprint</span></div>
+                <h3 class="pub-title">Rethinking Theoretical Illumination for Efficient Low-Light Image Enhancement</h3>
+                <p class="pub-authors"><strong>Shyang-En Weng</strong>, Cheng-Yen Hsiao, Li-Wei Lu, Yu-Shen Huang, Tzu-Han Chen, Shaou-Gang Miaou, Ricky Christanto</p>
+                <p class="pub-venue">arXiv preprint · Sep 2024 (v4: Aug 2025)</p>
+                <div class="pub-foot"><a class="pub-link" href="https://arxiv.org/abs/2409.05274" target="_blank" rel="noopener">arXiv:2409.05274</a></div>
+            </article>
+            <article class="pub">
+                <div class="pub-tags"><span class="chip is-neutral">Conference</span></div>
+                <h3 class="pub-title">Exposure Correction in Driving Scenes Using the Atmospheric Scattering Model</h3>
+                <p class="pub-authors"><strong>Shyang-En Weng</strong>, Shaou-Gang Miaou, Ricky Christanto, Chang-Pin Hsu</p>
+                <p class="pub-venue">IEEE ICCE-TW 2024, Taichung, Taiwan · 2024</p>
+                <div class="pub-foot"><a class="pub-link" href="https://ieeexplore.ieee.org/document/10674535/" target="_blank" rel="noopener">DOI: 10.1109/ICCE-TW55602.2024.10674535</a></div>
+            </article>
+                </section>
+                <nav class="pager" aria-label="More projects"><a class="prev" href="dynamic-illuminance.html"><small>← Previous</small><span>Dynamic Illuminance Enhancement for Diverse Scenes</span></a><a class="next" href="weather-generation.html"><small>Next →</small><span>Weather Image Generation (Thesis)</span></a></nav>
+            </article>
+
+            <aside class="project-aside">
+                <div class="aside-block">
+                    <h2>At a glance</h2>
+                    <dl class="facts"><dt>Period</dt><dd>2024-2025</dd><dt>Models</dt><dd>CPGA-Net, CPGA-Net+</dd><dt>Footprint</dt><dd>0.025 M parameters, 0.030 s inference (CPGA-Net)</dd></dl>
                 </div>
-                <div class="sidebar-card">
-                    <h4>Keywords</h4>
-                    <ul>
-                        <li>Low-Light Enhancement</li>
-                        <li>Edge AI</li>
-                        <li>Knowledge Distillation</li>
-                        <li>Explainable AI</li>
-                        <li>Model Compression</li>
-                        <li>Embedded Vision Systems</li>
-                    </ul>
+                <div class="aside-block toc-block">
+                    <h2>On this page</h2>
+                    <nav class="toc" aria-label="On this page" data-spy>
+                        <a href="#overview">Project overview</a>
+                        <a href="#cpga-net">CPGA-Net: channel prior &amp; gamma correction</a>
+                        <a href="#cpga-net-plus">CPGA-Net+: reshaping theoretical illumination</a>
+                        <a href="#driving">Atmospheric scattering for driving scenes</a>
+                        <a href="#edge-ai">Side project: edge AI deployment</a>
+                        <a href="#publications">Related publications</a>
+                    </nav>
+                </div>
+                <div class="aside-block">
+                    <h2>Keywords</h2>
+                    <div class="chips"><span class="chip is-neutral">Low-Light Enhancement</span><span class="chip is-neutral">Edge AI</span><span class="chip is-neutral">Knowledge Distillation</span><span class="chip is-neutral">Explainable AI</span><span class="chip is-neutral">Model Compression</span><span class="chip is-neutral">Embedded Vision Systems</span></div>
                 </div>
             </aside>
         </div>
     </main>
 
-    <footer>
+    <dialog id="lightbox" class="lightbox" aria-label="Enlarged figure">
+        <div class="lightbox-inner"><img src="" alt=""></div>
+    </dialog>
+    <footer class="site-footer">
         <div class="container">
-            <p class="footer-text">&copy; 2024 Shyang-En Weng. All rights reserved. Built with Codex.
-            </p>
+            <div class="social-links">
+                <a href="mailto:shyangen104@gmail.com" title="Email"><img src="../images/icons/email_white_44dp.png" alt="Email" class="social-icon" width="18" height="18" loading="lazy"></a>
+                <a href="https://github.com/Shyandram" target="_blank" rel="noopener" title="GitHub"><img src="../images/icons/github_white_44dp.png" alt="GitHub" class="social-icon" width="18" height="18" loading="lazy"></a>
+                <a href="https://www.linkedin.com/in/Shyandram/" target="_blank" rel="noopener" title="LinkedIn"><img src="../images/icons/linkedin_white_44dp.png" alt="LinkedIn" class="social-icon" width="18" height="18" loading="lazy"></a>
+                <a href="https://medium.com/@shyangen104" target="_blank" rel="noopener" title="Medium"><img src="../images/icons/medium_white_44dp.png" alt="Medium" class="social-icon" width="18" height="18" loading="lazy"></a>
+                <a href="https://scholar.google.com/citations?user=DBBIjHsAAAAJ" target="_blank" rel="noopener" title="Google Scholar"><img src="../images/icons/google_scholar_icon.png" alt="Google Scholar" class="social-icon" width="18" height="18" loading="lazy"></a>
+            </div>
+            <p class="footer-text">&copy; 2026 Shyang-En Weng. All rights reserved. Built with Codex.</p>
         </div>
     </footer>
-
-    <script src="../script.js?v=20260820"></script>
+    <button id="backToTop" class="back-to-top" aria-label="Back to top">
+        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M18 15l-6-6-6 6" />
+        </svg>
+    </button>
+    <script src="../script.js?v=4bbb0646"></script>
 </body>
 
 </html>

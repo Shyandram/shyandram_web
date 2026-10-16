@@ -8,125 +8,151 @@
         window.dataLayer = window.dataLayer || [];
         function gtag() { dataLayer.push(arguments); }
         gtag('js', new Date());
-
         gtag('config', 'G-4WB2LLQP50');
     </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Weather Image Generation | Shyang-En Weng</title>
+    <title>Weather Image Generation (Thesis) | Shyang-En Weng</title>
+    <meta name="description" content="Weather Image Generation (Thesis) — End-to-End deep learning network using Triplet Content Loss for weather synthesis.">
+    <link rel="canonical" href="https://shyandram.dev/projects/weather-generation.html">
+    <meta name="theme-color" content="#1c1917">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Weather Image Generation (Thesis) | Shyang-En Weng">
+    <meta property="og:description" content="Weather Image Generation (Thesis) — End-to-End deep learning network using Triplet Content Loss for weather synthesis.">
+    <meta property="og:url" content="https://shyandram.dev/projects/weather-generation.html">
+    <meta property="og:image" content="https://shyandram.dev/images/selfie.jpg">
+    <meta name="twitter:card" content="summary">
     <link rel="icon" href="../images/icons/icon.jpg" type="image/jpeg">
-    <link rel="stylesheet" href="../style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap">
+    <script>document.documentElement.classList.add('js')</script>
+    <link rel="stylesheet" href="../style.css?v=e761200b">
 </head>
 
-<body>
-    <nav>
+<body class="">
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-nav">
         <div class="container">
-            <div class="logo">Shyandram</div>
-            <ul class="nav-links">
-                <li><a href="../index.html">Home</a></li>
+            <div class="logo"><a href="../index.html">Shyang-En Weng</a></div>
+            <button class="nav-toggle" aria-expanded="false" aria-controls="site-menu" aria-label="Menu"><span></span></button>
+            <nav aria-label="Primary">
+                <ul class="nav-links" id="site-menu">
+                <li><a href="../index.html#about">About</a></li>
                 <li><a href="../index.html#education">Education</a></li>
                 <li><a href="../index.html#experience">Experience</a></li>
-                <li><a href="../research.html?v=20260820">Research</a></li>
+                <li><a href="../research.html" aria-current="page">Research</a></li>
+                <li><a href="../research.html#publications">Publications</a></li>
                 <li><a href="../index.html#awards">Awards</a></li>
-                <li><a href="../index.html#skills">Skills</a></li>
                 <li><a href="../index.html#contact">Contact</a></li>
-            </ul>
-        </div>
-    </nav>
-
-    <header class="project-hero">
-        <div class="container">
-            <a href="../index.html#research" class="back-link" onclick="history.back(); return false;">← Back</a>
-            <h1>Weather Image Generation (Thesis)</h1>
-            <h2 style="font-size: 1.2rem; color: var(--text-secondary); opacity: 0.8; font-weight: 500;">
-                用於生成不同天氣影像的端到端深度學習生成網路</h2>
-            <div style="margin-top: 2rem;">
-                <a href="https://hdl.handle.net/11296/xjgq5j" class="btn btn-outline" target="_blank">Master's Thesis
-                    (Chinese)</a>
-                <a href="https://dx.doi.org/10.2139/ssrn.4591716" class="btn btn-outline" target="_blank"
-                    style="margin-left: 1rem;">English Version</a>
-            </div>
-            <div class="project-meta">
-                <span class="metric-chip">Master's Thesis</span>
-                <span class="metric-chip">Weakly Supervised Learning</span>
-                <span class="metric-chip">Triplet Content Loss</span>
-            </div>
+                <li><a class="btn btn-outline" href="https://drive.google.com/file/d/1rs0FKCtK_leqRvLHzdSkleJ6Lxe3RcTZ/view" target="_blank" rel="noopener">CV</a></li>
+                </ul>
+            </nav>
         </div>
     </header>
-
-    <main class="container">
-        <div class="project-content">
-            <div class="project-main">
-                <img src="../images/Weather Image Generation/master_thiesis.png" alt="Weather Generation Visualization"
-                    class="project-image-large">
-                <img src="../images/Weather Image Generation/master_thiesis_illust.png" alt="Network Architecture"
-                    class="project-image-large">
-
-                <h2>Project Overview</h2>
-                <p>
-                    This project, conducted as my Master's Thesis, introduces <strong>DGNDW</strong>, an end-to-end deep
-                    learning
-                    framework designed to synthesize diverse weather conditions. It addresses the scarcity of adverse
-                    weather
-                    datasets (fog, rain, snow) for training robust autonomous driving systems.
-                </p>
-
-                <h2>Core Techniques</h2>
-                <p>
-                    The framework leverages <strong>Weakly Supervised Learning</strong> to translate clear images into
-                    weather-degraded counterparts. A key contribution is the novel <strong>Triplet Content
-                        Loss</strong>,
-                    which preserves the semantic structure of the scene while realistically rendering weather effects.
-                </p>
-                <p>
-                    The generated data significantly improves the domain adaptation capabilities of downstream object
-                    detectors, bridging the gap between clear and adverse weather performance.
-                </p>
-
-                <h2>Related Publications</h2>
-                <div class="publication-item">
-                    <strong>[1] Weather Image Generation (DGNDW)</strong><br>
-                    <em>Master's Thesis, CYCU, 2023</em><br>
-                    <span class="project-authors" style="font-size: 0.9em; color: var(--text-secondary);">
-                        Authors: <strong>Shyang-En Weng</strong>, Shaou-Gang Miaou
-                    </span><br>
-                    <a href="https://hdl.handle.net/11296/xjgq5j" target="_blank">Thesis Link</a>
-                </div>
+    <main id="main">
+        <header class="page-head">
+            <div class="container">
+                <nav class="breadcrumb" aria-label="Breadcrumb"><a href="../research.html">Research</a><span aria-hidden="true">/</span><span aria-current="page">Weather generation</span></nav>
+                <p class="eyebrow">2024 · Generation</p>
+                <h1>Weather Image Generation (Thesis)</h1>
+                <p class="subtitle" lang="zh-TW">用於生成不同天氣影像的端到端深度學習生成網路</p>
+                <div class="chips"><span class="chip">Master&#x27;s Thesis</span><span class="chip">Weakly Supervised Learning</span><span class="chip">Triplet Content Loss</span></div>
+                <div class="btn-row"><a href="https://hdl.handle.net/11296/xjgq5j" class="btn" target="_blank" rel="noopener">Master&#x27;s Thesis (Chinese)</a><a href="https://dx.doi.org/10.2139/ssrn.4591716" class="btn btn-outline" target="_blank" rel="noopener">English Version</a></div>
             </div>
+        </header>
 
-            <aside class="project-sidebar">
-                <div class="sidebar-card">
-                    <h4>Authors</h4>
-                    <p style="font-size: 0.9em;">
-                        <strong>[1]</strong><br>
-                        <strong>Shyang-En Weng</strong><br>
-                        Shaou-Gang Miaou
-                    </p>
+        <div class="container project-layout">
+            <article class="prose">
+                <section id="overview">
+                    <h2>Project overview</h2>
+                <figure class="figure">
+                    <button type="button" class="figure-frame" data-zoom aria-label="Enlarge figure: Weather Generation Visualization">
+                        <img src="../images/Weather%20Image%20Generation/master_thiesis.webp" alt="Weather Generation Visualization" width="446" height="188" loading="lazy" decoding="async">
+                    </button>
+                    <figcaption>Weather Generation Visualization</figcaption>
+                </figure>
+                <figure class="figure">
+                    <button type="button" class="figure-frame" data-zoom aria-label="Enlarge figure: Network Architecture">
+                        <img src="../images/Weather%20Image%20Generation/master_thiesis_illust.webp" alt="Network Architecture" width="339" height="127" loading="lazy" decoding="async">
+                    </button>
+                    <figcaption>Network Architecture</figcaption>
+                </figure>
+<p>This project, conducted as my Master's Thesis, introduces <strong>DGNDW</strong>, an end-to-end deep learning
+framework designed to synthesize diverse weather conditions. It addresses the scarcity of adverse weather
+datasets (fog, rain, snow) for training robust autonomous driving systems.</p>
+                </section>
+                <section id="techniques">
+                    <h2>Core techniques</h2>
+<p>The framework leverages <strong>Weakly Supervised Learning</strong> to translate clear images into
+weather-degraded counterparts. A key contribution is the novel <strong>Triplet Content Loss</strong>, which
+preserves the semantic structure of the scene while realistically rendering weather effects.</p>
+<p>The generated data significantly improves the domain adaptation capabilities of downstream object detectors,
+bridging the gap between clear and adverse weather performance.</p>
+                </section>
+                <section id="publications">
+                    <h2>Related publications</h2>
+            <article class="pub">
+                <div class="pub-tags"><span class="chip is-neutral">Preprint</span></div>
+                <h3 class="pub-title">A Non-Adversarial and End-to-End Deep Learning Generative Network for Generating Diverse Weather Images</h3>
+                <p class="pub-authors"><strong>Shyang-En Weng</strong>, Shaou-Gang Miaou</p>
+                <p class="pub-venue">SSRN preprint · Jan 2023</p>
+                <div class="pub-foot"><a class="pub-link" href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4591716" target="_blank" rel="noopener">SSRN: 4591716</a></div>
+            </article>
+            <article class="pub">
+                <div class="pub-tags"><span class="chip is-neutral">Thesis</span></div>
+                <h3 class="pub-title">Weather Image Generation (DGNDW)</h3>
+                <p class="pub-authors"><strong>Shyang-En Weng</strong>, Shaou-Gang Miaou</p>
+                <p class="pub-venue">Master&#x27;s Thesis, CYCU · 2023</p>
+                <div class="pub-foot"><a class="pub-link" href="https://hdl.handle.net/11296/xjgq5j" target="_blank" rel="noopener">Thesis</a></div>
+            </article>
+                </section>
+                <nav class="pager" aria-label="More projects"><a class="prev" href="lightweight-enhancement.html"><small>← Previous</small><span>Lightweight Deep Learning for Image Enhancement</span></a><a class="next" href="dehazing-sr.html"><small>Next →</small><span>Image Dehazing using SR Networks</span></a></nav>
+            </article>
+
+            <aside class="project-aside">
+                <div class="aside-block">
+                    <h2>At a glance</h2>
+                    <dl class="facts"><dt>Type</dt><dd>Master's Thesis, CYCU</dd><dt>Academic background</dt><dd>Master of Science in Electronic Engineering (CYCU) & ECE (UWM)</dd></dl>
                 </div>
-                <div class="sidebar-card">
-                    <h4>Academic Background</h4>
-                    <p>Master of Science in Electronic Engineering (CYCU) & ECE (UWM)</p>
+                <div class="aside-block toc-block">
+                    <h2>On this page</h2>
+                    <nav class="toc" aria-label="On this page" data-spy>
+                        <a href="#overview">Project overview</a>
+                        <a href="#techniques">Core techniques</a>
+                        <a href="#publications">Related publications</a>
+                    </nav>
                 </div>
-                <div class="sidebar-card">
-                    <h4>Keywords</h4>
-                    <ul>
-                        <li>Data Augmentation</li>
-                        <li>ADAS Robustness Testing</li>
-                        <li>Gaming & VR/AR</li>
-                    </ul>
+                <div class="aside-block">
+                    <h2>Keywords</h2>
+                    <div class="chips"><span class="chip is-neutral">Data Augmentation</span><span class="chip is-neutral">ADAS Robustness Testing</span><span class="chip is-neutral">Gaming &amp; VR/AR</span></div>
                 </div>
             </aside>
         </div>
     </main>
 
-    <footer>
+    <dialog id="lightbox" class="lightbox" aria-label="Enlarged figure">
+        <div class="lightbox-inner"><img src="" alt=""></div>
+    </dialog>
+    <footer class="site-footer">
         <div class="container">
-            <p class="footer-text">&copy; 2024 Shyang-En Weng. All rights reserved. Built with Codex.
-            </p>
+            <div class="social-links">
+                <a href="mailto:shyangen104@gmail.com" title="Email"><img src="../images/icons/email_white_44dp.png" alt="Email" class="social-icon" width="18" height="18" loading="lazy"></a>
+                <a href="https://github.com/Shyandram" target="_blank" rel="noopener" title="GitHub"><img src="../images/icons/github_white_44dp.png" alt="GitHub" class="social-icon" width="18" height="18" loading="lazy"></a>
+                <a href="https://www.linkedin.com/in/Shyandram/" target="_blank" rel="noopener" title="LinkedIn"><img src="../images/icons/linkedin_white_44dp.png" alt="LinkedIn" class="social-icon" width="18" height="18" loading="lazy"></a>
+                <a href="https://medium.com/@shyangen104" target="_blank" rel="noopener" title="Medium"><img src="../images/icons/medium_white_44dp.png" alt="Medium" class="social-icon" width="18" height="18" loading="lazy"></a>
+                <a href="https://scholar.google.com/citations?user=DBBIjHsAAAAJ" target="_blank" rel="noopener" title="Google Scholar"><img src="../images/icons/google_scholar_icon.png" alt="Google Scholar" class="social-icon" width="18" height="18" loading="lazy"></a>
+            </div>
+            <p class="footer-text">&copy; 2026 Shyang-En Weng. All rights reserved. Built with Codex.</p>
         </div>
     </footer>
-
-    <script src="../script.js?v=20260820"></script>
+    <button id="backToTop" class="back-to-top" aria-label="Back to top">
+        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M18 15l-6-6-6 6" />
+        </svg>
+    </button>
+    <script src="../script.js?v=4bbb0646"></script>
 </body>
 
 </html>
