@@ -197,8 +197,7 @@ main { display: block; }
 .year-group .pub:first-child { border-top: 0; padding-top: 0; }
 
 .service { border-top: 1px solid var(--line); margin-top: 3rem; padding-top: 1.6rem; }
-.service h3 { align-items: baseline; display: flex; font-size: 1rem; gap: .8rem; }
-.service p { font-size: .88rem; margin: .2rem 0 .9rem; }
+.service h3 { align-items: baseline; display: flex; font-size: 1rem; gap: .8rem; margin-bottom: .9rem; }
 
 /* Compact variants used on the home page highlights */
 .card-grid.is-compact { gap: 1rem; }

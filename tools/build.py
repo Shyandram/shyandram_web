@@ -429,7 +429,7 @@ def build_research():
         for k, v in C.PUB_TYPES.items())
 
     review_chips = "".join(
-        f'<span class="chip is-neutral">{esc(j)}{f" (&times;{n})" if n > 1 else ""}</span>' for j, y, n in C.REVIEWING)
+        f'<span class="chip is-neutral">{esc(j)}</span>' for j, _y, _n in C.REVIEWING)
     body = f"""    <main id="main">
         <header class="page-head">
             <div class="container">
@@ -493,7 +493,6 @@ def build_research():
                 </div>
                 <div class="service">
                     <h3>Peer review <a href="{C.ORCID}" class="text-link" target="_blank" rel="noopener">ORCID</a></h3>
-                    <p class="muted">Reviewer for {len(C.REVIEWING)} journals, 2025&ndash;2026.</p>
                     <div class="chips">{review_chips}</div>
                 </div>
             </div>
