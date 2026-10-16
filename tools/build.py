@@ -163,6 +163,7 @@ def footer(p):
         (C.BLOG, "Blog", "blog_white.svg", ' target="_blank" rel="noopener"'),
         (C.MEDIUM, "Medium", "medium_white_44dp.png", ' target="_blank" rel="noopener"'),
         (C.SCHOLAR, "Google Scholar", "google_scholar_icon.png", ' target="_blank" rel="noopener"'),
+        (C.ORCID, "ORCID", "orcid_white.svg", ' target="_blank" rel="noopener"'),
     ]
     icons = "\n".join(
         f'                <a href="{u}"{t} title="{n}"><img src="{p}images/icons/{i}" alt="{n}" class="social-icon" '
@@ -286,6 +287,7 @@ def build_home():
         (C.BLOG, "blog_white.svg", "Blog", "blog.shyandram.dev", ' target="_blank" rel="noopener"'),
         (C.MEDIUM, "medium_white_44dp.png", "Medium", "@shyangen104", ' target="_blank" rel="noopener"'),
         (C.SCHOLAR, "google_scholar_icon.png", "Scholar", "Google Scholar Profile", ' target="_blank" rel="noopener"'),
+        (C.ORCID, "orcid_white.svg", "ORCID", C.ORCID_ID, ' target="_blank" rel="noopener"'),
     ]
     contact_html = "\n".join(
         f'            <a href="{u}"{t} class="contact-card fade-in"><img src="images/icons/{i}" alt="" class="contact-icon" '
@@ -296,7 +298,7 @@ def build_home():
         "url": C.SITE_URL, "image": C.SITE_URL + "images/selfie.jpg",
         "jobTitle": "PhD candidate, Computer Vision",
         "affiliation": {"@type": "CollegeOrUniversity", "name": "National Yang Ming Chiao Tung University"},
-        "sameAs": [C.GITHUB, C.LINKEDIN, C.BLOG, C.MEDIUM, C.SCHOLAR],
+        "sameAs": [C.GITHUB, C.LINKEDIN, C.BLOG, C.MEDIUM, C.SCHOLAR, C.ORCID],
     }, ensure_ascii=False)
 
     body = f"""    <main id="main">
@@ -432,6 +434,7 @@ def build_research():
                 <p class="page-lead">Image restoration, low-light enhancement, super-resolution and object detection — from lightweight models for edge devices to diffusion-based restoration.</p>
                 <div class="btn-row">
                     <a href="{C.SCHOLAR}" class="btn" target="_blank" rel="noopener">Google Scholar</a>
+                    <a href="{C.ORCID}" class="btn btn-outline" target="_blank" rel="noopener">ORCID</a>
                     <a href="{C.GITHUB}" class="btn btn-outline" target="_blank" rel="noopener">GitHub</a>
                 </div>
                 <div class="stat-row">
