@@ -8,136 +8,141 @@
         window.dataLayer = window.dataLayer || [];
         function gtag() { dataLayer.push(arguments); }
         gtag('js', new Date());
-
         gtag('config', 'G-4WB2LLQP50');
     </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Hairstyle Recommendation — a research project by Shyang-En Weng in computer vision and deep learning.">
-    <title>Hairstyle Recommendation | Shyang-En Weng</title>
+    <title>Hairstyle Recommendation System | Shyang-En Weng</title>
+    <meta name="description" content="Hairstyle Recommendation System — Face Shape Classification and Swapping for personalized recommendation.">
     <link rel="canonical" href="https://shyandram.dev/projects/hairstyle-recommendation.html">
     <meta name="theme-color" content="#1c1917">
     <meta property="og:type" content="website">
-    <meta property="og:title" content="Hairstyle Recommendation | Shyang-En Weng">
-    <meta property="og:description" content="Hairstyle Recommendation — a research project by Shyang-En Weng in computer vision and deep learning.">
+    <meta property="og:title" content="Hairstyle Recommendation System | Shyang-En Weng">
+    <meta property="og:description" content="Hairstyle Recommendation System — Face Shape Classification and Swapping for personalized recommendation.">
     <meta property="og:url" content="https://shyandram.dev/projects/hairstyle-recommendation.html">
     <meta property="og:image" content="https://shyandram.dev/images/selfie.jpg">
     <meta name="twitter:card" content="summary">
     <link rel="icon" href="../images/icons/icon.jpg" type="image/jpeg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap">
     <script>document.documentElement.classList.add('js')</script>
-    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../style.css?v=e761200b">
 </head>
 
-<body>
-    <nav>
+<body class="">
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-nav">
         <div class="container">
             <div class="logo"><a href="../index.html">Shyang-En Weng</a></div>
-            <ul class="nav-links">
-                <li><a href="../index.html">Home</a></li>
+            <button class="nav-toggle" aria-expanded="false" aria-controls="site-menu" aria-label="Menu"><span></span></button>
+            <nav aria-label="Primary">
+                <ul class="nav-links" id="site-menu">
+                <li><a href="../index.html#about">About</a></li>
                 <li><a href="../index.html#education">Education</a></li>
                 <li><a href="../index.html#experience">Experience</a></li>
-                <li><a href="../research.html?v=20260820">Research</a></li>
+                <li><a href="../research.html" aria-current="page">Research</a></li>
+                <li><a href="../research.html#publications">Publications</a></li>
                 <li><a href="../index.html#awards">Awards</a></li>
                 <li><a href="../index.html#contact">Contact</a></li>
-            </ul>
-        </div>
-    </nav>
-
-    <header class="project-hero">
-        <div class="container">
-            <a href="../index.html#research" class="back-link" data-back>← Back</a>
-            <h1>Hairstyle Recommendation System</h1>
-            <h2 style="font-size: 1.2rem; color: var(--text-secondary); opacity: 0.8; font-weight: 500;">
-                一個結合臉型分類、換臉和染髮影像處理技術的髮型推薦系統</h2>
-            <div class="project-meta">
-                <span class="metric-chip">1st Place Award</span>
-                <span class="metric-chip">Face Swapping</span>
-                <span class="metric-chip">Hair Dyeing</span>
-            </div>
+                <li><a class="btn btn-outline" href="https://drive.google.com/file/d/1rs0FKCtK_leqRvLHzdSkleJ6Lxe3RcTZ/view" target="_blank" rel="noopener">CV</a></li>
+                </ul>
+            </nav>
         </div>
     </header>
-
-    <main class="container">
-        <div class="project-content">
-            <div class="project-main">
-                <img src="../images/Hairstyle Recommendation System/hair_recommendation.webp" alt="System Interface"
-                    class="project-image-large" width="321" height="137" loading="lazy" decoding="async">
-
-                <h2>Project Overview</h2>
-                <p>
-                    Winner of the <strong>1st Place Award</strong> in the CYCU EL Undergraduate Project Competition,
-                    this system
-                    revolutionizes the virtual try-on experience. It provides personalized hairstyle suggestions by
-                    integrating
-                    advanced computer vision techniques for facial analysis and image synthesis.
-                </p>
-
-                <h2>Core Techniques</h2>
-                <p>
-                    The core of the recommended system is built upon three advanced modules:
-                </p>
-                <ul>
-                    <li><strong>Advanced FA (Face Attribute Analysis)</strong>: Precisely classifying face shapes to
-                        match suitable styles.</li>
-                    <li><strong>FS (Face Swapping)</strong>: enabling users to visualize different hairstyles on their
-                        own face realistically.</li>
-                    <li><strong>HDT (Hair Dyeing Transfer)</strong>: Simulating various hair colors to find the perfect
-                        look.</li>
-                </ul>
-
-                <h2>Related Publications</h2>
-
-                <div class="publication-item">
-                    <strong>[1] A Hair Style Recommendation System with Advanced FA, FS, and HDT</strong><br>
-                    <em>CVGIP 2023, Taiwan</em><br>
-                    <span class="project-authors" style="font-size: 0.9em; color: var(--text-secondary);">
-                        Authors: <strong>Shyang-En Weng</strong>, Shaou-Gang Miaou
-                    </span><br>
-                    <a href="https://drive.google.com/file/d/1m5GMriR5bY0f0rRyLAGze6_Gpg2QH2Yc/view?usp=sharing"
-                        target="_blank">Conference Article (PDF)</a>
-                </div>
+    <main id="main">
+        <header class="page-head">
+            <div class="container">
+                <nav class="breadcrumb" aria-label="Breadcrumb"><a href="../research.html">Research</a><span aria-hidden="true">/</span><span aria-current="page">Hairstyle recommendation</span></nav>
+                <p class="eyebrow">2023 · Generation <span class="badge" style="margin-left:.6rem">1st Place Award</span></p>
+                <h1>Hairstyle Recommendation System</h1>
+                <p class="subtitle" lang="zh-TW">一個結合臉型分類、換臉和染髮影像處理技術的髮型推薦系統</p>
+                <div class="chips"><span class="chip">1st Place Award</span><span class="chip">Face Swapping</span><span class="chip">Hair Dyeing</span></div>
+                <div class="btn-row"><a href="https://drive.google.com/file/d/1m5GMriR5bY0f0rRyLAGze6_Gpg2QH2Yc/view?usp=sharing" class="btn" target="_blank" rel="noopener">Conference Article (PDF)</a></div>
             </div>
+        </header>
 
-            <aside class="project-sidebar">
-                <div class="sidebar-card">
-                    <h4>Authors</h4>
-                    <p style="font-size: 0.9em;">
-                        <strong>[1]</strong><br>
-                        <strong>Shyang-En Weng</strong><br>
-                        Shaou-Gang Miaou
-                    </p>
+        <div class="container project-layout">
+            <article class="prose">
+                <section id="overview">
+                    <h2>Project overview</h2>
+                <figure class="figure">
+                    <button type="button" class="figure-frame" data-zoom aria-label="Enlarge figure: System Interface">
+                        <img src="../images/Hairstyle%20Recommendation%20System/hair_recommendation.webp" alt="System Interface" width="321" height="137" loading="lazy" decoding="async">
+                    </button>
+                    <figcaption>System Interface</figcaption>
+                </figure>
+<p>Winner of the <strong>1st Place Award</strong> in the CYCU EL Undergraduate Project Competition, this system
+revolutionizes the virtual try-on experience. It provides personalized hairstyle suggestions by integrating
+advanced computer vision techniques for facial analysis and image synthesis.</p>
+                </section>
+                <section id="techniques">
+                    <h2>Core techniques</h2>
+<p>The core of the recommended system is built upon three advanced modules:</p>
+<ul>
+<li><strong>Advanced FA (Face Attribute Analysis)</strong>: Precisely classifying face shapes to match suitable
+styles.</li>
+<li><strong>FS (Face Swapping)</strong>: enabling users to visualize different hairstyles on their own face
+realistically.</li>
+<li><strong>HDT (Hair Dyeing Transfer)</strong>: Simulating various hair colors to find the perfect look.</li>
+</ul>
+                </section>
+                <section id="publications">
+                    <h2>Related publications</h2>
+            <article class="pub">
+                <div class="pub-tags"><span class="chip is-neutral">Conference</span></div>
+                <h3 class="pub-title">A Hair Style Recommendation System with Advanced FA, FS, and HDT</h3>
+                <p class="pub-authors"><strong>Shyang-En Weng</strong>, Shaou-Gang Miaou</p>
+                <p class="pub-venue">CVGIP 2023, Taiwan · 2023</p>
+                <div class="pub-foot"><a class="pub-link" href="https://drive.google.com/file/d/1m5GMriR5bY0f0rRyLAGze6_Gpg2QH2Yc/view?usp=sharing" target="_blank" rel="noopener">PDF</a></div>
+            </article>
+                </section>
+                <nav class="pager" aria-label="More projects"><a class="prev" href="dehazing-sr.html"><small>← Previous</small><span>Image Dehazing using SR Networks</span></a><a class="next" href="drone-survey.html"><small>Next →</small><span>Drone-based Aerial Image Super-Resolution</span></a></nav>
+            </article>
+
+            <aside class="project-aside">
+                <div class="aside-block">
+                    <h2>At a glance</h2>
+                    <dl class="facts"><dt>Industry</dt><dd>Fashion Tech &amp; Intelligent Graphics</dd><dt>Period</dt><dd>2023</dd></dl>
                 </div>
-                <div class="sidebar-card">
-                    <h4>Industry</h4>
-                    <p>Fashion Tech & Intelligent Graphics</p>
+                <div class="aside-block toc-block">
+                    <h2>On this page</h2>
+                    <nav class="toc" aria-label="On this page" data-spy>
+                        <a href="#overview">Project overview</a>
+                        <a href="#techniques">Core techniques</a>
+                        <a href="#publications">Related publications</a>
+                    </nav>
                 </div>
-                <div style="margin-top: 2rem;">
-                    <a href="https://drive.google.com/file/d/1m5GMriR5bY0f0rRyLAGze6_Gpg2QH2Yc/view?usp=sharing"
-                        class="btn btn-outline" target="_blank">Conference Article (PDF)</a>
-                </div>
-                <div class="sidebar-card">
-                    <h4>Keywords</h4>
-                    <ul>
-                        <li>Face Attribute Analysis</li>
-                        <li>GAN-based Synthesis</li>
-                        <li>Image Editing</li>
-                    </ul>
+                <div class="aside-block">
+                    <h2>Keywords</h2>
+                    <div class="chips"><span class="chip is-neutral">Face Attribute Analysis</span><span class="chip is-neutral">GAN-based Synthesis</span><span class="chip is-neutral">Image Editing</span></div>
                 </div>
             </aside>
         </div>
     </main>
 
-    <footer>
+    <dialog id="lightbox" class="lightbox" aria-label="Enlarged figure">
+        <div class="lightbox-inner"><img src="" alt=""></div>
+    </dialog>
+    <footer class="site-footer">
         <div class="container">
-            <p class="footer-text">&copy; 2024 Shyang-En Weng. All rights reserved. Built with Codex.
-            </p>
+            <div class="social-links">
+                <a href="mailto:shyangen104@gmail.com" title="Email"><img src="../images/icons/email_white_44dp.png" alt="Email" class="social-icon" width="18" height="18" loading="lazy"></a>
+                <a href="https://github.com/Shyandram" target="_blank" rel="noopener" title="GitHub"><img src="../images/icons/github_white_44dp.png" alt="GitHub" class="social-icon" width="18" height="18" loading="lazy"></a>
+                <a href="https://www.linkedin.com/in/Shyandram/" target="_blank" rel="noopener" title="LinkedIn"><img src="../images/icons/linkedin_white_44dp.png" alt="LinkedIn" class="social-icon" width="18" height="18" loading="lazy"></a>
+                <a href="https://medium.com/@shyangen104" target="_blank" rel="noopener" title="Medium"><img src="../images/icons/medium_white_44dp.png" alt="Medium" class="social-icon" width="18" height="18" loading="lazy"></a>
+                <a href="https://scholar.google.com/citations?user=DBBIjHsAAAAJ" target="_blank" rel="noopener" title="Google Scholar"><img src="../images/icons/google_scholar_icon.png" alt="Google Scholar" class="social-icon" width="18" height="18" loading="lazy"></a>
+            </div>
+            <p class="footer-text">&copy; 2026 Shyang-En Weng. All rights reserved. Built with Codex.</p>
         </div>
     </footer>
-
-    <script src="../script.js?v=20261016"></script>
+    <button id="backToTop" class="back-to-top" aria-label="Back to top">
+        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M18 15l-6-6-6 6" />
+        </svg>
+    </button>
+    <script src="../script.js?v=4bbb0646"></script>
 </body>
 
 </html>
