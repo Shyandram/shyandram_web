@@ -2,13 +2,21 @@
 <html lang="en">
 
 <head>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-4WB2LLQP50"></script>
+    <!-- Google Analytics (GA4): queued now, library loaded after the page has finished loading -->
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag() { dataLayer.push(arguments); }
         gtag('js', new Date());
         gtag('config', 'G-4WB2LLQP50');
+        window.addEventListener('load', function () {
+            var load = function () {
+                var s = document.createElement('script');
+                s.async = true;
+                s.src = 'https://www.googletagmanager.com/gtag/js?id=G-4WB2LLQP50';
+                document.head.appendChild(s);
+            };
+            if ('requestIdleCallback' in window) requestIdleCallback(load, { timeout: 3000 }); else setTimeout(load, 1);
+        });
     </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -23,12 +31,11 @@
     <meta property="og:url" content="https://shyandram.dev/404.html">
     <meta property="og:image" content="https://shyandram.dev/images/selfie.jpg">
     <meta name="twitter:card" content="summary">
-    <link rel="icon" href="/images/icons/icon.jpg" type="image/jpeg">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap">
+    <link rel="icon" href="/images/icons/icon-48.png" type="image/png">
+    <link rel="apple-touch-icon" href="/images/icons/icon-180.png">
+    <link rel="preload" href="/fonts/manrope-latin.woff2" as="font" type="font/woff2" crossorigin>
     <script>document.documentElement.classList.add('js')</script>
-    <link rel="stylesheet" href="/style.css?v=280bcf9d">
+    <link rel="stylesheet" href="/style.css?v=3df898fe">
 </head>
 
 <body class="">

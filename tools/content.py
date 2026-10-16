@@ -16,17 +16,6 @@ CV_URL = "https://drive.google.com/file/d/1rs0FKCtK_leqRvLHzdSkleJ6Lxe3RcTZ/view
 BLOG = "https://blog.shyandram.dev/zh-tw/"
 SLIDES_URL = "https://drive.google.com/file/d/1j0LcNTCM60v78FmR7VG5Dv24tpJnl4ON/view"
 
-# Affiliations shown as badges. `mark` is the monogram inside the badge.
-AFFILIATIONS = {
-    "nycu": {"mark": "NYCU", "short": "NYCU", "name": "National Yang Ming Chiao Tung University",
-             "url": "https://www.nycu.edu.tw/"},
-    "uwm": {"mark": "UWM", "short": "UWM", "name": "University of Wisconsin-Milwaukee", "url": "https://uwm.edu/"},
-    "cycu": {"mark": "CYCU", "short": "CYCU", "name": "Chung Yuan Christian University",
-             "url": "https://www.cycu.edu.tw/"},
-}
-# Lab shown next to the main affiliation in the hero
-LAB = {"name": "ACM Lab", "full": "Applied Computing and Multimedia Lab, NYCU"}
-
 # ----------------------------------------------------------------------------
 # Home page
 # ----------------------------------------------------------------------------
@@ -47,7 +36,6 @@ EDUCATION = [
     {
         "date": "Feb 2025 - Present",
         "org": "National Yang Ming Chiao Tung University (NYCU)",
-        "aff": "nycu",
         "role": "Doctor of Philosophy in Computer Science and Engineering",
         "lines": ["ACM Lab (Applied Computing and Multimedia Lab). Focus on Computer Vision and Deep Learning."],
         "courses": [],
@@ -55,7 +43,6 @@ EDUCATION = [
     {
         "date": "Sep 2023 - May 2024",
         "org": "University of Wisconsin-Milwaukee (UWM)",
-        "aff": "uwm",
         "role": "Master of Science in Engineering (Dual Master's Degree Program)",
         "lines": ["Electrical and Computer Engineering Concentration"],
         "gpa": "3.833",
@@ -68,7 +55,6 @@ EDUCATION = [
     {
         "date": "Sep 2022 - May 2024",
         "org": "Chung Yuan Christian University (CYCU)",
-        "aff": "cycu",
         "role": "Master of Science in Electronic Engineering (Dual Master's Degree Program)",
         "lines": ["Institute of Computer Science and Engineering"],
         "gpa": "4.000",
@@ -81,7 +67,6 @@ EDUCATION = [
     {
         "date": "Sep 2017 - Jun 2022",
         "org": "Chung Yuan Christian University (CYCU)",
-        "aff": "cycu",
         "role": "Bachelor of Science in Electronic Engineering",
         "lines": ["Department of Electrical Engineering"],
         "gpa": "3.878 (161 total credits)",
@@ -103,7 +88,6 @@ EXPERIENCE = [
         "date": "Feb 2025 - Present",
         "title": "Research Assistant (Part-time)",
         "org": "ACM Lab, National Yang Ming Chiao Tung University",
-        "aff": "nycu",
         "advisor": "Advisor: Prof. Ching-Chun Huang",
         "paras": [
             "Collaborating on a MediaTek industry-academic cooperation project, focusing on Super-Resolution, "
@@ -116,7 +100,6 @@ EXPERIENCE = [
         "date": "Jan 2024 - Jul 2024",
         "title": "Research Assistant (Part-time)",
         "org": "MuCAT Lab, Chung Yuan Christian University (CYCU), Taiwan",
-        "aff": "cycu",
         "advisor": "Advisor: Prof. Shaou-Gang Miaou",
         "paras": [
             "Participated in a NSTC Research Project, focusing on Dynamic Illumination Adjustment and "
@@ -133,7 +116,6 @@ EXPERIENCE = [
         "date": "Oct 2022 - Aug 2023",
         "title": "Research Assistant (Part-time)",
         "org": "MuCAT Lab, Chung Yuan Christian University (CYCU), Taiwan",
-        "aff": "cycu",
         "advisor": "Advisor: Prof. Shaou-Gang Miaou",
         "paras": [
             "Participated in a NSTC Research Project, focusing on Image Enhancement and Restoration, "
@@ -149,7 +131,6 @@ EXPERIENCE = [
         "date": "Sep 2021 - Jan 2022",
         "title": "Teaching Assistant (Part-time)",
         "org": "Department of Electronic Engineering, Chung Yuan Christian University (CYCU), Taiwan",
-        "aff": "cycu",
         "advisor": "Instructor: Prof. Hui-Kai Zeng",
         "paras": ["Course: Modern Physics"],
         "bullets": [],
@@ -158,7 +139,6 @@ EXPERIENCE = [
         "date": "Sep 2018 - Jun 2022",
         "title": "Student Senator",
         "org": "Department of Electronic Engineering Student Council, CYCU",
-        "aff": "cycu",
         "paras": ["Served as a Senator (議代) for the Department Student Council for 4 years."],
         "bullets": [],
     },
