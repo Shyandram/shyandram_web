@@ -103,6 +103,7 @@ def page(*, title, desc, path, depth, body, nav_active="", extra_head="", body_c
     <link rel="icon" href="{p}images/icons/icon-48.png" type="image/png">
     <link rel="apple-touch-icon" href="{p}images/icons/icon-180.png">
     <link rel="preload" href="{p}fonts/manrope-latin.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="{p}fonts/instrument-serif-latin.woff2" as="font" type="font/woff2" crossorigin>
     <script>document.documentElement.classList.add('js')</script>
     <link rel="stylesheet" href="{p}style.css?v={CSS_V}">{extra_head}
 </head>
