@@ -197,7 +197,7 @@ PUBLICATIONS = [
         "id": "osdiff-2026", "year": 2026, "type": "preprint", "selected": True,
         "title": "Bridging Restoration and Generation Manifolds in One-Step Diffusion for Real-World Super-Resolution",
         "authors": "Shyang-En Weng, Yi-Cheng Liao, Yu-Syuan Xu, Wei-Chen Chiu, Ching-Chun Huang",
-        "venue": "arXiv preprint", "date": "2026",
+        "venue": "arXiv preprint", "date": "Apr 2026",
         "links": [("arXiv:2604.24136", "https://arxiv.org/abs/2604.24136")],
     },
     {
@@ -205,7 +205,7 @@ PUBLICATIONS = [
         "title": "The First Challenge on Mobile Real-World Image Super-Resolution at NTIRE 2026: "
                  "Benchmark Results and Method Overview",
         "authors": "Jiatong Li and 93 other authors, including Shyang-En Weng",
-        "venue": "arXiv preprint", "date": "2026",
+        "venue": "arXiv preprint", "date": "Apr 2026",
         "links": [("arXiv:2604.17306", "https://arxiv.org/abs/2604.17306")],
     },
     {
@@ -220,8 +220,10 @@ PUBLICATIONS = [
         "id": "ijprai-2025", "year": 2025, "type": "journal", "selected": True, "project": "lightweight-enhancement",
         "title": "A lightweight low-light image enhancement network via channel prior and gamma correction",
         "authors": "Shyang-En Weng, Shaou-Gang Miaou, Ricky Christanto",
-        "venue": "International Journal of Pattern Recognition and Artificial Intelligence (IJPRAI)", "date": "2025",
-        "links": [("DOI: 10.1142/S0218001425540138", "https://www.worldscientific.com/doi/full/10.1142/S0218001425540138")],
+        "venue": "International Journal of Pattern Recognition and Artificial Intelligence (IJPRAI), vol. 39, no. 12",
+        "date": "2025",
+        "links": [("DOI: 10.1142/S0218001425540138", "https://www.worldscientific.com/doi/full/10.1142/S0218001425540138"),
+                  ("arXiv:2402.18147", "https://arxiv.org/abs/2402.18147")],
     },
     {
         "id": "jit-2025", "year": 2025, "type": "journal", "selected": True, "project": "mask-detection",
