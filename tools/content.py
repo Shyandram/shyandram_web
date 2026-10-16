@@ -240,7 +240,7 @@ PUBLICATIONS = [
         "title": "Rethinking Theoretical Illumination for Efficient Low-Light Image Enhancement",
         "authors": "Shyang-En Weng, Cheng-Yen Hsiao, Li-Wei Lu, Yu-Shen Huang, Tzu-Han Chen, Shaou-Gang Miaou, "
                    "Ricky Christanto",
-        "venue": "arXiv preprint", "date": "Sep 2024 (v4: Aug 2025)",
+        "venue": "arXiv preprint", "date": "Sep 2024",
         "links": [("arXiv:2409.05274", "https://arxiv.org/abs/2409.05274"),
                   ("Code", "https://github.com/Shyandram/CPGA-Net_Plus")],
     },
