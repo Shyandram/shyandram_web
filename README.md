@@ -23,3 +23,6 @@ Images are WebP (`images/**.webp`); the original PNG/JPG files are kept next to 
 Manrope is self-hosted (`fonts/manrope-latin.woff2`, latin subset, SIL Open Font License). Responsive image
 variants (`IMG_4067-800.webp`, `selfie-280/560.webp`, `icons/icon-48/180.png`) are generated assets; originals
 (`IMG_4067.JPEG`, `selfie.jpg`, `icons/icon.jpg`) are kept as sources.
+
+The site is commercial-free: no analytics, trackers, ads, cookies or third-party scripts/fonts are loaded.
+Only plain outbound links (GitHub, LinkedIn, Scholar, arXiv, ...) leave the site.
