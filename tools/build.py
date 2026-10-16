@@ -428,11 +428,8 @@ def build_research():
         f'<button type="button" class="filter" data-filter="{k}" aria-pressed="false">{v}</button>'
         for k, v in C.PUB_TYPES.items())
 
-    n_reviews = sum(n for _, _, n in C.REVIEWING)
-    review_items = "\n".join(
-        f'                    <li><span class="review-journal">{esc(j)}</span>'
-        f'<span class="review-meta">{y}{f" · {n} reviews" if n > 1 else ""}</span></li>'
-        for j, y, n in C.REVIEWING)
+    review_chips = "".join(
+        f'<span class="chip is-neutral">{esc(j)}{f" (&times;{n})" if n > 1 else ""}</span>' for j, y, n in C.REVIEWING)
     body = f"""    <main id="main">
         <header class="page-head">
             <div class="container">
@@ -467,7 +464,6 @@ def build_research():
                 <nav class="tabs" aria-label="Sections" data-spy>
                     <a href="#projects">Projects</a>
                     <a href="#publications">Publications</a>
-                    <a href="#reviewing">Peer review</a>
                 </nav>
             </div>
         </div>
@@ -495,19 +491,11 @@ def build_research():
                 <div id="pub-list">
 {chr(10).join(groups)}
                 </div>
-            </div>
-        </section>
-
-        <section id="reviewing" class="section">
-            <div class="container">
-                <div class="section-head">
-                    <h2 class="section-title">Peer review</h2>
-                    <a href="{C.ORCID}" class="text-link" target="_blank" rel="noopener">Verified on ORCID</a>
+                <div class="service">
+                    <h3>Peer review <a href="{C.ORCID}" class="text-link" target="_blank" rel="noopener">ORCID</a></h3>
+                    <p class="muted">Reviewer for {len(C.REVIEWING)} journals, 2025&ndash;2026.</p>
+                    <div class="chips">{review_chips}</div>
                 </div>
-                <p class="muted" style="margin-bottom: 1.6rem;">Reviewer for {len(C.REVIEWING)} journals ({n_reviews} reviews in 2025&ndash;2026).</p>
-                <ul class="review-list">
-{review_items}
-                </ul>
             </div>
         </section>
     </main>"""
