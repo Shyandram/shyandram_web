@@ -99,6 +99,17 @@ EXPERIENCE = [
         "bullets": [],
     },
     {
+        "date": "2025 - Present",
+        "title": "Peer Reviewer",
+        "org": "Academic journals in image and signal processing",
+        "paras": [
+            "Reviewer for IEEE Transactions on Image Processing, IEEE Transactions on Circuits and Systems for "
+            "Video Technology, Digital Signal Processing, Scientific Reports and other journals. "
+            "Full list on the research page.",
+        ],
+        "bullets": [],
+    },
+    {
         "date": "Jan 2024 - Jul 2024",
         "title": "Research Assistant (Part-time)",
         "org": "MuCAT Lab, Chung Yuan Christian University (CYCU), Taiwan",
@@ -286,6 +297,18 @@ PUBLICATIONS = [
         "venue": "Master's Thesis, CYCU", "date": "2024",
         "links": [("Thesis", "https://hdl.handle.net/11296/xjgq5j")],
     },
+]
+
+# Peer review: journals reviewed for, from the public peer-review section of the ORCID record
+# (journal names and years only; no manuscript information). (journal, year, number of reviews)
+REVIEWING = [
+    ("IEEE Transactions on Image Processing", 2026, 1),
+    ("IEEE Transactions on Circuits and Systems for Video Technology", 2026, 1),
+    ("Digital Signal Processing", 2026, 2),
+    ("Scientific Reports", 2026, 1),
+    ("Discover Electronics", 2026, 1),
+    ("Journal of King Saud University - Computer and Information Sciences", 2026, 1),
+    ("The Imaging Science Journal", 2025, 1),
 ]
 
 PUB_TYPES = {"journal": "Journal", "conference": "Conference", "preprint": "Preprint", "thesis": "Thesis"}
