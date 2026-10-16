@@ -56,6 +56,8 @@ def asset_version(name):
         return hashlib.sha1(f.read()).hexdigest()[:8]
 
 
+# Icons that carry their own brand colours (ORCID's official iD icon must not be recoloured)
+COLOR_ICONS = {"orcid.svg", "google_scholar_icon.png"}
 CSS_V, JS_V = asset_version("style.css"), asset_version("script.js")
 PROJECTS = {p["slug"]: p for p in C.PROJECTS}
 CATEGORY_LABEL = dict(C.CATEGORIES)
@@ -163,9 +165,10 @@ def footer(p):
         (C.BLOG, "Blog", "blog_white.svg", ' target="_blank" rel="noopener"'),
         (C.MEDIUM, "Medium", "medium_white_44dp.png", ' target="_blank" rel="noopener"'),
         (C.SCHOLAR, "Google Scholar", "google_scholar_icon.png", ' target="_blank" rel="noopener"'),
+        (C.ORCID, "ORCID", "orcid.svg", ' target="_blank" rel="noopener"'),
     ]
     icons = "\n".join(
-        f'                <a href="{u}"{t} title="{n}"><img src="{p}images/icons/{i}" alt="{n}" class="social-icon" '
+        f'                <a href="{u}"{t} title="{n}"><img src="{p}images/icons/{i}" alt="{n}" class="social-icon{" is-color" if i in COLOR_ICONS else ""}" '
         f'width="18" height="18" loading="lazy"></a>'
         for u, n, i, t in socials)
     return f"""    <footer class="site-footer">
@@ -286,9 +289,10 @@ def build_home():
         (C.BLOG, "blog_white.svg", "Blog", "blog.shyandram.dev", ' target="_blank" rel="noopener"'),
         (C.MEDIUM, "medium_white_44dp.png", "Medium", "@shyangen104", ' target="_blank" rel="noopener"'),
         (C.SCHOLAR, "google_scholar_icon.png", "Scholar", "Google Scholar Profile", ' target="_blank" rel="noopener"'),
+        (C.ORCID, "orcid.svg", "ORCID", "orcid.org/" + C.ORCID_ID, ' target="_blank" rel="noopener"'),
     ]
     contact_html = "\n".join(
-        f'            <a href="{u}"{t} class="contact-card fade-in"><img src="images/icons/{i}" alt="" class="contact-icon" '
+        f'            <a href="{u}"{t} class="contact-card fade-in"><img src="images/icons/{i}" alt="" class="contact-icon{" is-color" if i in COLOR_ICONS else ""}" '
         f'width="24" height="24" loading="lazy"><h3>{n}</h3><p>{v}</p></a>' for u, i, n, v, t in contacts)
 
     jsonld = json.dumps({
@@ -296,7 +300,7 @@ def build_home():
         "url": C.SITE_URL, "image": C.SITE_URL + "images/selfie.jpg",
         "jobTitle": "PhD candidate, Computer Vision",
         "affiliation": {"@type": "CollegeOrUniversity", "name": "National Yang Ming Chiao Tung University"},
-        "sameAs": [C.GITHUB, C.LINKEDIN, C.BLOG, C.MEDIUM, C.SCHOLAR],
+        "sameAs": [C.GITHUB, C.LINKEDIN, C.BLOG, C.MEDIUM, C.SCHOLAR, C.ORCID],
     }, ensure_ascii=False)
 
     body = f"""    <main id="main">
@@ -424,6 +428,8 @@ def build_research():
         f'<button type="button" class="filter" data-filter="{k}" aria-pressed="false">{v}</button>'
         for k, v in C.PUB_TYPES.items())
 
+    review_chips = "".join(
+        f'<span class="chip is-neutral">{esc(j)}</span>' for j, _y, _n in C.REVIEWING)
     body = f"""    <main id="main">
         <header class="page-head">
             <div class="container">
@@ -432,6 +438,7 @@ def build_research():
                 <p class="page-lead">Image restoration, low-light enhancement, super-resolution and object detection — from lightweight models for edge devices to diffusion-based restoration.</p>
                 <div class="btn-row">
                     <a href="{C.SCHOLAR}" class="btn" target="_blank" rel="noopener">Google Scholar</a>
+                    <a href="{C.ORCID}" class="btn btn-outline" target="_blank" rel="noopener">ORCID</a>
                     <a href="{C.GITHUB}" class="btn btn-outline" target="_blank" rel="noopener">GitHub</a>
                 </div>
                 <div class="stat-row">
@@ -483,6 +490,10 @@ def build_research():
                 <div class="filters" role="group" aria-label="Filter publications" data-filter-group="type" data-target="pub-list">{type_buttons}</div>
                 <div id="pub-list">
 {chr(10).join(groups)}
+                </div>
+                <div class="service">
+                    <h3>Peer review <a href="{C.ORCID}" class="text-link" target="_blank" rel="noopener">ORCID</a></h3>
+                    <div class="chips">{review_chips}</div>
                 </div>
             </div>
         </section>

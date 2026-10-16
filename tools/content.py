@@ -8,6 +8,8 @@ SITE_URL = "https://shyandram.dev/"
 NAME = "Shyang-En Weng"
 NAME_ZH = "翁祥恩"
 SCHOLAR = "https://scholar.google.com/citations?user=DBBIjHsAAAAJ"
+ORCID = "https://orcid.org/0000-0002-4663-7846"
+ORCID_ID = "0000-0002-4663-7846"
 GITHUB = "https://github.com/Shyandram"
 LINKEDIN = "https://www.linkedin.com/in/Shyandram/"
 MEDIUM = "https://medium.com/@shyangen104"
@@ -93,6 +95,17 @@ EXPERIENCE = [
             "Collaborating on a MediaTek industry-academic cooperation project, focusing on Super-Resolution, "
             "Diffusion Models, and Image Restoration.",
             "Assisted the proposal writing of NSTC Research Project and ITRI industry-academic cooperation project.",
+        ],
+        "bullets": [],
+    },
+    {
+        "date": "2025 - Present",
+        "title": "Peer Reviewer",
+        "org": "Academic journals in image and signal processing",
+        "paras": [
+            "Reviewer for IEEE Transactions on Image Processing, IEEE Transactions on Circuits and Systems for "
+            "Video Technology, Digital Signal Processing, Scientific Reports and other journals. "
+            "Full list on the research page.",
         ],
         "bullets": [],
     },
@@ -236,7 +249,7 @@ PUBLICATIONS = [
         "title": "Scene-Guided Image Enhancement through Gamma Correction Prior and Transfer Learning "
                  "for Varied Illumination Environments",
         "authors": "Shyang-En Weng, Cheng-Yen Hsiao, Chang-Pin Hsu, Shaou-Gang Miaou",
-        "venue": "CVGIP 2024, Hualien, Taiwan", "date": "2024",
+        "venue": "CVGIP 2024, Hualien, Taiwan", "date": "Aug 2024",
         "links": [("PDF", "https://drive.google.com/file/d/12UQGOyMK4EBdCErrsk_W5JYVBN7L8OD8/view?usp=sharing")],
     },
     {
@@ -264,9 +277,10 @@ PUBLICATIONS = [
     },
     {
         "id": "cvgip-2023", "year": 2023, "type": "conference", "selected": False, "project": "hairstyle-recommendation",
-        "title": "A Hair Style Recommendation System with Advanced FA, FS, and HDT",
-        "authors": "Shyang-En Weng, Shaou-Gang Miaou",
-        "venue": "CVGIP 2023, Taiwan", "date": "2023",
+        "title": "Improving Hair Design Efficiency and Customer Satisfaction: A Hairstyle Recommendation System "
+                 "with Advanced Face Analysis, Face Swapping, and Hair Dyeing Techniques",
+        "authors": "Shyang-En Weng, Yen-Cheng Chen, Chia-Hung Li, Shaou-Gang Miaou",
+        "venue": "CVGIP 2023, Taiwan", "date": "Aug 2023",
         "links": [("PDF", "https://drive.google.com/file/d/1m5GMriR5bY0f0rRyLAGze6_Gpg2QH2Yc/view?usp=sharing")],
     },
     {
@@ -280,10 +294,22 @@ PUBLICATIONS = [
     {
         "id": "thesis-2024", "year": 2024, "type": "thesis", "selected": False, "project": "weather-generation",
         "title": "Weather Image Generation (DGNDW)",
-        "authors": "Shyang-En Weng, Shaou-Gang Miaou",
+        "authors": "Shyang-En Weng",
         "venue": "Master's Thesis, CYCU", "date": "2024",
         "links": [("Thesis", "https://hdl.handle.net/11296/xjgq5j")],
     },
+]
+
+# Peer review: journals reviewed for, from the public peer-review section of the ORCID record
+# (journal names and years only; no manuscript information). (journal, year, number of reviews)
+REVIEWING = [
+    ("IEEE Transactions on Image Processing", 2026, 1),
+    ("IEEE Transactions on Circuits and Systems for Video Technology", 2026, 1),
+    ("Digital Signal Processing", 2026, 2),
+    ("Scientific Reports", 2026, 1),
+    ("Discover Electronics", 2026, 1),
+    ("Journal of King Saud University - Computer and Information Sciences", 2026, 1),
+    ("The Imaging Science Journal", 2025, 1),
 ]
 
 PUB_TYPES = {"journal": "Journal", "conference": "Conference", "preprint": "Preprint", "thesis": "Thesis"}

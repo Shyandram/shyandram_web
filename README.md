@@ -26,3 +26,6 @@ variants (`IMG_4067-800.webp`, `selfie-280/560.webp`, `icons/icon-48/180.png`) a
 
 No ads, no third-party fonts or scripts. The only third-party request is Google Analytics (GA4, ID in
 `tools/build.py`), loaded after the page has finished loading so it does not slow first paint.
+
+The ORCID iD icon (`images/icons/orcid.svg`) is ORCID's official, unmodified icon (from orcid.org); it is shown only to
+link to the owner's own ORCID record, per ORCID's iD display guidelines.
