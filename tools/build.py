@@ -93,7 +93,7 @@ def page(*, title, desc, path, depth, body, nav_active="", extra_head="", body_c
     <title>{title}</title>
     <meta name="description" content="{esc(desc)}">
     <link rel="canonical" href="{url}">
-    <meta name="theme-color" content="#1c1917">
+    <meta name="theme-color" content="#121212">
     <meta property="og:type" content="website">
     <meta property="og:title" content="{title}">
     <meta property="og:description" content="{esc(desc)}">
@@ -102,8 +102,7 @@ def page(*, title, desc, path, depth, body, nav_active="", extra_head="", body_c
     <meta name="twitter:card" content="summary">
     <link rel="icon" href="{p}images/icons/icon-48.png" type="image/png">
     <link rel="apple-touch-icon" href="{p}images/icons/icon-180.png">
-    <link rel="preload" href="{p}fonts/manrope-latin.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="{p}fonts/instrument-serif-latin.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="{p}fonts/geist-latin.woff2" as="font" type="font/woff2" crossorigin>
     <script>document.documentElement.classList.add('js')</script>
     <link rel="stylesheet" href="{p}style.css?v={CSS_V}">{extra_head}
 </head>
