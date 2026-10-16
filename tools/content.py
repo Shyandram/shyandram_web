@@ -298,10 +298,10 @@ PUBLICATIONS = [
         "links": [("SSRN: 4591716", "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4591716")],
     },
     {
-        "id": "thesis-2023", "year": 2023, "type": "thesis", "selected": False, "project": "weather-generation",
+        "id": "thesis-2024", "year": 2024, "type": "thesis", "selected": False, "project": "weather-generation",
         "title": "Weather Image Generation (DGNDW)",
         "authors": "Shyang-En Weng, Shaou-Gang Miaou",
-        "venue": "Master's Thesis, CYCU", "date": "2023",
+        "venue": "Master's Thesis, CYCU", "date": "2024",
         "links": [("Thesis", "https://hdl.handle.net/11296/xjgq5j")],
     },
 ]
