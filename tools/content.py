@@ -249,7 +249,7 @@ PUBLICATIONS = [
         "title": "Scene-Guided Image Enhancement through Gamma Correction Prior and Transfer Learning "
                  "for Varied Illumination Environments",
         "authors": "Shyang-En Weng, Cheng-Yen Hsiao, Chang-Pin Hsu, Shaou-Gang Miaou",
-        "venue": "CVGIP 2024, Hualien, Taiwan", "date": "2024",
+        "venue": "CVGIP 2024, Hualien, Taiwan", "date": "Aug 2024",
         "links": [("PDF", "https://drive.google.com/file/d/12UQGOyMK4EBdCErrsk_W5JYVBN7L8OD8/view?usp=sharing")],
     },
     {
@@ -277,9 +277,10 @@ PUBLICATIONS = [
     },
     {
         "id": "cvgip-2023", "year": 2023, "type": "conference", "selected": False, "project": "hairstyle-recommendation",
-        "title": "A Hair Style Recommendation System with Advanced FA, FS, and HDT",
-        "authors": "Shyang-En Weng, Shaou-Gang Miaou",
-        "venue": "CVGIP 2023, Taiwan", "date": "2023",
+        "title": "Improving Hair Design Efficiency and Customer Satisfaction: A Hairstyle Recommendation System "
+                 "with Advanced Face Analysis, Face Swapping, and Hair Dyeing Techniques",
+        "authors": "Shyang-En Weng, Yen-Cheng Chen, Chia-Hung Li, Shaou-Gang Miaou",
+        "venue": "CVGIP 2023, Taiwan", "date": "Aug 2023",
         "links": [("PDF", "https://drive.google.com/file/d/1m5GMriR5bY0f0rRyLAGze6_Gpg2QH2Yc/view?usp=sharing")],
     },
     {
@@ -293,7 +294,7 @@ PUBLICATIONS = [
     {
         "id": "thesis-2024", "year": 2024, "type": "thesis", "selected": False, "project": "weather-generation",
         "title": "Weather Image Generation (DGNDW)",
-        "authors": "Shyang-En Weng, Shaou-Gang Miaou",
+        "authors": "Shyang-En Weng",
         "venue": "Master's Thesis, CYCU", "date": "2024",
         "links": [("Thesis", "https://hdl.handle.net/11296/xjgq5j")],
     },
