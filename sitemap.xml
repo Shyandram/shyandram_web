@@ -2,6 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://shyandram.dev/</loc></url>
   <url><loc>https://shyandram.dev/research.html</loc></url>
+  <url><loc>https://shyandram.dev/projects/diffusion-sr.html</loc></url>
   <url><loc>https://shyandram.dev/projects/dynamic-illuminance.html</loc></url>
   <url><loc>https://shyandram.dev/projects/lightweight-enhancement.html</loc></url>
   <url><loc>https://shyandram.dev/projects/weather-generation.html</loc></url>

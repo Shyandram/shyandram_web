@@ -10,6 +10,7 @@ import hashlib
 import html
 import json
 import os
+import re
 import sys
 from datetime import date
 from urllib.parse import quote
@@ -30,6 +31,11 @@ def q(path):
 def image_size(rel, default=(1200, 800)):
     """Read pixel size from a WebP header (VP8 / VP8L / VP8X) without third-party libraries."""
     try:
+        if rel.endswith(".svg"):
+            with open(os.path.join(ROOT, rel), encoding="utf-8") as f:
+                head = f.read(400)
+            w, h = re.search(r'width="(\d+)"', head), re.search(r'height="(\d+)"', head)
+            return (int(w.group(1)), int(h.group(1))) if w and h else default
         with open(os.path.join(ROOT, rel), "rb") as f:
             d = f.read(40)
         kind = d[12:16]
@@ -127,6 +133,7 @@ def nav(p, active):
     for key, label, href in items:
         cur = ' aria-current="page"' if key == active else ""
         links.append(f'                <li><a href="{href}"{cur}>{label}</a></li>')
+    links.append(f'                <li><a href="{C.BLOG}" target="_blank" rel="noopener">Blog ↗</a></li>')
     links.append(f'                <li><a class="btn btn-outline" href="{C.CV_URL}" target="_blank" rel="noopener">CV</a></li>')
     return f"""    <header class="site-nav">
         <div class="container">
@@ -146,6 +153,7 @@ def footer(p):
         ("mailto:" + C.EMAIL, "Email", "email_white_44dp.png", ""),
         (C.GITHUB, "GitHub", "github_white_44dp.png", ' target="_blank" rel="noopener"'),
         (C.LINKEDIN, "LinkedIn", "linkedin_white_44dp.png", ' target="_blank" rel="noopener"'),
+        (C.BLOG, "Blog", "blog_white.svg", ' target="_blank" rel="noopener"'),
         (C.MEDIUM, "Medium", "medium_white_44dp.png", ' target="_blank" rel="noopener"'),
         (C.SCHOLAR, "Google Scholar", "google_scholar_icon.png", ' target="_blank" rel="noopener"'),
     ]
@@ -158,7 +166,7 @@ def footer(p):
             <div class="social-links">
 {icons}
             </div>
-            <p class="footer-text">&copy; {YEAR} {C.NAME}. All rights reserved. Built with Codex.</p>
+            <p class="footer-text">&copy; {YEAR} {C.NAME}. All rights reserved.</p>
         </div>
     </footer>"""
 
@@ -212,9 +220,19 @@ def card_html(pr, depth, *, fade=True, attrs=""):
             </article>"""
 
 
-def tl_item(date_txt, inner):
+def aff_badge(key, *, small=False, full=False):
+    """Affiliation badge: monogram + name, linked to the institution's site."""
+    a = C.AFFILIATIONS[key]
+    label = a["name"] if full else a["short"]
+    cls = "aff-badge is-sm" if small else "aff-badge"
+    return (f'<a class="{cls}" href="{a["url"]}" target="_blank" rel="noopener" title="{esc(a["name"])}">'
+            f'<span class="aff-mark" aria-hidden="true">{a["mark"]}</span><span>{esc(label)}</span></a>')
+
+
+def tl_item(date_txt, inner, aff=None):
+    badge = f'\n                    {aff_badge(aff, small=True)}' if aff else ""
     return f"""            <div class="timeline-item fade-in">
-                <div class="timeline-date">{esc(date_txt)}</div>
+                <div class="timeline-date">{esc(date_txt)}{badge}</div>
                 <div class="timeline-body">
 {inner}
                 </div>
@@ -238,7 +256,7 @@ def build_home():
             courses = f'\n                    <details class="coursework"><summary>Relevant coursework</summary><ul>{lis}</ul></details>'
         inner = (f'                    <h3>{esc(e["org"])}</h3>\n                    <span class="timeline-sub">{esc(e["role"])}</span>\n'
                  f'                    {"".join(lines)}{courses}')
-        edu.append(tl_item(e["date"], inner))
+        edu.append(tl_item(e["date"], inner, e.get("aff")))
 
     exp = []
     for e in C.EXPERIENCE:
@@ -249,7 +267,7 @@ def build_home():
         parts += [f"                    <p>{esc(t)}</p>" for t in e["paras"]]
         if e["bullets"]:
             parts.append("                    <ul>" + "".join(f"<li>{esc(b)}</li>" for b in e["bullets"]) + "</ul>")
-        exp.append(tl_item(e["date"], "\n".join(parts)))
+        exp.append(tl_item(e["date"], "\n".join(parts), e.get("aff")))
 
     awards = []
     for d, title, sub, extra in C.AWARDS:
@@ -260,6 +278,7 @@ def build_home():
 
     focus = "\n".join(
         f"                <li><span>{n}</span><strong>{t}</strong><p>{d}</p></li>" for n, t, d in C.FOCUS)
+    n_featured = sum(1 for pr in C.PROJECTS if pr["featured"])
     featured = "\n".join(card_html(pr, 0) for pr in C.PROJECTS if pr["featured"])
     selected = "\n".join(pub_html(pb, 0, show_type=False) .replace('class="pub"', 'class="pub fade-in"', 1)
                          for pb in C.PUBLICATIONS if pb["selected"])
@@ -267,6 +286,7 @@ def build_home():
         ("mailto:" + C.EMAIL, "email_white_44dp.png", "Email", C.EMAIL, ""),
         (C.LINKEDIN, "linkedin_white_44dp.png", "LinkedIn", "Shyandram", ' target="_blank" rel="noopener"'),
         (C.GITHUB, "github_white_44dp.png", "GitHub", "Shyandram", ' target="_blank" rel="noopener"'),
+        (C.BLOG, "blog_white.svg", "Blog", "blog.shyandram.dev", ' target="_blank" rel="noopener"'),
         (C.MEDIUM, "medium_white_44dp.png", "Medium", "@shyangen104", ' target="_blank" rel="noopener"'),
         (C.SCHOLAR, "google_scholar_icon.png", "Scholar", "Google Scholar Profile", ' target="_blank" rel="noopener"'),
     ]
@@ -279,7 +299,7 @@ def build_home():
         "url": C.SITE_URL, "image": C.SITE_URL + "images/selfie.jpg",
         "jobTitle": "PhD candidate, Computer Vision",
         "affiliation": {"@type": "CollegeOrUniversity", "name": "National Yang Ming Chiao Tung University"},
-        "sameAs": [C.GITHUB, C.LINKEDIN, C.MEDIUM, C.SCHOLAR],
+        "sameAs": [C.GITHUB, C.LINKEDIN, C.BLOG, C.MEDIUM, C.SCHOLAR],
     }, ensure_ascii=False)
 
     body = f"""    <main id="main">
@@ -288,6 +308,7 @@ def build_home():
                 <div class="hero-text fade-in">
                     <p class="eyebrow">PhD candidate · Computer vision · Taiwan</p>
                     <h1>{C.NAME}</h1>
+                    <div class="aff-row" aria-label="Affiliation">{aff_badge("nycu", full=True)}<span class="aff-badge is-lab" title="{esc(C.LAB["full"])}"><span class="aff-mark" aria-hidden="true">ACM</span><span>{C.LAB["name"]}</span></span></div>
                     <p class="hero-lead"><span lang="zh-TW">{C.NAME_ZH}</span> (Shyang) — I build practical vision systems for images that are difficult to see, understand, or use.</p>
                     <div class="btn-row">
                         <a href="#research" class="btn btn-outline">Explore the work</a>
@@ -340,12 +361,12 @@ def build_home():
                         <a href="{C.SCHOLAR}" class="text-link" target="_blank" rel="noopener">Google Scholar</a>
                     </div>
                 </div>
-                <div class="card-grid">
+                <div class="card-grid is-compact{' is-3' if n_featured == 3 else ''}">
 {featured}
                 </div>
 
-                <div class="subsection-head fade-in" id="publications"><p class="eyebrow">Selected writing</p><h3>Publications</h3></div>
-                <div class="pub-grid">
+                <div class="subsection-head is-tight fade-in" id="publications"><p class="eyebrow">Selected writing</p><h3>Publications</h3></div>
+                <div class="pub-grid is-compact">
 {selected}
                 </div>
                 <div class="btn-row" style="justify-content:center;margin-top:2.5rem"><a href="research.html#publications" class="btn fade-in">All publications</a></div>

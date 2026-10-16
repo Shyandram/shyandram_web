@@ -13,7 +13,19 @@ LINKEDIN = "https://www.linkedin.com/in/Shyandram/"
 MEDIUM = "https://medium.com/@shyangen104"
 EMAIL = "shyangen104@gmail.com"
 CV_URL = "https://drive.google.com/file/d/1rs0FKCtK_leqRvLHzdSkleJ6Lxe3RcTZ/view"
+BLOG = "https://blog.shyandram.dev/zh-tw/"
 SLIDES_URL = "https://drive.google.com/file/d/1j0LcNTCM60v78FmR7VG5Dv24tpJnl4ON/view"
+
+# Affiliations shown as badges. `mark` is the monogram inside the badge.
+AFFILIATIONS = {
+    "nycu": {"mark": "NYCU", "short": "NYCU", "name": "National Yang Ming Chiao Tung University",
+             "url": "https://www.nycu.edu.tw/"},
+    "uwm": {"mark": "UWM", "short": "UWM", "name": "University of Wisconsin-Milwaukee", "url": "https://uwm.edu/"},
+    "cycu": {"mark": "CYCU", "short": "CYCU", "name": "Chung Yuan Christian University",
+             "url": "https://www.cycu.edu.tw/"},
+}
+# Lab shown next to the main affiliation in the hero
+LAB = {"name": "ACM Lab", "full": "Applied Computing and Multimedia Lab, NYCU"}
 
 # ----------------------------------------------------------------------------
 # Home page
@@ -35,6 +47,7 @@ EDUCATION = [
     {
         "date": "Feb 2025 - Present",
         "org": "National Yang Ming Chiao Tung University (NYCU)",
+        "aff": "nycu",
         "role": "Doctor of Philosophy in Computer Science and Engineering",
         "lines": ["ACM Lab (Applied Computing and Multimedia Lab). Focus on Computer Vision and Deep Learning."],
         "courses": [],
@@ -42,6 +55,7 @@ EDUCATION = [
     {
         "date": "Sep 2023 - May 2024",
         "org": "University of Wisconsin-Milwaukee (UWM)",
+        "aff": "uwm",
         "role": "Master of Science in Engineering (Dual Master's Degree Program)",
         "lines": ["Electrical and Computer Engineering Concentration"],
         "gpa": "3.833",
@@ -54,6 +68,7 @@ EDUCATION = [
     {
         "date": "Sep 2022 - May 2024",
         "org": "Chung Yuan Christian University (CYCU)",
+        "aff": "cycu",
         "role": "Master of Science in Electronic Engineering (Dual Master's Degree Program)",
         "lines": ["Institute of Computer Science and Engineering"],
         "gpa": "4.000",
@@ -66,6 +81,7 @@ EDUCATION = [
     {
         "date": "Sep 2017 - Jun 2022",
         "org": "Chung Yuan Christian University (CYCU)",
+        "aff": "cycu",
         "role": "Bachelor of Science in Electronic Engineering",
         "lines": ["Department of Electrical Engineering"],
         "gpa": "3.878 (161 total credits)",
@@ -87,6 +103,7 @@ EXPERIENCE = [
         "date": "Feb 2025 - Present",
         "title": "Research Assistant (Part-time)",
         "org": "ACM Lab, National Yang Ming Chiao Tung University",
+        "aff": "nycu",
         "advisor": "Advisor: Prof. Ching-Chun Huang",
         "paras": [
             "Collaborating on a MediaTek industry-academic cooperation project, focusing on Super-Resolution, "
@@ -99,6 +116,7 @@ EXPERIENCE = [
         "date": "Jan 2024 - Jul 2024",
         "title": "Research Assistant (Part-time)",
         "org": "MuCAT Lab, Chung Yuan Christian University (CYCU), Taiwan",
+        "aff": "cycu",
         "advisor": "Advisor: Prof. Shaou-Gang Miaou",
         "paras": [
             "Participated in a NSTC Research Project, focusing on Dynamic Illumination Adjustment and "
@@ -115,6 +133,7 @@ EXPERIENCE = [
         "date": "Oct 2022 - Aug 2023",
         "title": "Research Assistant (Part-time)",
         "org": "MuCAT Lab, Chung Yuan Christian University (CYCU), Taiwan",
+        "aff": "cycu",
         "advisor": "Advisor: Prof. Shaou-Gang Miaou",
         "paras": [
             "Participated in a NSTC Research Project, focusing on Image Enhancement and Restoration, "
@@ -130,6 +149,7 @@ EXPERIENCE = [
         "date": "Sep 2021 - Jan 2022",
         "title": "Teaching Assistant (Part-time)",
         "org": "Department of Electronic Engineering, Chung Yuan Christian University (CYCU), Taiwan",
+        "aff": "cycu",
         "advisor": "Instructor: Prof. Hui-Kai Zeng",
         "paras": ["Course: Modern Physics"],
         "bullets": [],
@@ -138,6 +158,7 @@ EXPERIENCE = [
         "date": "Sep 2018 - Jun 2022",
         "title": "Student Senator",
         "org": "Department of Electronic Engineering Student Council, CYCU",
+        "aff": "cycu",
         "paras": ["Served as a Senator (議代) for the Department Student Council for 4 years."],
         "bullets": [],
     },
@@ -173,10 +194,10 @@ AWARDS = [
 # ----------------------------------------------------------------------------
 PUBLICATIONS = [
     {
-        "id": "osdiff-2026", "year": 2026, "type": "preprint", "selected": True,
-        "title": "Bridging Restoration and Generation Manifolds in One-Step Diffusion for Real-World Super-Resolution",
+        "project": "diffusion-sr", "id": "osdiff-2026", "year": 2026, "type": "preprint", "selected": True,
+        "title": "Bridging Restoration and Generation in One-step Diffusion for Real-World Image Super-Resolution",
         "authors": "Shyang-En Weng, Yi-Cheng Liao, Yu-Syuan Xu, Wei-Chen Chiu, Ching-Chun Huang",
-        "venue": "arXiv preprint", "date": "2026",
+        "venue": "arXiv preprint", "date": "Apr 2026",
         "links": [("arXiv:2604.24136", "https://arxiv.org/abs/2604.24136")],
     },
     {
@@ -184,11 +205,11 @@ PUBLICATIONS = [
         "title": "The First Challenge on Mobile Real-World Image Super-Resolution at NTIRE 2026: "
                  "Benchmark Results and Method Overview",
         "authors": "Jiatong Li and 93 other authors, including Shyang-En Weng",
-        "venue": "arXiv preprint", "date": "2026",
+        "venue": "arXiv preprint", "date": "Apr 2026",
         "links": [("arXiv:2604.17306", "https://arxiv.org/abs/2604.17306")],
     },
     {
-        "id": "zephir-2025", "year": 2025, "type": "preprint", "selected": True,
+        "project": "diffusion-sr", "id": "zephir-2025", "year": 2025, "type": "preprint", "selected": True,
         "title": "Learning Ordinal Degradation Representations with Textual Priors for Diffusion-Based "
                  "Blind Image Super-Resolution",
         "authors": "Yi-Cheng Liao, Shyang-En Weng, Yu-Syuan Xu, Chia-Hung Yuan, Wei-Chen Chiu, Ching-Chun Huang",
@@ -199,8 +220,10 @@ PUBLICATIONS = [
         "id": "ijprai-2025", "year": 2025, "type": "journal", "selected": True, "project": "lightweight-enhancement",
         "title": "A lightweight low-light image enhancement network via channel prior and gamma correction",
         "authors": "Shyang-En Weng, Shaou-Gang Miaou, Ricky Christanto",
-        "venue": "International Journal of Pattern Recognition and Artificial Intelligence (IJPRAI)", "date": "2025",
-        "links": [("DOI: 10.1142/S0218001425540138", "https://www.worldscientific.com/doi/full/10.1142/S0218001425540138")],
+        "venue": "International Journal of Pattern Recognition and Artificial Intelligence (IJPRAI), vol. 39, no. 12",
+        "date": "2025",
+        "links": [("DOI: 10.1142/S0218001425540138", "https://www.worldscientific.com/doi/full/10.1142/S0218001425540138"),
+                  ("arXiv:2402.18147", "https://arxiv.org/abs/2402.18147")],
     },
     {
         "id": "jit-2025", "year": 2025, "type": "journal", "selected": True, "project": "mask-detection",
@@ -217,8 +240,9 @@ PUBLICATIONS = [
         "title": "Rethinking Theoretical Illumination for Efficient Low-Light Image Enhancement",
         "authors": "Shyang-En Weng, Cheng-Yen Hsiao, Li-Wei Lu, Yu-Shen Huang, Tzu-Han Chen, Shaou-Gang Miaou, "
                    "Ricky Christanto",
-        "venue": "arXiv preprint", "date": "Sep 2024 (v4: Aug 2025)",
-        "links": [("arXiv:2409.05274", "https://arxiv.org/abs/2409.05274")],
+        "venue": "arXiv preprint", "date": "Sep 2024",
+        "links": [("arXiv:2409.05274", "https://arxiv.org/abs/2409.05274"),
+                  ("Code", "https://github.com/Shyandram/CPGA-Net_Plus")],
     },
     {
         "id": "sivp-2024", "year": 2024, "type": "journal", "selected": True, "project": "dynamic-illuminance",
@@ -274,10 +298,10 @@ PUBLICATIONS = [
         "links": [("SSRN: 4591716", "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4591716")],
     },
     {
-        "id": "thesis-2023", "year": 2023, "type": "thesis", "selected": False, "project": "weather-generation",
+        "id": "thesis-2024", "year": 2024, "type": "thesis", "selected": False, "project": "weather-generation",
         "title": "Weather Image Generation (DGNDW)",
         "authors": "Shyang-En Weng, Shaou-Gang Miaou",
-        "venue": "Master's Thesis, CYCU", "date": "2023",
+        "venue": "Master's Thesis, CYCU", "date": "2024",
         "links": [("Thesis", "https://hdl.handle.net/11296/xjgq5j")],
     },
 ]
@@ -289,6 +313,59 @@ PUB_TYPES = {"journal": "Journal", "conference": "Conference", "preprint": "Prep
 # `fit` controls the card thumbnail: "contain" for diagrams, "cover" for photos.
 # ----------------------------------------------------------------------------
 PROJECTS = [
+    {
+        "slug": "diffusion-sr", "featured": True, "category": "restoration",
+        "title": "Diffusion-based Real-World Super-Resolution",
+        "title_zh": "基於擴散模型的真實世界超解析度",
+        "year": "2025-2026", "short": "Diffusion SR",
+        "summary": "Adapting pretrained diffusion models to real-world super-resolution with degradation-aware "
+                   "representations and one-step restoration.",
+        "chips": ["Diffusion Models", "Super-Resolution", "Degradation Representation", "arXiv 2025-2026"],
+        "thumb": "images/Diffusion SR/cover.svg", "fit": "cover",
+        "links": [("arXiv:2604.24136", "https://arxiv.org/abs/2604.24136"),
+                  ("arXiv:2512.10340", "https://arxiv.org/abs/2512.10340")],
+        "facts": [("Period", "2025-2026"),
+                  ("Setting", "ACM Lab, NYCU, with MediaTek co-authors"),
+                  ("Authorship", "1st author (2604.24136), 2nd author (2512.10340)")],
+        "keywords": ["Real-World Super-Resolution", "Diffusion Models", "Stable Diffusion", "One-Step Diffusion",
+                     "Degradation Representation", "CLIP"],
+        "sections": [
+            {"id": "overview", "title": "Project overview", "html": """
+<p>Real-world image super-resolution (Real-ISR) has to restore images whose degradations are unknown, mixed and
+of varying severity. This project studies how to make large pretrained diffusion models, such as
+<strong>Stable Diffusion</strong>, work for that setting along two complementary directions: representing
+<em>what</em> is wrong with an image and <em>how badly</em>, and using that knowledge to decide how a diffusion
+model should restore it.</p>"""},
+            {"id": "ordinal-degradation", "title": "Ordinal degradation representations", "html": """
+<p>The first paper, <em>Learning Ordinal Degradation Representations with Textual Priors for Diffusion-Based
+Blind Image Super-Resolution</em> (<a href="https://arxiv.org/abs/2512.10340" target="_blank" rel="noopener">arXiv:2512.10340</a>),
+was first released as <strong>ZePHiR</strong>: zero-shot adaptation of Stable Diffusion through a plug-in
+hierarchical degradation representation.</p>
+<ul>
+<li><strong>Decoupled degradation</strong>: an <strong>HD-CLIP</strong> component separates degradation
+<em>type</em> from degradation <em>intensity</em> using composition-based ordinal text embeddings.</li>
+<li><strong>Plug-in design</strong>: the representation is attached to a pretrained diffusion model rather than
+training a restoration network from scratch.</li>
+</ul>"""},
+            {"id": "one-step", "title": "One-step diffusion with manifold inversion", "html": """
+<p>The second paper, <em>Bridging Restoration and Generation in One-step Diffusion for Real-World Image
+Super-Resolution</em> (<a href="https://arxiv.org/abs/2604.24136" target="_blank" rel="noopener">arXiv:2604.24136</a>),
+targets the cost of iterative diffusion sampling. Distilling a diffusion model into a single step is fast but
+runs into a perception-distortion trade-off: common one-step methods turn the generative prior into a
+deterministic mapping and lose its stochastic nature, while methods that bring randomness back by shifting
+timesteps or adding noise only control one side, so restoration and generation agree at a few preset timesteps
+and drift apart once steered.</p>
+<p>The proposed <strong>IDaS-SR</strong> (Inversion and Degradation-aware Sampling for Real-ISR) is a one-step
+framework with two parts:</p>
+<ul>
+<li><strong>Manifold Inversion Noise Estimator</strong>: anchors the low-quality latent onto the pretrained
+diffusion trajectory.</li>
+<li><strong>CHARIOT</strong>: reintroduces controlled stochasticity, so a single scalar moves smoothly along the
+fidelity-realism trade-off at inference.</li>
+</ul>
+<p>The authors report state-of-the-art results under explicit control in a single inference step.</p>"""},
+        ],
+    },
     {
         "slug": "dynamic-illuminance", "featured": True, "category": "enhancement",
         "title": "Dynamic Illuminance Enhancement for Diverse Scenes",
@@ -346,7 +423,8 @@ preservation.</li>
         "chips": ["Edge AI", "Knowledge Distillation", "Explainable AI"],
         "card_chips": ["CPGA-Net", "CPGA-Net+"],
         "thumb": "images/Lightweight Image Enhancement/exposure.webp", "fit": "cover",
-        "links": [("GitHub Repository", "https://github.com/Shyandram/CPGA-Net-Pytorch.git")],
+        "links": [("GitHub: CPGA-Net", "https://github.com/Shyandram/CPGA-Net-Pytorch.git"),
+                  ("GitHub: CPGA-Net+", "https://github.com/Shyandram/CPGA-Net_Plus")],
         "facts": [("Period", "2024-2025"), ("Models", "CPGA-Net, CPGA-Net+"),
                   ("Footprint", "0.025 M parameters, 0.030 s inference (CPGA-Net)")],
         "keywords": ["Low-Light Enhancement", "Edge AI", "Knowledge Distillation", "Explainable AI",
@@ -376,7 +454,8 @@ models.</li>
 <p>Detailed in our <em>ArXiv</em> preprint, <strong>CPGA-Net+</strong> extends the framework with
 <strong>theoretically-based attentions</strong> for local and global illumination processing. This version
 achieves a significant balance between performance and computational cost, effectively addressing the
-"theoretical illumination" constraints of previous models.</p>"""},
+"theoretical illumination" constraints of previous models.</p>
+<p>Code: <a href="https://github.com/Shyandram/CPGA-Net_Plus" target="_blank" rel="noopener">CPGA-Net+ on GitHub</a>.</p>"""},
             {"id": "driving", "title": "Atmospheric scattering for driving scenes", "html": """
 <p>Our work presented at <em>IEEE ICCE-TW 2024</em> specifically targets <strong>Exposure Correction</strong> in
 dynamic driving scenes. By grounding the enhancement in the atmospheric scattering model, the method improves
