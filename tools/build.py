@@ -56,6 +56,8 @@ def asset_version(name):
         return hashlib.sha1(f.read()).hexdigest()[:8]
 
 
+# Icons that carry their own brand colours (ORCID's official iD icon must not be recoloured)
+COLOR_ICONS = {"orcid.svg", "google_scholar_icon.png"}
 CSS_V, JS_V = asset_version("style.css"), asset_version("script.js")
 PROJECTS = {p["slug"]: p for p in C.PROJECTS}
 CATEGORY_LABEL = dict(C.CATEGORIES)
@@ -163,10 +165,10 @@ def footer(p):
         (C.BLOG, "Blog", "blog_white.svg", ' target="_blank" rel="noopener"'),
         (C.MEDIUM, "Medium", "medium_white_44dp.png", ' target="_blank" rel="noopener"'),
         (C.SCHOLAR, "Google Scholar", "google_scholar_icon.png", ' target="_blank" rel="noopener"'),
-        (C.ORCID, "ORCID", "orcid_white.svg", ' target="_blank" rel="noopener"'),
+        (C.ORCID, "ORCID", "orcid.svg", ' target="_blank" rel="noopener"'),
     ]
     icons = "\n".join(
-        f'                <a href="{u}"{t} title="{n}"><img src="{p}images/icons/{i}" alt="{n}" class="social-icon" '
+        f'                <a href="{u}"{t} title="{n}"><img src="{p}images/icons/{i}" alt="{n}" class="social-icon{" is-color" if i in COLOR_ICONS else ""}" '
         f'width="18" height="18" loading="lazy"></a>'
         for u, n, i, t in socials)
     return f"""    <footer class="site-footer">
@@ -287,10 +289,10 @@ def build_home():
         (C.BLOG, "blog_white.svg", "Blog", "blog.shyandram.dev", ' target="_blank" rel="noopener"'),
         (C.MEDIUM, "medium_white_44dp.png", "Medium", "@shyangen104", ' target="_blank" rel="noopener"'),
         (C.SCHOLAR, "google_scholar_icon.png", "Scholar", "Google Scholar Profile", ' target="_blank" rel="noopener"'),
-        (C.ORCID, "orcid_white.svg", "ORCID", C.ORCID_ID, ' target="_blank" rel="noopener"'),
+        (C.ORCID, "orcid.svg", "ORCID", "orcid.org/" + C.ORCID_ID, ' target="_blank" rel="noopener"'),
     ]
     contact_html = "\n".join(
-        f'            <a href="{u}"{t} class="contact-card fade-in"><img src="images/icons/{i}" alt="" class="contact-icon" '
+        f'            <a href="{u}"{t} class="contact-card fade-in"><img src="images/icons/{i}" alt="" class="contact-icon{" is-color" if i in COLOR_ICONS else ""}" '
         f'width="24" height="24" loading="lazy"><h3>{n}</h3><p>{v}</p></a>' for u, i, n, v, t in contacts)
 
     jsonld = json.dumps({

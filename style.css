@@ -236,6 +236,7 @@ main { display: block; }
 .social-links { display: flex; gap: .9rem; }
 .social-icon { height: 18px; opacity: .55; transition: opacity var(--ease), transform var(--ease); width: 18px; }
 .social-links a:hover .social-icon { opacity: 1; transform: translateY(-2px); }
+.social-icon.is-color, .contact-icon.is-color { opacity: 1; }
 .footer-text { color: var(--faint); font-size: .78rem; }
 
 .back-to-top { background: var(--accent); border: 0; bottom: 1.5rem; color: var(--ink); cursor: pointer; display: grid; height: 40px; opacity: 0; place-items: center; pointer-events: none; position: fixed; right: 1.5rem; transform: translateY(10px); transition: opacity var(--ease), transform var(--ease), background-color var(--ease); width: 40px; z-index: 40; }
