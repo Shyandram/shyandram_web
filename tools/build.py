@@ -160,7 +160,7 @@ def footer(p):
             <div class="social-links">
 {icons}
             </div>
-            <p class="footer-text">&copy; {YEAR} {C.NAME}. All rights reserved. Built with Codex.</p>
+            <p class="footer-text">&copy; {YEAR} {C.NAME}. All rights reserved.</p>
         </div>
     </footer>"""
 
