@@ -195,7 +195,7 @@ AWARDS = [
 PUBLICATIONS = [
     {
         "project": "diffusion-sr", "id": "osdiff-2026", "year": 2026, "type": "preprint", "selected": True,
-        "title": "Bridging Restoration and Generation Manifolds in One-Step Diffusion for Real-World Super-Resolution",
+        "title": "Bridging Restoration and Generation in One-step Diffusion for Real-World Image Super-Resolution",
         "authors": "Shyang-En Weng, Yi-Cheng Liao, Yu-Syuan Xu, Wei-Chen Chiu, Ching-Chun Huang",
         "venue": "arXiv preprint", "date": "Apr 2026",
         "links": [("arXiv:2604.24136", "https://arxiv.org/abs/2604.24136")],
@@ -347,16 +347,23 @@ hierarchical degradation representation.</p>
 <li><strong>Plug-in design</strong>: the representation is attached to a pretrained diffusion model rather than
 training a restoration network from scratch.</li>
 </ul>"""},
-            {"id": "one-step", "title": "One-step diffusion with adaptive inversion", "html": """
-<p>The second paper, <em>Bridging Restoration and Generation Manifolds in One-Step Diffusion for Real-World
+            {"id": "one-step", "title": "One-step diffusion with manifold inversion", "html": """
+<p>The second paper, <em>Bridging Restoration and Generation in One-step Diffusion for Real-World Image
 Super-Resolution</em> (<a href="https://arxiv.org/abs/2604.24136" target="_blank" rel="noopener">arXiv:2604.24136</a>),
-proposes <strong>IDaS-SR</strong> and restores an image in a single diffusion step.</p>
+targets the cost of iterative diffusion sampling. Distilling a diffusion model into a single step is fast but
+runs into a perception-distortion trade-off: common one-step methods turn the generative prior into a
+deterministic mapping and lose its stochastic nature, while methods that bring randomness back by shifting
+timesteps or adding noise only control one side, so restoration and generation agree at a few preset timesteps
+and drift apart once steered.</p>
+<p>The proposed <strong>IDaS-SR</strong> (Inversion and Degradation-aware Sampling for Real-ISR) is a one-step
+framework with two parts:</p>
 <ul>
-<li><strong>Manifold Inversion Noise Estimator</strong>: predicts a severity-aware timestep and inversion noise,
-anchoring low-quality latents onto the diffusion trajectory.</li>
-<li><strong>CHARIOT</strong>: a continuous steering mechanism that trades off perception against distortion,
-moving from a structural restorer to a texture-rich generator within one inference step.</li>
-</ul>"""},
+<li><strong>Manifold Inversion Noise Estimator</strong>: anchors the low-quality latent onto the pretrained
+diffusion trajectory.</li>
+<li><strong>CHARIOT</strong>: reintroduces controlled stochasticity, so a single scalar moves smoothly along the
+fidelity-realism trade-off at inference.</li>
+</ul>
+<p>The authors report state-of-the-art results under explicit control in a single inference step.</p>"""},
         ],
     },
     {
