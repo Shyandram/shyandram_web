@@ -185,6 +185,26 @@ a.aff-badge:hover { border-color: var(--accent); }
 .year-group > h3 { align-self: start; color: var(--accent); font-size: 1.5rem; font-variant-numeric: tabular-nums; position: sticky; top: calc(var(--nav-h) + 4.5rem); }
 .year-group .pub:first-child { border-top: 0; padding-top: 0; }
 
+/* Compact variants used on the home page highlights */
+.card-grid.is-compact { gap: 1rem; }
+.is-compact .card-thumb { aspect-ratio: 2 / 1; }
+.is-compact .card-thumb img { padding: .4rem; }
+.is-compact .card-thumb.is-cover img { padding: 0; }
+.is-compact .card-body { gap: .35rem; padding: .85rem 1rem 1rem; }
+.is-compact .card-meta { font-size: .68rem; }
+.is-compact .card-body h3 { font-size: .98rem; }
+.is-compact .card-body p { -webkit-box-orient: vertical; display: -webkit-box; -webkit-line-clamp: 2; line-clamp: 2; font-size: .84rem; overflow: hidden; }
+.is-compact .card-more { font-size: .72rem; padding-top: .2rem; }
+.pub-grid.is-compact { gap: 0 2rem; }
+.is-compact .pub { padding: .85rem 0 .95rem; }
+.is-compact .pub-title { font-size: .9rem; line-height: 1.45; }
+.is-compact .pub-authors { font-size: .78rem; margin-top: .25rem; }
+.is-compact .pub-venue { font-size: .74rem; margin-top: .15rem; }
+.is-compact .pub-foot { gap: .4rem .5rem; margin-top: .5rem; }
+.is-compact .pub-link { font-size: .7rem; padding: .15rem .5rem; }
+.is-compact .pub-project { display: none; }   /* shown on the full research page */
+.subsection-head.is-tight { margin-top: 2.5rem; }
+
 /* ---------- Contact & footer ---------- */
 .contact-grid { background: var(--line); border: 1px solid var(--line); display: grid; gap: 1px; grid-template-columns: repeat(3, 1fr); }
 .contact-card { background: var(--surface); padding: 1.25rem 1.4rem; }

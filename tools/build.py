@@ -10,6 +10,7 @@ import hashlib
 import html
 import json
 import os
+import re
 import sys
 from datetime import date
 from urllib.parse import quote
@@ -30,6 +31,11 @@ def q(path):
 def image_size(rel, default=(1200, 800)):
     """Read pixel size from a WebP header (VP8 / VP8L / VP8X) without third-party libraries."""
     try:
+        if rel.endswith(".svg"):
+            with open(os.path.join(ROOT, rel), encoding="utf-8") as f:
+                head = f.read(400)
+            w, h = re.search(r'width="(\d+)"', head), re.search(r'height="(\d+)"', head)
+            return (int(w.group(1)), int(h.group(1))) if w and h else default
         with open(os.path.join(ROOT, rel), "rb") as f:
             d = f.read(40)
         kind = d[12:16]
@@ -272,6 +278,7 @@ def build_home():
 
     focus = "\n".join(
         f"                <li><span>{n}</span><strong>{t}</strong><p>{d}</p></li>" for n, t, d in C.FOCUS)
+    n_featured = sum(1 for pr in C.PROJECTS if pr["featured"])
     featured = "\n".join(card_html(pr, 0) for pr in C.PROJECTS if pr["featured"])
     selected = "\n".join(pub_html(pb, 0, show_type=False) .replace('class="pub"', 'class="pub fade-in"', 1)
                          for pb in C.PUBLICATIONS if pb["selected"])
@@ -354,12 +361,12 @@ def build_home():
                         <a href="{C.SCHOLAR}" class="text-link" target="_blank" rel="noopener">Google Scholar</a>
                     </div>
                 </div>
-                <div class="card-grid">
+                <div class="card-grid is-compact{' is-3' if n_featured == 3 else ''}">
 {featured}
                 </div>
 
-                <div class="subsection-head fade-in" id="publications"><p class="eyebrow">Selected writing</p><h3>Publications</h3></div>
-                <div class="pub-grid">
+                <div class="subsection-head is-tight fade-in" id="publications"><p class="eyebrow">Selected writing</p><h3>Publications</h3></div>
+                <div class="pub-grid is-compact">
 {selected}
                 </div>
                 <div class="btn-row" style="justify-content:center;margin-top:2.5rem"><a href="research.html#publications" class="btn fade-in">All publications</a></div>

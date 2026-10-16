@@ -194,7 +194,7 @@ AWARDS = [
 # ----------------------------------------------------------------------------
 PUBLICATIONS = [
     {
-        "id": "osdiff-2026", "year": 2026, "type": "preprint", "selected": True,
+        "project": "diffusion-sr", "id": "osdiff-2026", "year": 2026, "type": "preprint", "selected": True,
         "title": "Bridging Restoration and Generation Manifolds in One-Step Diffusion for Real-World Super-Resolution",
         "authors": "Shyang-En Weng, Yi-Cheng Liao, Yu-Syuan Xu, Wei-Chen Chiu, Ching-Chun Huang",
         "venue": "arXiv preprint", "date": "Apr 2026",
@@ -209,7 +209,7 @@ PUBLICATIONS = [
         "links": [("arXiv:2604.17306", "https://arxiv.org/abs/2604.17306")],
     },
     {
-        "id": "zephir-2025", "year": 2025, "type": "preprint", "selected": True,
+        "project": "diffusion-sr", "id": "zephir-2025", "year": 2025, "type": "preprint", "selected": True,
         "title": "Learning Ordinal Degradation Representations with Textual Priors for Diffusion-Based "
                  "Blind Image Super-Resolution",
         "authors": "Yi-Cheng Liao, Shyang-En Weng, Yu-Syuan Xu, Chia-Hung Yuan, Wei-Chen Chiu, Ching-Chun Huang",
@@ -313,6 +313,52 @@ PUB_TYPES = {"journal": "Journal", "conference": "Conference", "preprint": "Prep
 # `fit` controls the card thumbnail: "contain" for diagrams, "cover" for photos.
 # ----------------------------------------------------------------------------
 PROJECTS = [
+    {
+        "slug": "diffusion-sr", "featured": True, "category": "restoration",
+        "title": "Diffusion-based Real-World Super-Resolution",
+        "title_zh": "基於擴散模型的真實世界超解析度",
+        "year": "2025-2026", "short": "Diffusion SR",
+        "summary": "Adapting pretrained diffusion models to real-world super-resolution with degradation-aware "
+                   "representations and one-step restoration.",
+        "chips": ["Diffusion Models", "Super-Resolution", "Degradation Representation", "arXiv 2025-2026"],
+        "thumb": "images/Diffusion SR/cover.svg", "fit": "cover",
+        "links": [("arXiv:2604.24136", "https://arxiv.org/abs/2604.24136"),
+                  ("arXiv:2512.10340", "https://arxiv.org/abs/2512.10340")],
+        "facts": [("Period", "2025-2026"),
+                  ("Setting", "ACM Lab, NYCU, with MediaTek co-authors"),
+                  ("Authorship", "1st author (2604.24136), 2nd author (2512.10340)")],
+        "keywords": ["Real-World Super-Resolution", "Diffusion Models", "Stable Diffusion", "One-Step Diffusion",
+                     "Degradation Representation", "CLIP"],
+        "sections": [
+            {"id": "overview", "title": "Project overview", "html": """
+<p>Real-world image super-resolution (Real-ISR) has to restore images whose degradations are unknown, mixed and
+of varying severity. This project studies how to make large pretrained diffusion models, such as
+<strong>Stable Diffusion</strong>, work for that setting along two complementary directions: representing
+<em>what</em> is wrong with an image and <em>how badly</em>, and using that knowledge to decide how a diffusion
+model should restore it.</p>"""},
+            {"id": "ordinal-degradation", "title": "Ordinal degradation representations", "html": """
+<p>The first paper, <em>Learning Ordinal Degradation Representations with Textual Priors for Diffusion-Based
+Blind Image Super-Resolution</em> (<a href="https://arxiv.org/abs/2512.10340" target="_blank" rel="noopener">arXiv:2512.10340</a>),
+was first released as <strong>ZePHiR</strong>: zero-shot adaptation of Stable Diffusion through a plug-in
+hierarchical degradation representation.</p>
+<ul>
+<li><strong>Decoupled degradation</strong>: an <strong>HD-CLIP</strong> component separates degradation
+<em>type</em> from degradation <em>intensity</em> using composition-based ordinal text embeddings.</li>
+<li><strong>Plug-in design</strong>: the representation is attached to a pretrained diffusion model rather than
+training a restoration network from scratch.</li>
+</ul>"""},
+            {"id": "one-step", "title": "One-step diffusion with adaptive inversion", "html": """
+<p>The second paper, <em>Bridging Restoration and Generation Manifolds in One-Step Diffusion for Real-World
+Super-Resolution</em> (<a href="https://arxiv.org/abs/2604.24136" target="_blank" rel="noopener">arXiv:2604.24136</a>),
+proposes <strong>IDaS-SR</strong> and restores an image in a single diffusion step.</p>
+<ul>
+<li><strong>Manifold Inversion Noise Estimator</strong>: predicts a severity-aware timestep and inversion noise,
+anchoring low-quality latents onto the diffusion trajectory.</li>
+<li><strong>CHARIOT</strong>: a continuous steering mechanism that trades off perception against distortion,
+moving from a structural restorer to a texture-rich generator within one inference step.</li>
+</ul>"""},
+        ],
+    },
     {
         "slug": "dynamic-illuminance", "featured": True, "category": "enhancement",
         "title": "Dynamic Illuminance Enhancement for Diverse Scenes",
