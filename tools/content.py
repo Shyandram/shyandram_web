@@ -183,8 +183,7 @@ PUBLICATIONS = [
         "id": "ntire-2026", "year": 2026, "type": "preprint", "selected": False,
         "title": "The First Challenge on Mobile Real-World Image Super-Resolution at NTIRE 2026: "
                  "Benchmark Results and Method Overview",
-        "authors": "Jiatong Li, Zheng Chen, Kai Liu, Jingkai Wang, Zihan Zhou, Xiaoyang Liu, Libo Zhu, Jue Gong, "
-                   "Radu Timofte, and collaborators including Shyang-En Weng",
+        "authors": "Jiatong Li and 93 other authors, including Shyang-En Weng",
         "venue": "arXiv preprint", "date": "2026",
         "links": [("arXiv:2604.17306", "https://arxiv.org/abs/2604.17306")],
     },
@@ -215,10 +214,10 @@ PUBLICATIONS = [
     {
         "id": "cpganet-plus-2024", "year": 2024, "type": "preprint", "selected": True,
         "project": "lightweight-enhancement",
-        "title": "Rethinking the Atmospheric Scattering-driven Attention via Channel and Gamma Correction Priors "
-                 "for Low-Light Image Enhancement",
-        "authors": "Shyang-En Weng, Cheng-Yen Hsiao, Shaou-Gang Miaou, Ricky Christanto",
-        "venue": "arXiv preprint", "date": "Sep 2024",
+        "title": "Rethinking Theoretical Illumination for Efficient Low-Light Image Enhancement",
+        "authors": "Shyang-En Weng, Cheng-Yen Hsiao, Li-Wei Lu, Yu-Shen Huang, Tzu-Han Chen, Shaou-Gang Miaou, "
+                   "Ricky Christanto",
+        "venue": "arXiv preprint", "date": "Sep 2024 (v4: Aug 2025)",
         "links": [("arXiv:2409.05274", "https://arxiv.org/abs/2409.05274")],
     },
     {
