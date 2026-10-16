@@ -34,7 +34,7 @@
     --accent-soft: rgba(251, 146, 60, .11);
     --accent-line: rgba(251, 146, 60, .3);
     --ink: #121212;               /* text on accent backgrounds */
-    --font: 'Geist', 'Noto Sans TC', 'PingFang TC', 'Microsoft JhengHei', system-ui, sans-serif;
+    --font: 'Geist', sans-serif;   /* Chinese falls back to the browser's default sans-serif, as on the original site */
     --nav-h: 4.5rem;
     --gutter: clamp(1.25rem, 4vw, 2.25rem);
     --radius: 8px;
