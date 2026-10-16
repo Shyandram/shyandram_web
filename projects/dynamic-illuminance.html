@@ -13,22 +13,34 @@
     </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Dynamic Illuminance Adjustment — a research project by Shyang-En Weng in computer vision and deep learning.">
     <title>Dynamic Illuminance Adjustment | Shyang-En Weng</title>
+    <link rel="canonical" href="https://shyandram.dev/projects/dynamic-illuminance.html">
+    <meta name="theme-color" content="#1c1917">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Dynamic Illuminance Adjustment | Shyang-En Weng">
+    <meta property="og:description" content="Dynamic Illuminance Adjustment — a research project by Shyang-En Weng in computer vision and deep learning.">
+    <meta property="og:url" content="https://shyandram.dev/projects/dynamic-illuminance.html">
+    <meta property="og:image" content="https://shyandram.dev/images/selfie.jpg">
+    <meta name="twitter:card" content="summary">
     <link rel="icon" href="../images/icons/icon.jpg" type="image/jpeg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap">
+    <script>document.documentElement.classList.add('js')</script>
     <link rel="stylesheet" href="../style.css">
 </head>
 
 <body>
     <nav>
         <div class="container">
-            <div class="logo">Shyandram</div>
+            <div class="logo"><a href="../index.html">Shyang-En Weng</a></div>
             <ul class="nav-links">
                 <li><a href="../index.html">Home</a></li>
                 <li><a href="../index.html#education">Education</a></li>
                 <li><a href="../index.html#experience">Experience</a></li>
                 <li><a href="../research.html?v=20260820">Research</a></li>
                 <li><a href="../index.html#awards">Awards</a></li>
-                <li><a href="../index.html#skills">Skills</a></li>
                 <li><a href="../index.html#contact">Contact</a></li>
             </ul>
         </div>
@@ -36,7 +48,7 @@
 
     <header class="project-hero">
         <div class="container">
-            <a href="../index.html#research" class="back-link" onclick="history.back(); return false;">← Back</a>
+            <a href="../index.html#research" class="back-link" data-back>← Back</a>
             <h1>Dynamic Illuminance Enhancement for Diverse Scenes</h1>
             <h2 style="font-size: 1.2rem; color: var(--text-secondary); opacity: 0.8; font-weight: 500;">
                 面對不同亮度場景的動態照明影像增強</h2>
@@ -51,10 +63,10 @@
     <main class="container">
         <div class="project-content">
             <div class="project-main">
-                <img src="../images/Dynamic Illuminance Enhancement/CPGADIA.png" alt="Dynamic Illuminance Results"
-                    class="project-image-large">
-                <img src="../images/Dynamic Illuminance Enhancement/Illumination_Spectrum.png"
-                    alt="Illumination Spectrum analysis" class="project-image-large">
+                <img src="../images/Dynamic Illuminance Enhancement/CPGADIA.webp" alt="Dynamic Illuminance Results"
+                    class="project-image-large" width="1400" height="1060" loading="lazy" decoding="async">
+                <img src="../images/Dynamic Illuminance Enhancement/Illumination_Spectrum.webp"
+                    alt="Illumination Spectrum analysis" class="project-image-large" width="731" height="512" loading="lazy" decoding="async">
 
                 <h2>Project Overview</h2>
                 <p>
@@ -83,8 +95,8 @@
 
                 <h3 style="margin-top: 2.5rem; color: var(--accent-color);">2. Scene-Guided Image Enhancement (SGIE)
                 </h3>
-                <img src="../images/Dynamic Illuminance Enhancement/SGIE-CPGA.png"
-                    alt="Scene-Guided Image Enhancement Architecture" class="project-image-large">
+                <img src="../images/Dynamic Illuminance Enhancement/SGIE-CPGA.webp"
+                    alt="Scene-Guided Image Enhancement Architecture" class="project-image-large" width="1155" height="538" loading="lazy" decoding="async">
                 <p>
                     Presented at <em>CVGIP 2024</em>, this research introduces a <strong>Scene-Guided</strong> strategy
                     leveraging <strong>Transfer Learning</strong> to adapt enhancement models to complex, varied
@@ -169,7 +181,7 @@
         </div>
     </footer>
 
-    <script src="../script.js?v=20260820"></script>
+    <script src="../script.js?v=20261016"></script>
 </body>
 
 </html>

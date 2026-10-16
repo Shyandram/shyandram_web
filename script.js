@@ -39,9 +39,11 @@ document.addEventListener('DOMContentLoaded', () => {
     // Smooth scroll for nav links (handled by CSS, but good to have)
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
-            e.preventDefault();
-            const target = document.querySelector(this.getAttribute('href'));
+            const href = this.getAttribute('href');
+            if (href.length < 2) return;
+            const target = document.querySelector(href);
             if (target) {
+                e.preventDefault();
                 target.scrollIntoView({
                     behavior: 'smooth'
                 });
@@ -49,61 +51,65 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Header scroll effect
-    const nav = document.querySelector('nav');
-    window.addEventListener('scroll', () => {
-        if (window.scrollY > 50) {
-            nav.style.padding = '1rem 0';
-        } else {
-            nav.style.padding = '1.5rem 0';
-        }
+    // "Back" on project pages: go back only when the visitor came from this site,
+    // otherwise follow the link's own href (direct visits, search results).
+    document.querySelectorAll('a[data-back]').forEach(link => {
+        link.addEventListener('click', (e) => {
+            let cameFromSite = false;
+            try {
+                cameFromSite = document.referrer !== '' && new URL(document.referrer).origin === location.origin;
+            } catch (err) { /* malformed referrer: fall through to href */ }
+            if (cameFromSite && history.length > 1) {
+                e.preventDefault();
+                history.back();
+            }
+        });
     });
 
     // Set current year in footer (if element exists)
     const footerText = document.querySelector('.footer-text');
     if (footerText) {
-        const year = new Date().getFullYear();
-        footerText.innerHTML = footerText.innerHTML.replace('2024', year);
+        footerText.innerHTML = footerText.innerHTML.replace(/(©|&copy;)(\s*)\d{4}/, `$1$2${new Date().getFullYear()}`);
     }
 
-    // Back to Top Button Logic
+    const nav = document.querySelector('nav');
     const backToTopBtn = document.getElementById('backToTop');
 
-    // Floating Switcher Logic
+    // Research page: floating switcher and the in-page sub-nav share the same scroll spy
     const floatingSwitcher = document.querySelector('.floating-switcher');
     const fabProjects = document.getElementById('fab-projects');
     const fabPubs = document.getElementById('fab-publications');
     const publicationsSection = document.getElementById('publications');
+    const subNavLinks = [...document.querySelectorAll('.sub-nav-link')];
 
-    window.addEventListener('scroll', () => {
-        if (backToTopBtn) {
-            if (window.scrollY > 300) {
-                backToTopBtn.classList.add('visible');
-            } else {
-                backToTopBtn.classList.remove('visible');
-            }
-        }
+    // One passive, rAF-throttled scroll handler instead of several unthrottled ones
+    let ticking = false;
+    const onScroll = () => {
+        const y = window.scrollY;
+
+        if (nav) nav.classList.toggle('scrolled', y > 50);
+        if (backToTopBtn) backToTopBtn.classList.toggle('visible', y > 300);
 
         if (floatingSwitcher && publicationsSection) {
-            // Show switcher after scrolling past header
-            if (window.scrollY > 300) {
-                floatingSwitcher.classList.add('visible');
-            } else {
-                floatingSwitcher.classList.remove('visible');
-            }
+            floatingSwitcher.classList.toggle('visible', y > 300);
 
-            // Scroll Spy for Active State
-            const pubOffset = publicationsSection.offsetTop - 100; // Offset for better triggering
-
-            if (window.scrollY >= pubOffset) {
-                fabPubs.classList.add('active');
-                fabProjects.classList.remove('active');
-            } else {
-                fabProjects.classList.add('active');
-                fabPubs.classList.remove('active');
-            }
+            const inPubs = y >= publicationsSection.offsetTop - 100;
+            if (fabPubs) fabPubs.classList.toggle('active', inPubs);
+            if (fabProjects) fabProjects.classList.toggle('active', !inPubs);
+            subNavLinks.forEach(link => {
+                link.classList.toggle('active', (link.getAttribute('href') === '#publications') === inPubs);
+            });
         }
-    });
+        ticking = false;
+    };
+
+    window.addEventListener('scroll', () => {
+        if (!ticking) {
+            ticking = true;
+            requestAnimationFrame(onScroll);
+        }
+    }, { passive: true });
+    onScroll();
 
     if (backToTopBtn) {
         backToTopBtn.addEventListener('click', () => {
@@ -118,18 +124,13 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('.switcher-btn').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             e.preventDefault();
-            const targetId = this.getAttribute('href');
-            const targetSection = document.querySelector(targetId);
+            const targetSection = document.querySelector(this.getAttribute('href'));
 
             if (targetSection) {
                 window.scrollTo({
                     top: targetSection.offsetTop - 100, // Offset for fixed header/nav
                     behavior: 'smooth'
                 });
-
-                // Manual active state update update
-                document.querySelectorAll('.switcher-btn').forEach(btn => btn.classList.remove('active'));
-                this.classList.add('active');
             }
         });
     });
