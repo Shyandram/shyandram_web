@@ -19,3 +19,7 @@ The build uses only the Python standard library. Asset URLs get a content hash (
 no manual cache-busting. Commit the regenerated HTML together with the content change.
 
 Images are WebP (`images/**.webp`); the original PNG/JPG files are kept next to them as source/OG images.
+
+Manrope is self-hosted (`fonts/manrope-latin.woff2`, latin subset, SIL Open Font License). Responsive image
+variants (`IMG_4067-800.webp`, `selfie-280/560.webp`, `icons/icon-48/180.png`) are generated assets; originals
+(`IMG_4067.JPEG`, `selfie.jpg`, `icons/icon.jpg`) are kept as sources.

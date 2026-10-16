@@ -92,10 +92,9 @@ def page(*, title, desc, path, depth, body, nav_active="", extra_head="", body_c
     <meta property="og:url" content="{url}">
     <meta property="og:image" content="{C.SITE_URL}images/selfie.jpg">
     <meta name="twitter:card" content="summary">
-    <link rel="icon" href="{p}images/icons/icon.jpg" type="image/jpeg">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap">
+    <link rel="icon" href="{p}images/icons/icon-48.png" type="image/png">
+    <link rel="apple-touch-icon" href="{p}images/icons/icon-180.png">
+    <link rel="preload" href="{p}fonts/manrope-latin.woff2" as="font" type="font/woff2" crossorigin>
     <script>document.documentElement.classList.add('js')</script>
     <link rel="stylesheet" href="{p}style.css?v={CSS_V}">{extra_head}
 </head>
@@ -306,7 +305,7 @@ def build_home():
                     <p class="hero-note">Image restoration · Low-light enhancement · Object detection</p>
                 </div>
                 <div class="hero-photo fade-in">
-                    <img src="images/selfie.webp" alt="Portrait of {C.NAME}" class="profile-pic" width="1256" height="1023" fetchpriority="high" decoding="async">
+                    <img src="images/selfie-560.webp" srcset="images/selfie-280.webp 280w, images/selfie-560.webp 560w" sizes="(max-width: 860px) 112px, 280px" alt="Portrait of {C.NAME}" class="profile-pic" width="560" height="560" fetchpriority="high" decoding="async">
                 </div>
             </div>
         </header>
@@ -387,7 +386,7 @@ def build_home():
     return page(
         title=f"{C.NAME} | Computer Vision Researcher", desc="Personal website of Shyang-En Weng, Computer Vision and Deep Learning Researcher.",
         path="", depth=0, body=body, nav_active="home",
-        extra_head=f'\n    <link rel="preload" as="image" href="images/IMG_4067.webp" fetchpriority="high">\n    <script type="application/ld+json">{jsonld}</script>')
+        extra_head=f'\n    <link rel="preload" as="image" href="images/IMG_4067-800.webp" media="(max-width: 899px)" fetchpriority="high">\n    <link rel="preload" as="image" href="images/IMG_4067.webp" media="(min-width: 900px)" fetchpriority="high">\n    <script type="application/ld+json">{jsonld}</script>')
 
 
 # ---------------------------------------------------------------------------
