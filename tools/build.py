@@ -282,6 +282,17 @@ def build_home():
     featured = "\n".join(card_html(pr, 0) for pr in C.PROJECTS if pr["featured"])
     selected = "\n".join(pub_html(pb, 0, show_type=False) .replace('class="pub"', 'class="pub fade-in"', 1)
                          for pb in C.PUBLICATIONS if pb["selected"])
+    side_items = "\n".join(
+        f"""                    <li class="side-item fade-in">
+                        <div class="side-main">
+                            <h3><a href="{esc(sp['url'])}" target="_blank" rel="noopener">{esc(sp['name'])}</a></h3>
+                            <p>{esc(sp['summary'])}</p>
+                        </div>
+                        <div class="side-meta">
+                            <div class="chips">{"".join(f'<span class="chip is-neutral">{esc(t)}</span>' for t in sp['tags'])}</div>
+                            <div class="side-links">{"".join(f'<a class="text-link" href="{esc(u)}" target="_blank" rel="noopener">{esc(l)}</a>' for l, u in sp['links'])}</div>
+                        </div>
+                    </li>""" for sp in C.SIDE_PROJECTS)
     contacts = [
         ("mailto:" + C.EMAIL, "email_white_44dp.png", "Email", C.EMAIL, ""),
         (C.LINKEDIN, "linkedin_white_44dp.png", "LinkedIn", "Shyandram", ' target="_blank" rel="noopener"'),
@@ -370,6 +381,18 @@ def build_home():
 {selected}
                 </div>
                 <div class="btn-row" style="justify-content:center;margin-top:2.5rem"><a href="research.html#publications" class="btn fade-in">All publications</a></div>
+            </div>
+        </section>
+
+        <section id="side-projects" class="section">
+            <div class="container">
+                <div class="section-head fade-in">
+                    <h2 class="section-title">Side projects</h2>
+                    <a href="{C.GITHUB}?tab=repositories" class="text-link" target="_blank" rel="noopener">More on GitHub</a>
+                </div>
+                <ul class="side-list">
+{side_items}
+                </ul>
             </div>
         </section>
 
