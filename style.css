@@ -199,6 +199,15 @@ main { display: block; }
 .service { border-top: 1px solid var(--line); margin-top: 3rem; padding-top: 1.6rem; }
 .service h3 { align-items: baseline; display: flex; font-size: 1rem; gap: .8rem; margin-bottom: .9rem; }
 
+/* ---------- Side projects ---------- */
+.side-list { border-top: 1px solid var(--line); }
+.side-item { align-items: start; border-bottom: 1px solid var(--line); display: grid; gap: 1rem 2.5rem; grid-template-columns: minmax(0, 1fr) minmax(190px, auto); padding: 1.5rem 0; }
+.side-main h3 { font-size: 1.15rem; }
+.side-main h3 a:hover { color: var(--accent); }
+.side-main p { color: var(--muted); font-size: .92rem; margin-top: .35rem; }
+.side-meta { display: grid; gap: .7rem; justify-items: start; }
+.side-links { display: flex; flex-wrap: wrap; gap: .4rem 1.2rem; }
+
 /* Compact variants used on the home page highlights */
 .card-grid.is-compact { gap: 1rem; }
 .is-compact .card-thumb { aspect-ratio: 2 / 1; }
@@ -339,6 +348,7 @@ main { display: block; }
     .about-grid { grid-template-columns: 1fr; }
     .timeline-item { gap: .4rem; grid-template-columns: 1fr; }
     .card-grid, .card-grid.is-3, .pub-grid { grid-template-columns: 1fr; }
+    .side-item { grid-template-columns: 1fr; }
     .contact-grid { grid-template-columns: repeat(2, 1fr); }
     .year-group { grid-template-columns: 1fr; }
     .year-group > h3 { position: static; }

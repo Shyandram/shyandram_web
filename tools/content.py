@@ -312,6 +312,27 @@ REVIEWING = [
     ("The Imaging Science Journal", 2025, 1),
 ]
 
+# Side projects shown on the home page: (name, summary, tags, primary url, [(link label, url), ...])
+SIDE_PROJECTS = [
+    {
+        "name": "Conf DDL",
+        "summary": "Live countdowns to computer vision, ML, AI and NLP conference deadlines. Each countdown follows a "
+                   "paper from submission through rebuttal to the decision, with search, filters, a planner and "
+                   "calendar feeds.",
+        "tags": ["Web app", "JavaScript"],
+        "url": "https://conf-ddl.shyandram.dev/",
+        "links": [("Live site", "https://conf-ddl.shyandram.dev/"), ("GitHub", "https://github.com/Shyandram/Conf-DDL")],
+    },
+    {
+        "name": "Academic Paper Reviewer",
+        "summary": "A multi-perspective peer-review skill for Codex and Claude, tuned for computer vision and ML papers: "
+                   "five simulated reviewers, reproducible score aggregation and a prioritized revision roadmap.",
+        "tags": ["Agent skill", "Python"],
+        "url": "https://github.com/Shyandram/academic-paper-reviewer.skill",
+        "links": [("GitHub", "https://github.com/Shyandram/academic-paper-reviewer.skill")],
+    },
+]
+
 PUB_TYPES = {"journal": "Journal", "conference": "Conference", "preprint": "Preprint", "thesis": "Thesis"}
 
 # ----------------------------------------------------------------------------
