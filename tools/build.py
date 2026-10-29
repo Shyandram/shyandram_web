@@ -368,7 +368,7 @@ def build_home():
                 <div class="section-head fade-in">
                     <h2 class="section-title">Research highlights</h2>
                     <div class="section-actions">
-                        <a href="research.html" class="btn btn-outline">Full portfolio</a>
+                        <a href="research.html#publications" class="btn btn-outline">All publications</a>
                         <a href="{C.SCHOLAR}" class="text-link" target="_blank" rel="noopener">Google Scholar</a>
                     </div>
                 </div>
@@ -380,7 +380,6 @@ def build_home():
                 <div class="pub-grid is-compact">
 {selected}
                 </div>
-                <div class="btn-row" style="justify-content:center;margin-top:2.5rem"><a href="research.html#publications" class="btn fade-in">All publications</a></div>
             </div>
         </section>
 
